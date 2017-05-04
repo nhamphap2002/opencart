@@ -1,0 +1,172 @@
+Checkout session request: Array
+(
+    [apiOperation] => CREATE_CHECKOUT_SESSION
+    [apiPassword] => fad718b6a0bd99aaed8d2a2c127fffd0
+    [apiUsername] => merchant.TESTAMBBUICOM201
+    [merchant] => TESTAMBBUICOM201
+    [order.id] => 20
+    [order.amount] => 20700
+    [order.currency] => AUD
+)
+2017-05-04 14:10:51\n Checkout session response: Array
+(
+    [merchant] => TESTAMBBUICOM201
+    [result] => SUCCESS
+    [session_id] => SESSION0002284032333F4457331G24
+    [session_updateStatus] => SUCCESS
+    [session_version] => c9f9f02801
+    [successIndicator] => fed7958bfcf142e8
+)
+\nCheckout session request: Array
+(
+    [apiOperation] => CREATE_CHECKOUT_SESSION
+    [apiPassword] => fad718b6a0bd99aaed8d2a2c127fffd0
+    [apiUsername] => merchant.TESTAMBBUICOM201
+    [merchant] => TESTAMBBUICOM201
+    [order.id] => 20
+    [order.amount] => 20700
+    [order.currency] => AUD
+)
+2017-05-04 14:11:48\n Checkout session response: Array
+(
+    [merchant] => TESTAMBBUICOM201
+    [result] => SUCCESS
+    [session_id] => SESSION0002207269518G4510041L89
+    [session_updateStatus] => SUCCESS
+    [session_version] => aa92b2fa01
+    [successIndicator] => a344bb4c21e14ada
+)
+\nCheckout session request: Array
+(
+    [apiOperation] => CREATE_CHECKOUT_SESSION
+    [apiPassword] => fad718b6a0bd99aaed8d2a2c127fffd0
+    [apiUsername] => merchant.TESTAMBBUICOM201
+    [merchant] => TESTAMBBUICOM201
+    [order.id] => 20
+    [order.amount] => 20700
+    [order.currency] => AUD
+)
+2017-05-04 14:13:19\n Checkout session response: Array
+(
+    [merchant] => TESTAMBBUICOM201
+    [result] => SUCCESS
+    [session_id] => SESSION0002182926133I8704025L41
+    [session_updateStatus] => SUCCESS
+    [session_version] => d67aa89601
+    [successIndicator] => 76c120f26b014ef7
+)
+\nCheckout session request: Array
+(
+    [apiOperation] => CREATE_CHECKOUT_SESSION
+    [apiPassword] => fad718b6a0bd99aaed8d2a2c127fffd0
+    [apiUsername] => merchant.TESTAMBBUICOM201
+    [merchant] => TESTAMBBUICOM201
+    [order.id] => 20
+    [order.amount] => 20700
+    [order.currency] => AUD
+)
+2017-05-04 14:14:10\n Checkout session response: Array
+(
+    [merchant] => TESTAMBBUICOM201
+    [result] => SUCCESS
+    [session_id] => SESSION0002159673334K6059092L97
+    [session_updateStatus] => SUCCESS
+    [session_version] => fb35f95c01
+    [successIndicator] => 6dbb224dbd8544e8
+)
+\nCheckout session request: Array
+(
+    [apiOperation] => CREATE_CHECKOUT_SESSION
+    [apiPassword] => fad718b6a0bd99aaed8d2a2c127fffd0
+    [apiUsername] => merchant.TESTAMBBUICOM201
+    [merchant] => TESTAMBBUICOM201
+    [order.id] => 20
+    [order.amount] => 20700
+    [order.currency] => AUD
+)
+2017-05-04 14:14:44\n Checkout session response: Array
+(
+    [merchant] => TESTAMBBUICOM201
+    [result] => SUCCESS
+    [session_id] => SESSION0002254924296N4774119G22
+    [session_updateStatus] => SUCCESS
+    [session_version] => 2094f27701
+    [successIndicator] => 7994ebba7f99401c
+)
+\nCheckout session request: Array
+(
+    [apiOperation] => CREATE_CHECKOUT_SESSION
+    [apiPassword] => fad718b6a0bd99aaed8d2a2c127fffd0
+    [apiUsername] => merchant.TESTAMBBUICOM201
+    [merchant] => TESTAMBBUICOM201
+    [order.id] => 20
+    [order.amount] => 20700
+    [order.currency] => AUD
+)
+2017-05-04 14:15:18\n Checkout session response: Array
+(
+    [merchant] => TESTAMBBUICOM201
+    [result] => SUCCESS
+    [session_id] => SESSION0002503133417J2979707J91
+    [session_updateStatus] => SUCCESS
+    [session_version] => 90d433d601
+    [successIndicator] => 15be55ea192c4130
+)
+\nCheckout session request: Array
+(
+    [apiOperation] => CREATE_CHECKOUT_SESSION
+    [apiPassword] => fad718b6a0bd99aaed8d2a2c127fffd0
+    [apiUsername] => merchant.TESTAMBBUICOM201
+    [merchant] => TESTAMBBUICOM201
+    [order.id] => 20
+    [order.amount] => 20700
+    [order.currency] => AUD
+)
+2017-05-04 14:16:11\n Checkout session response: Array
+(
+    [merchant] => TESTAMBBUICOM201
+    [result] => SUCCESS
+    [session_id] => SESSION0002332600670H3761411N51
+    [session_updateStatus] => SUCCESS
+    [session_version] => 8b67f10301
+    [successIndicator] => 1e081b0940e847dc
+)
+\nCheckout session request: Array
+(
+    [apiOperation] => CREATE_CHECKOUT_SESSION
+    [apiPassword] => fad718b6a0bd99aaed8d2a2c127fffd0
+    [apiUsername] => merchant.TESTAMBBUICOM201
+    [merchant] => TESTAMBBUICOM201
+    [order.id] => 20
+    [order.amount] => 20700
+    [order.currency] => AUD
+)
+2017-05-04 14:17:10\n Checkout session response: Array
+(
+    [merchant] => TESTAMBBUICOM201
+    [result] => SUCCESS
+    [session_id] => SESSION0002523713859H6843213I68
+    [session_updateStatus] => SUCCESS
+    [session_version] => d97a86ac01
+    [successIndicator] => 91d0dbbafada46a2
+)
+\nCheckout session request: Array
+(
+    [apiOperation] => CREATE_CHECKOUT_SESSION
+    [apiPassword] => fad718b6a0bd99aaed8d2a2c127fffd0
+    [apiUsername] => merchant.TESTAMBBUICOM201
+    [merchant] => TESTAMBBUICOM201
+    [order.id] => 20
+    [order.amount] => 20700
+    [order.currency] => AUD
+)
+2017-05-04 14:19:01\n Checkout session response: Array
+(
+    [merchant] => TESTAMBBUICOM201
+    [result] => SUCCESS
+    [session_id] => SESSION0002957065147I0564098N97
+    [session_updateStatus] => SUCCESS
+    [session_version] => 55794a8901
+    [successIndicator] => d73cfbbb7e8e42c2
+)
+\n

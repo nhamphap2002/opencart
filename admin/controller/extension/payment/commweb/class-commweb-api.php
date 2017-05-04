@@ -23,18 +23,6 @@ class VM_COMMWEB_HOSTED_API {
         file_put_contents(dirname(dirname(__FILE__)) . '/' . $filelog, $contentlog, FILE_APPEND);
     }
 
-    public function getMerchantId() {
-        return $this->commweb_merchant_id;
-    }
-
-    public function getApiPassword() {
-        return $this->commweb_api_password;
-    }
-
-    public function getMerchantName() {
-        return $this->merchant_name;
-    }
-
     public function getApiUsername() {
         $merchant_id = $this->commweb_merchant_id;
         return 'merchant.' . $merchant_id;

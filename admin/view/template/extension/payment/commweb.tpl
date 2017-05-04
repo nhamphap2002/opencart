@@ -77,11 +77,11 @@
                             <div class="form-group">
                                 <label class="col-sm-2 control-label"><?php echo $entry_debug_log; ?></label>
                                 <div class="col-sm-10">
-                                    <input type="checkbox" name="commweb_debug_log" value="<?php echo $commweb_debug_log; ?>" <?php if($commweb_3d_secure) echo 'checked="checked"';?> placeholder="<?php echo $commweb_debug_log; ?>" id="commweb_debug_log" class="form-control"/>
+                                    <input type="checkbox" name="commweb_debug_log" value="<?php echo $commweb_debug_log; ?>" <?php if($commweb_debug_log) echo 'checked="checked"';?> placeholder="<?php echo $commweb_debug_log; ?>" id="commweb_debug_log" class="form-control"/>
                                 </div>
                             </div>
                             <div class="clearfix"></div>
-                            <div class="form-group hide">
+                            <div class="form-group">
                                 <label class="col-sm-2 control-label"><?php echo $entry_order_status; ?></label>
                                 <div class="col-sm-10">
                                     <select name="commweb_order_status_id" class="form-control">
@@ -90,6 +90,22 @@
                                         <option value="<?php echo $order_status['order_status_id']; ?>" selected="selected"><?php echo $order_status['name']; ?></option>
                                         <?php } else { ?>
                                         <option value="<?php echo $order_status['order_status_id']; ?>"><?php echo $order_status['name']; ?></option>
+                                        <?php } ?>
+                                        <?php } ?>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label" for="input-geo-zone"><?php echo $entry_geo_zone; ?></label>
+                                <div class="col-sm-10">
+                                    <select name="commweb_geo_zone_id" id="input-geo-zone" class="form-control">
+                                        <option value="0"><?php echo $text_all_zones; ?></option>
+                                        <?php foreach ($geo_zones as $geo_zone) { ?>
+                                        <?php if ($geo_zone['geo_zone_id'] == $commweb_geo_zone_id) { ?>
+                                        <option value="<?php echo $geo_zone['geo_zone_id']; ?>" selected="selected"><?php echo $geo_zone['name']; ?></option>
+                                        <?php } else { ?>
+                                        <option value="<?php echo $geo_zone['geo_zone_id']; ?>"><?php echo $geo_zone['name']; ?></option>
                                         <?php } ?>
                                         <?php } ?>
                                     </select>
@@ -111,7 +127,7 @@
                                 </div>
                             </div>
                             <div class="clearfix"></div>
-                            <div class="form-group hide">
+                            <div class="form-group">
                                 <label class="col-sm-2 control-label"><?php echo $entry_status; ?></label>
                                 <div class="col-sm-10">
                                     <select name="commweb_status" class="form-control">
@@ -140,18 +156,18 @@
     </div>
 </div>
 <script>
-    jQuery(document).ready(function ($){
-        $('#commweb_3d_secure').change(function (){
-            if($(this).is(":checked")){
+    jQuery(document).ready(function ($) {
+        $('#commweb_3d_secure').change(function () {
+            if ($(this).is(":checked")) {
                 $(this).val(1);
-            }else{
+            } else {
                 $(this).val(0);
             }
         })
-        $('#commweb_debug_log').change(function (){
-            if($(this).is(":checked")){
+        $('#commweb_debug_log').change(function () {
+            if ($(this).is(":checked")) {
                 $(this).val(1);
-            }else{
+            } else {
                 $(this).val(0);
             }
         })

@@ -1,5 +1,10 @@
 <?php
-
+/*
+ * Created on : May 03, 2017, 9:54:39 AM
+ * Author: Tran Trong Thang
+ * Email: trantrongthang1207@gmail.com
+ * Skype: trantrongthang1207
+ *  */
 if (!class_exists('VM_COMMWEB_HOSTED_API')) {
     require_once('commweb/class-commweb-api.php');
 }
@@ -46,53 +51,6 @@ class ControllerExtensionPaymentCommweb extends Controller {
         }
     }
 
-    public function callback() {
-        $this->load->model('extension/payment/commweb');
-
-        $merchant_id = $this->config->get('commweb_merchant_id');
-        $transaction_password = $this->config->get('commweb_transaction_password');
-        $transaction_type = $this->config->get('commweb_transaction_type');
-
-        $order_id = $_POST["refid"];
-        $fingerprint = $_POST["fingerprint"];
-        $timestamp = $_POST["timestamp"];
-        $amount = $_POST["amount"];
-        $summarycode = $_POST["summarycode"];
-
-        $txnid = $_POST["txnid"];
-        $rescode = $_POST["rescode"];
-
-        $fingerprint_string = $merchant_id . '|' . $transaction_password . '|' . $order_id . '|' . $amount . '|' . $timestamp . '|' . $summarycode;
-        $fingerprint_hash = hash('sha1', $fingerprint_string);
-        if ($fingerprint_hash == $fingerprint && in_array($rescode, array('00', '08', '11'))) {
-            //success
-            $this->load->model('checkout/order');
-            $order_info = $this->model_checkout_order->getOrder($order_id);
-            $msg = '';
-
-            if (in_array($transaction_type, array(0, 2, 4, 6))) {
-                //payment transaction
-                $msg = 'Transaction ID: ' . $txnid;
-                //log transaction info to database
-                $commweb_order_id = $this->model_extension_payment_commweb->addOrder($order_info, $txnid);
-                //Save card info
-                if ($order_info['customer_id'] > 0) {
-                    if (!$this->model_extension_payment_commweb->getCard($order_info['customer_id'])) {
-                        $this->model_extension_payment_commweb->addCard($this->request->post, $order_info['customer_id']);
-                    } else {
-                        $this->model_extension_payment_commweb->updateCard($this->request->post, $order_info['customer_id']);
-                    }
-                }
-            } else {
-                //auth transaction
-                $msg = 'Auth ID: ' . $txnid;
-            }
-            $this->model_checkout_order->addOrderHistory($order_id, $this->config->get('commweb_order_status_id'), $msg);
-        } else {
-            //false
-        }
-    }
-
     public function success() {
         $merchant_id = $this->config->get('commweb_merchant_id');
         $transaction_password = $this->config->get('commweb_transaction_password');
@@ -127,12 +85,38 @@ class ControllerExtensionPaymentCommweb extends Controller {
 
         $order_id = $_REQUEST['on'];
         $order_info = $this->model_checkout_order->getOrder($order_id);
-        echo $merchant_id;
-        print_r($order_info);
-        exit();
-
 
         $commweb = new VM_COMMWEB_HOSTED_API($merchant_id, $api_password, $merchant_name, $checkout_method, $debug);
+
+        $data['commweb'] = $commweb;
+
+        $id_for_commweb = $order_id;
+        $_SESSION['id_for_commweb'] = $id_for_commweb;
+        $checkout_session_id = $commweb->getCheckoutSession($order_info, $id_for_commweb);
+
+        if ($checkout_method == 'Lightbox') {
+            $payment_method = 'Checkout.showLightbox();';
+        } else {
+            $payment_method = 'Checkout.showPaymentPage();';
+        }
+
+        $data['payment_method'] = $payment_method;
+        $data['id_for_commweb'] = $order_id;
+        $data['checkout_session_id'] = $checkout_session_id;
+        $total = number_format($order_info['total'], 2, '.', '') * 100;
+        $data['total'] = $total;
+        //$data['complete_callback'] = $this->url->link('checkout/success');
+        $data['complete_callback'] = $this->url->link('extension/payment/commweb/callback&on=' . $order_id, '', true);
+        $data['cancel_callback'] = $this->url->link('checkout/checkout', '', true);
+
+        $data['image_loading'] = '';
+
+        $data['street'] = $order_info['payment_address_1'];
+        $data['city'] = $order_info['payment_city'];
+        $data['billing_postcode'] = $order_info['payment_postcode'];
+        $data['state'] = $order_info['order_status_id'];
+        $data['country'] = $order_info['payment_iso_code_3'];
+
 
         $data['column_left'] = $this->load->controller('common/column_left');
         $data['column_right'] = $this->load->controller('common/column_right');
@@ -141,7 +125,48 @@ class ControllerExtensionPaymentCommweb extends Controller {
         $data['footer'] = $this->load->controller('common/footer');
         $data['header'] = $this->load->controller('common/header');
 
-        $this->response->setOutput($this->load->view('extension/payment/formcommweb', $data));
+        $this->response->setOutput($this->load->view('extension/payment/commwebform', $data));
+    }
+
+    public function callback() {
+        //extension/payment/commweb/callback&resultIndicator=3d13197a35394e73&sessionVersion=ecfefa3c06
+        $data['merchant_id'] = $merchant_id = $this->config->get('commweb_merchant_id');
+        $data['api_password'] = $api_password = $this->config->get('commweb_api_password');
+        $data['merchant_name'] = $merchant_name = 'Commweb';
+        $data['checkout_method'] = $checkout_method = $this->config->get('commweb_checkout_method');
+        $data['debug'] = $debug = $this->config->get('commweb_debug_log');
+        $data['commweb_3d_secure'] = $commweb_3d_secure = $this->config->get('commweb_3d_secure');
+
+        $order_id = $_REQUEST['on'];
+        $commweb = new VM_COMMWEB_HOSTED_API($merchant_id, $api_password, $merchant_name, $checkout_method, $debug);
+        $order_detail_commweb = $commweb->getOrderCommwebDetail($order_id);
+
+        $this->load->model('checkout/order');
+
+        $order_info = $this->model_checkout_order->getOrder($order_id);
+
+        if ($commweb->debug)
+            $commweb->log('commweb.log', date('Y-m-d H:i:s') . "\n Response from Complete callback of commweb: \n" . print_r($order_detail_commweb, true) . "\n");
+        $order_status_id = $this->config->get('commweb_order_status_id');
+        if ($order_detail_commweb['result'] == 'SUCCESS') {
+            if ($commweb_3d_secure) {
+                if (isset($order_detail_commweb['transaction_3DSecure_authenticationStatus']) && $order_detail_commweb['transaction_3DSecure_authenticationStatus'] == 'AUTHENTICATION_SUCCESSFUL') {
+                    $process_order = true;
+                } else {
+                    $process_order = false;
+                }
+            } else {
+                $process_order = true;
+            }
+            if ($process_order == true) {
+                $this->model_checkout_order->addOrderHistory($order_id, $order_status_id);
+                $this->response->redirect($this->url->link('checkout/success', '', 'SSL'));
+            } else {
+                $this->response->redirect($this->url->link('checkout/success', 'Your transaction was unsuccessful, please check your details and try again(error account 3d). Please contact the server administrator', 'SSL'));
+            }
+        } else {
+            $this->response->redirect($this->url->link('checkout/success', 'Your transaction was unsuccessful, please check your details and try again. Please contact the server administrator', 'SSL'));
+        }
     }
 
 }

@@ -1,8 +1,21 @@
 <?php
 
-if (!class_exists('VM_COMMWEB_HOSTED_API')) {
-    require_once('commweb/class-commweb-api.php');
-}
+/*
+ * Created on : May 03, 2017, 9:54:39 AM
+ * Author: Tran Trong Thang
+ * Email: trantrongthang1207@gmail.com
+ * Skype: trantrongthang1207
+ *  */
+/*
+ * Card number* 5111111111111118
+ * Expiry date* 05 / 17
+ * Cardholder name* admin test
+ * Security code* 100
+ * Street address Whiskey St
+ * Postcode / Zipcode 4556
+ * Country Australia
+ * State / Province 
+ */
 
 class ControllerExtensionPaymentCommweb extends Controller {
 
@@ -31,6 +44,10 @@ class ControllerExtensionPaymentCommweb extends Controller {
         $data['text_disabled'] = $this->language->get('text_disabled');
         $data['text_yes'] = $this->language->get('text_yes');
         $data['text_no'] = $this->language->get('text_no');
+        $data['entry_geo_zone'] = $this->language->get('entry_geo_zone');
+        $data['entry_status'] = $this->language->get('entry_status');
+        $data['entry_sort_order'] = $this->language->get('entry_sort_order');
+        $data['text_all_zones'] = $this->language->get('text_all_zones');
 
         $data['entry_merchant_id'] = $this->language->get('entry_merchant_id');
         $data['entry_api_password'] = $this->language->get('entry_api_password');
@@ -128,6 +145,20 @@ class ControllerExtensionPaymentCommweb extends Controller {
             $data['commweb_status'] = $this->config->get('commweb_status');
         }
 
+        if (isset($this->request->post['commweb_order_status_id'])) {
+            $data['commweb_order_status_id'] = $this->request->post['commweb_order_status_id'];
+        } else {
+            $data['commweb_order_status_id'] = $this->config->get('commweb_order_status_id');
+        }
+
+        if (isset($this->request->post['commweb_geo_zone_id'])) {
+            $data['commweb_geo_zone_id'] = $this->request->post['commweb_geo_zone_id'];
+        } else {
+            $data['commweb_geo_zone_id'] = $this->config->get('commweb_geo_zone_id');
+        }
+        $this->load->model('localisation/geo_zone');
+
+        $data['geo_zones'] = $this->model_localisation_geo_zone->getGeoZones();
         if (isset($this->request->post['commweb_sort_order'])) {
             $data['commweb_sort_order'] = $this->request->post['commweb_sort_order'];
         } else {

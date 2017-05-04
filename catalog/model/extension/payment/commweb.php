@@ -1,13 +1,61 @@
 <?php
 
+/*
+ * Created on : May 03, 2017, 9:54:39 AM
+ * Author: Tran Trong Thang
+ * Email: trantrongthang1207@gmail.com
+ * Skype: trantrongthang1207
+ *  */
+
 class ModelExtensionPaymentCommweb extends Model {
 
-    public function getMethod($address) {
+    public function getMethod($address, $total) {
         $this->load->language('extension/payment/commweb');
+        $query = $this->db->query("SELECT * FROM " . DB_PREFIX . "zone_to_geo_zone WHERE geo_zone_id = '" . (int) $this->config->get('commweb_geo_zone_id') . "' AND country_id = '" . (int) $address['country_id'] . "' AND (zone_id = '" . (int) $address['zone_id'] . "' OR zone_id = '0')");
+        if ($this->config->get('commweb_total') > $total) {
+            $status = false;
+        } elseif (!$this->config->get('commweb_geo_zone_id')) {
+            $status = true;
+        } elseif ($query->num_rows) {
+            $status = true;
+        } else {
+            $status = false;
+        }
 
-        $status = TRUE;
+        $currencies = array(
+            'AUD',
+            'CAD',
+            'EUR',
+            'GBP',
+            'JPY',
+            'USD',
+            'NZD',
+            'CHF',
+            'HKD',
+            'SGD',
+            'SEK',
+            'DKK',
+            'PLN',
+            'NOK',
+            'HUF',
+            'CZK',
+            'ILS',
+            'MXN',
+            'MYR',
+            'BRL',
+            'PHP',
+            'TWD',
+            'THB',
+            'TRY',
+            'RUB'
+        );
+
+        if (!in_array(strtoupper($this->session->data['currency']), $currencies)) {
+            $status = false;
+        }
 
         $method_data = array();
+
         if ($status) {
             $method_data = array(
                 'code' => 'commweb',
@@ -18,72 +66,6 @@ class ModelExtensionPaymentCommweb extends Model {
         }
 
         return $method_data;
-    }
-
-    public function addOrder($order_info, $transaction_id) {
-        $this->db->query("INSERT INTO `" . DB_PREFIX . "commweb_order` SET `order_id` = '" . (int) $order_info['order_id'] . "', `transaction_id` = '" . $this->db->escape($transaction_id) . "', `total` = '" . $this->currency->format($order_info['total'], $order_info['currency_code'], $order_info['currency_value'], false) . "'");
-
-        return $this->db->getLastId();
-    }
-
-    /**
-     * add card info to db
-     * @author Ho Ngoc Hang<kemly.vn@gmail.com>
-     */
-    public function addCard($card_data, $customer_id) {
-        $this->db->query("INSERT into " . DB_PREFIX . "commweb_card SET customer_id = '" . (int) $customer_id . "', commweb_payor = '" . $this->db->escape($card_data['payor']) . "', commweb_pan = '" . $this->db->escape($card_data['pan']) . "'");
-
-        return $this->db->getLastId();
-    }
-
-    /**
-     * edit card info of customer
-     * @author Ho Ngoc Hang<kemly.vn@gmail.com>
-     */
-    public function updateCard($card_data, $customer_id) {
-        $this->db->query("UPDATE " . DB_PREFIX . "commweb_card SET commweb_payor = '" . $this->db->escape($card_data['payor']) . "', commweb_pan = '" . $this->db->escape($card_data['pan']) . "' WHERE customer_id = '" . (int) $customer_id . "'");
-    }
-
-    /**
-     * get info card of customer
-     * @author Ho Ngoc Hang<kemly.vn@gmail.com>
-     * @param type $customer_id
-     * @return boolean
-     */
-    public function getCard($customer_id) {
-        $qry = $this->db->query("SELECT * FROM " . DB_PREFIX . "commweb_card WHERE customer_id = '" . (int) $customer_id . "'");
-
-        if ($qry->num_rows) {
-            return $qry->row;
-        } else {
-            return false;
-        }
-    }
-
-    public function payByXml($order_id, $commweb_payor) {
-        require_once('commweb/commweb_xml_api.php');
-        $this->load->model('checkout/order');
-        $commweb_order = $this->model_checkout_order->getOrder($order_id);
-
-        //if (!empty($commweb_order)) {
-        $merchant_id = $this->config->get('commweb_merchant_id');
-        $enviroment = $this->config->get('commweb_enviroment');
-        $transaction_password = $this->config->get('commweb_transaction_password');
-
-        $payment_mode = ($enviroment == 'live' ? SECUREPAY_GATEWAY_MODE_PERIODIC_LIVE : SECUREPAY_GATEWAY_MODE_PERIODIC_TEST);
-
-        $txn_object = new commweb_xml_transaction($payment_mode, $merchant_id, $transaction_password, '');
-
-        $banktxnID = $txn_object->processTrigger((float) $commweb_order['total'], $commweb_payor);
-
-        if (!$banktxnID) {
-            return false;
-        } else {
-            return array('banktxnID' => $banktxnID);
-        }
-//		} else {
-//			return false;
-//		}
     }
 
 }

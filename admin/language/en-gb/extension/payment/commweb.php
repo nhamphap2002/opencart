@@ -1,4 +1,10 @@
 <?php
+/*
+ * Created on : May 03, 2017, 9:54:39 AM
+ * Author: Tran Trong Thang
+ * Email: trantrongthang1207@gmail.com
+ * Skype: trantrongthang1207
+ *  */
 // Heading
 $_['heading_title']      = 'Commweb SecureFrame';
 
@@ -8,6 +14,9 @@ $_['text_payment']       = 'Payment';
 $_['text_success']       = 'Success: You have modified Commweb account details!';
 $_['text_yes']          = 'Yes';
 $_['text_no']          = 'No';
+$_['entry_order_status'] = 'Order Status';
+$_['entry_geo_zone'] = 'Geo Zone';
+$_['entry_status'] = 'Status';
 
 $_['text_commweb']		= '<img src="view/image/payment/cba-logo.png" alt="Commweb" title="Commweb" />';
 

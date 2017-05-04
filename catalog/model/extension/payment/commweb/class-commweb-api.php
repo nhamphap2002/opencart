@@ -10,7 +10,6 @@ class VM_COMMWEB_HOSTED_API {
     public $merchant_name;
     public $commweb_checkout_method;
     public $debug;
-    public $virtuemart_paymentmethod_id;
 
     function __construct($commweb_merchant_id, $commweb_api_password, $merchant_name, $commweb_checkout_method, $debug) {
         $this->commweb_merchant_id = $commweb_merchant_id;
@@ -24,9 +23,26 @@ class VM_COMMWEB_HOSTED_API {
         file_put_contents(dirname(dirname(__FILE__)) . '/' . $filelog, $contentlog, FILE_APPEND);
     }
 
+    public function getMerchantId() {
+        return $this->commweb_merchant_id;
+    }
+
+    public function getApiPassword() {
+        return $this->commweb_api_password;
+    }
+
+    public function getMerchantName() {
+        return $this->merchant_name;
+    }
+
+    public function getApiUsername() {
+        $merchant_id = $this->commweb_merchant_id;
+        return 'merchant.' . $merchant_id;
+    }
+
     public function getCheckoutSession($order, $id_for_commweb) {
 
-        $amount = number_format($order['details']['BT']->order_total_aus, 2, '.', '');
+        $amount = number_format($order['total'], 2, '.', '') * 100;
         $merchant = $this->commweb_merchant_id;
         $apiPassword = $this->commweb_api_password;
         $url = $this->_live_url;
@@ -68,7 +84,7 @@ class VM_COMMWEB_HOSTED_API {
             } else {
                 $session_id = $arr_session_id['session_id'];
                 $_SESSION['SuccessIndicator'] = $arr_session_id['successIndicator'];
-                $_SESSION['CurrentOrderId'] = $order['details']['BT']->order_number;
+                $_SESSION['CurrentOrderId'] = $order['order_id'];
             }
         } else {
             $this->log('commweb.log', date('Y-m-d H:i:s') . '\n Error: ' . print_r($error, true) . '\n');

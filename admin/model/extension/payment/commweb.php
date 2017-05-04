@@ -1,64 +1,210 @@
 <?php
 
+/*
+ * Created on : May 03, 2017, 9:54:39 AM
+ * Author: Tran Trong Thang
+ * Email: trantrongthang1207@gmail.com
+ * Skype: trantrongthang1207
+ *  */
+
 class ModelExtensionPaymentCommweb extends Model {
 
     public function install() {
         $this->db->query("
-			CREATE TABLE IF NOT EXISTS `" . DB_PREFIX . "securepay_order` (
-			  `securepay_order_id` INT(11) NOT NULL AUTO_INCREMENT,
-			  `order_id` INT(11) NOT NULL,
-			  `transaction_id` CHAR(50) NOT NULL,
-			  `rebate_status` INT(1) DEFAULT NULL,
+			CREATE TABLE IF NOT EXISTS `" . DB_PREFIX . "commweb_order` (
+			  `commweb_order_id` int(11) NOT NULL AUTO_INCREMENT,
+			  `order_id` int(11) NOT NULL,
+			  `date_added` DATETIME NOT NULL,
+			  `date_modified` DATETIME NOT NULL,
+			  `capture_status` ENUM('Complete','NotComplete') DEFAULT NULL,
+			  `currency_code` CHAR(3) NOT NULL,
+			  `authorization_id` VARCHAR(30) NOT NULL,
 			  `total` DECIMAL( 10, 2 ) NOT NULL,
-			  PRIMARY KEY (`securepay_order_id`)
-			) ENGINE=MyISAM DEFAULT COLLATE=utf8_general_ci;");
+			  PRIMARY KEY (`commweb_order_id`)
+			) ENGINE=MyISAM DEFAULT COLLATE=utf8_general_ci
+		");
+
         $this->db->query("
-			CREATE TABLE IF NOT EXISTS `" . DB_PREFIX . "securepay_card` (
-			  `card_id` INT(11) NOT NULL AUTO_INCREMENT,
-			  `customer_id` INT(11) NOT NULL,
-			  `securepay_payor` VARCHAR(50) NOT NULL,
-			  `securepay_pan` VARCHAR(50) NOT NULL,
-			  PRIMARY KEY (`card_id`)
-			) ENGINE=MyISAM DEFAULT COLLATE=utf8_general_ci;");
+			CREATE TABLE IF NOT EXISTS `" . DB_PREFIX . "commweb_order_transaction` (
+			  `commweb_order_transaction_id` int(11) NOT NULL AUTO_INCREMENT,
+			  `commweb_order_id` int(11) NOT NULL,
+			  `transaction_id` CHAR(20) NOT NULL,
+			  `parent_id` CHAR(20) NOT NULL,
+			  `date_added` DATETIME NOT NULL,
+			  `note` VARCHAR(255) NOT NULL,
+			  `msgsubid` CHAR(38) NOT NULL,
+			  `receipt_id` CHAR(20) NOT NULL,
+			  `payment_type` ENUM('none','echeck','instant', 'refund', 'void') DEFAULT NULL,
+			  `payment_status` CHAR(20) NOT NULL,
+			  `pending_reason` CHAR(50) NOT NULL,
+			  `transaction_entity` CHAR(50) NOT NULL,
+			  `amount` DECIMAL( 10, 2 ) NOT NULL,
+			  `debug_data` TEXT NOT NULL,
+			  `call_data` TEXT NOT NULL,
+			  PRIMARY KEY (`commweb_order_transaction_id`)
+			) ENGINE=MyISAM DEFAULT COLLATE=utf8_general_ci
+		");
     }
 
-    public function rebate($order_id) {
-        require_once('securepay/securepay_xml_api.php');
-        $securepay_order = $this->getOrder($order_id);
+    public function uninstall() {
+        $this->db->query("DROP TABLE IF EXISTS `" . DB_PREFIX . "commweb_order_transaction`");
+        $this->db->query("DROP TABLE IF EXISTS `" . DB_PREFIX . "commweb_order`");
+    }
 
-        if (!empty($securepay_order) && $securepay_order['rebate_status'] != 1) {
-            $merchant_id = $this->config->get('securepay_merchant_id');
-            $enviroment = $this->config->get('securepay_enviroment');
-            $transaction_password = $this->config->get('securepay_transaction_password');
+    public function getPayPalOrder($order_id) {
+        $query = $this->db->query("SELECT * FROM `" . DB_PREFIX . "commweb_order` WHERE `order_id` = '" . (int) $order_id . "'");
 
-            $payment_mode = ($enviroment == 'live' ? SECUREPAY_GATEWAY_MODE_LIVE : SECUREPAY_GATEWAY_MODE_TEST);
+        return $query->row;
+    }
 
-            $txn_object = new securepay_xml_transaction($payment_mode, $merchant_id, $transaction_password, '');
-            $banktxnID = $txn_object->processCreditRefund($securepay_order['total'], $order_id, $securepay_order['transaction_id']);
+    public function editPayPalOrderStatus($order_id, $capture_status) {
+        $this->db->query("UPDATE `" . DB_PREFIX . "commweb_order` SET `capture_status` = '" . $this->db->escape($capture_status) . "', `date_modified` = NOW() WHERE `order_id` = '" . (int) $order_id . "'");
+    }
 
-            if (!$banktxnID) {
-                return false;
-            } else {
-                return array('banktxnID' => $banktxnID);
-            }
+    public function addTransaction($transaction_data, $request_data = array()) {
+        if ($request_data) {
+            $serialized_data = json_encode($request_data);
+
+            $this->db->query("UPDATE " . DB_PREFIX . "commweb_order_transaction SET call_data = '" . $this->db->escape($serialized_data) . "' WHERE commweb_order_transaction_id = " . (int) $commweb_order_transaction_id . " LIMIT 1");
+        }
+
+
+
+        $this->db->query("INSERT INTO `" . DB_PREFIX . "commweb_order_transaction` SET `commweb_order_id` = '" . (int) $transaction_data['commweb_order_id'] . "', `transaction_id` = '" . $this->db->escape($transaction_data['transaction_id']) . "', `parent_id` = '" . $this->db->escape($transaction_data['parent_id']) . "', `date_added` = NOW(), `note` = '" . $this->db->escape($transaction_data['note']) . "', `msgsubid` = '" . $this->db->escape($transaction_data['msgsubid']) . "', `receipt_id` = '" . $this->db->escape($transaction_data['receipt_id']) . "', `payment_type` = '" . $this->db->escape($transaction_data['payment_type']) . "', `payment_status` = '" . $this->db->escape($transaction_data['payment_status']) . "', `pending_reason` = '" . $this->db->escape($transaction_data['pending_reason']) . "', `transaction_entity` = '" . $this->db->escape($transaction_data['transaction_entity']) . "', `amount` = '" . (float) $transaction_data['amount'] . "', `debug_data` = '" . $this->db->escape($transaction_data['debug_data']) . "'");
+
+        return $this->db->getLastId();
+    }
+
+    public function updateTransaction($transaction) {
+        $this->db->query("UPDATE " . DB_PREFIX . "commweb_order_transaction SET commweb_order_id = " . (int) $transaction['commweb_order_id'] . ", transaction_id = '" . $this->db->escape($transaction['transaction_id']) . "', parent_id = '" . $this->db->escape($transaction['parent_id']) . "', date_added = '" . $this->db->escape($transaction['date_added']) . "', note = '" . $this->db->escape($transaction['note']) . "', msgsubid = '" . $this->db->escape($transaction['msgsubid']) . "', receipt_id = '" . $this->db->escape($transaction['receipt_id']) . "', payment_type = '" . $this->db->escape($transaction['payment_type']) . "', payment_status = '" . $this->db->escape($transaction['payment_status']) . "', pending_reason = '" . $this->db->escape($transaction['pending_reason']) . "', transaction_entity = '" . $this->db->escape($transaction['transaction_entity']) . "', amount = '" . $this->db->escape($transaction['amount']) . "', debug_data = '" . $this->db->escape($transaction['debug_data']) . "', call_data = '" . $this->db->escape($transaction['call_data']) . "' WHERE commweb_order_transaction_id = '" . (int) $transaction['commweb_order_transaction_id'] . "'");
+    }
+
+    public function getPaypalOrderByTransactionId($transaction_id) {
+        $query = $this->db->query("SELECT * FROM " . DB_PREFIX . "commweb_order_transaction WHERE transaction_id = '" . $this->db->escape($transaction_id) . "'");
+
+        return $query->rows;
+    }
+
+    public function getFailedTransaction($commweb_order_transaction_id) {
+        $query = $this->db->query("SELECT * FROM " . DB_PREFIX . "commweb_order_transaction WHERE commweb_order_transaction_id = '" . (int) $commweb_order_transaction_id . "'");
+
+        return $query->row;
+    }
+
+    public function getLocalTransaction($transaction_id) {
+        $result = $this->db->query("SELECT * FROM " . DB_PREFIX . "commweb_order_transaction WHERE transaction_id = '" . $this->db->escape($transaction_id) . "'")->row;
+
+        if ($result) {
+            return $result;
         } else {
             return false;
         }
     }
 
-    public function updateRebateStatus($securepay_order_id, $status) {
-        $this->db->query("UPDATE `" . DB_PREFIX . "securepay_order` SET `rebate_status` = '" . (int) $status . "' WHERE `securepay_order_id` = '" . (int) $securepay_order_id . "'");
+    public function getTransaction($transaction_id) {
+        $call_data = array(
+            'METHOD' => 'GetTransactionDetails',
+            'TRANSACTIONID' => $transaction_id,
+        );
+
+        return $this->call($call_data);
+    }
+
+    public function getCurrencies() {
+        return array(
+            'AUD',
+            'BRL',
+            'CAD',
+            'CZK',
+            'DKK',
+            'EUR',
+            'HKD',
+            'HUF',
+            'ILS',
+            'JPY',
+            'MYR',
+            'MXN',
+            'NOK',
+            'NZD',
+            'PHP',
+            'PLN',
+            'GBP',
+            'SGD',
+            'SEK',
+            'CHF',
+            'TWD',
+            'THB',
+            'TRY',
+            'USD',
+        );
+    }
+
+    public function getOrderId($transaction_id) {
+        $query = $this->db->query("SELECT `o`.`order_id` FROM `" . DB_PREFIX . "commweb_order_transaction` `ot` LEFT JOIN `" . DB_PREFIX . "commweb_order` `o`  ON `o`.`commweb_order_id` = `ot`.`commweb_order_id`  WHERE `ot`.`transaction_id` = '" . $this->db->escape($transaction_id) . "' LIMIT 1");
+
+        return $query->row['order_id'];
+    }
+
+    public function getCapturedTotal($commweb_order_id) {
+        $query = $this->db->query("SELECT SUM(`amount`) AS `amount` FROM `" . DB_PREFIX . "commweb_order_transaction` WHERE `commweb_order_id` = '" . (int) $commweb_order_id . "' AND `pending_reason` != 'authorization' AND (`payment_status` = 'Partially-Refunded' OR `payment_status` = 'Completed' OR `payment_status` = 'Pending') AND `transaction_entity` = 'payment'");
+
+        return $query->row['amount'];
+    }
+
+    public function getRefundedTotal($commweb_order_id) {
+        $query = $this->db->query("SELECT SUM(`amount`) AS `amount` FROM `" . DB_PREFIX . "commweb_order_transaction` WHERE `commweb_order_id` = '" . (int) $commweb_order_id . "' AND `payment_status` = 'Refunded' AND `parent_id` != ''");
+
+        return $query->row['amount'];
+    }
+
+    public function getRefundedTotalByParentId($transaction_id) {
+        $query = $this->db->query("SELECT SUM(`amount`) AS `amount` FROM `" . DB_PREFIX . "commweb_order_transaction` WHERE `parent_id` = '" . $this->db->escape($transaction_id) . "' AND `payment_type` = 'refund'");
+
+        return $query->row['amount'];
+    }
+
+    public function cleanReturn($data) {
+        $data = explode('&', $data);
+
+        $arr = array();
+
+        foreach ($data as $k => $v) {
+            $tmp = explode('=', $v);
+            $arr[$tmp[0]] = urldecode($tmp[1]);
+        }
+
+        return $arr;
+    }
+
+    public function log($data, $title = null) {
+        if ($this->config->get('pp_express_debug')) {
+            $this->log->write('PayPal Express debug (' . $title . '): ' . json_encode($data));
+        }
     }
 
     public function getOrder($order_id) {
-        $qry = $this->db->query("SELECT * FROM `" . DB_PREFIX . "securepay_order` WHERE `order_id` = '" . (int) $order_id . "' LIMIT 1");
+        $qry = $this->db->query("SELECT * FROM `" . DB_PREFIX . "commweb_order` WHERE `order_id` = '" . (int) $order_id . "' LIMIT 1");
 
         if ($qry->num_rows) {
             $order = $qry->row;
+            $order['transactions'] = $this->getTransactions($order['commweb_order_id']);
+            $order['captured'] = $this->totalCaptured($order['commweb_order_id']);
             return $order;
         } else {
             return false;
         }
+    }
+
+    public function totalCaptured($commweb_order_id) {
+        $qry = $this->db->query("SELECT SUM(`amount`) AS `amount` FROM `" . DB_PREFIX . "commweb_order_transaction` WHERE `commweb_order_id` = '" . (int) $commweb_order_id . "' AND `pending_reason` != 'authorization' AND (`payment_status` = 'Partially-Refunded' OR `payment_status` = 'Completed' OR `payment_status` = 'Pending') AND `transaction_entity` = 'payment'");
+
+        return $qry->row['amount'];
+    }
+
+    public function getTransactions($commweb_order_id) {
+        $query = $this->db->query("SELECT `ot`.*, (SELECT COUNT(`ot2`.`commweb_order_id`) FROM `" . DB_PREFIX . "commweb_order_transaction` `ot2` WHERE `ot2`.`parent_id` = `ot`.`transaction_id`) AS `children` FROM `" . DB_PREFIX . "commweb_order_transaction` `ot` WHERE `commweb_order_id` = '" . (int) $commweb_order_id . "' ORDER BY `date_added` ASC");
+
+        return $query->rows;
     }
 
     public function addOrderHistory($order_id, $data, $store_id = 0) {
