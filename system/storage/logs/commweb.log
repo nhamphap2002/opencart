@@ -1,0 +1,3507 @@
+Checkout session request: Array
+(
+    [apiOperation] => CREATE_CHECKOUT_SESSION
+    [apiPassword] => fad718b6a0bd99aaed8d2a2c127fffd0
+    [apiUsername] => merchant.TESTAMBBUICOM201
+    [merchant] => TESTAMBBUICOM201
+    [order.id] => 35
+    [order.amount] => 10600
+    [order.currency] => AUD
+)
+2017-05-05 15:03:50\n Checkout session response: Array
+(
+    [merchant] => TESTAMBBUICOM201
+    [result] => SUCCESS
+    [session_id] => SESSION0002389492213L1255627L11
+    [session_updateStatus] => SUCCESS
+    [session_version] => 0a5b657401
+    [successIndicator] => 3c4e0d832e5b4833
+)
+\n2017-05-05 15:04:15\n Order detail from commweb: Array
+(
+    [amount] => 10600.00
+    [billing_address_city] => Sydney
+    [billing_address_country] => AUS
+    [billing_address_postcodeZip] => 4556
+    [billing_address_stateProvince] => ACT
+    [billing_address_street] => Whiskey St
+    [creationTime] => 2017-05-05T08:04:13.797Z
+    [currency] => AUD
+    [customer_firstName] => test
+    [description] => Commweb Order
+    [device_browser] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36
+    [device_ipAddress] => 27.72.157.158
+    [id] => 35
+    [merchant] => TESTAMBBUICOM201
+    [result] => SUCCESS
+    [risk_response_gatewayCode] => ACCEPTED
+    [risk_response_review_decision] => NOT_REQUIRED
+    [risk_response_rule_data] => W
+    [risk_response_rule_name] => MERCHANT_AVS
+    [risk_response_rule_recommendation] => NO_ACTION
+    [risk_response_rule_type] => MERCHANT_RULE
+    [risk_response_rule] => Array
+        (
+            [10] => MSO_RULE
+            [1] => MERCHANT_RULE
+            [2] => MERCHANT_RULE
+            [3] => MERCHANT_RULE
+            [4] => MERCHANT_RULE
+            [5] => MERCHANT_RULE
+            [6] => MERCHANT_RULE
+            [7] => MSO_RULE
+            [8] => MSO_RULE
+            [9] => MSO_RULE
+        )
+
+    [sourceOfFunds_provided_card_brand] => MASTERCARD
+    [sourceOfFunds_provided_card_expiry_month] => 5
+    [sourceOfFunds_provided_card_expiry_year] => 17
+    [sourceOfFunds_provided_card_fundingMethod] => DEBIT
+    [sourceOfFunds_provided_card_issuer] => U.S. BANK NATIONAL ASSOCIATION, ND
+    [sourceOfFunds_provided_card_nameOnCard] => test
+    [sourceOfFunds_provided_card_number] => 511111xxxxxx1118
+    [sourceOfFunds_provided_card_scheme] => MASTERCARD
+    [sourceOfFunds_type] => CARD
+    [status] => CAPTURED
+    [totalAuthorizedAmount] => 10600.00
+    [totalCapturedAmount] => 10600.00
+    [totalRefundedAmount] => 0.00
+    [transaction_authorizationResponse_avsCode] => W
+    [transaction_authorizationResponse_cardSecurityCodeError] => M
+    [transaction_authorizationResponse_commercialCard] => 888
+    [transaction_authorizationResponse_commercialCardIndicator] => 3
+    [transaction_authorizationResponse_financialNetworkCode] => 777
+    [transaction_authorizationResponse_processingCode] => 003000
+    [transaction_authorizationResponse_responseCode] => 00
+    [transaction_authorizationResponse_stan] => 138322
+    [transaction_authorizationResponse_transactionIdentifier] => 123456789
+    [transaction_billing_address_city] => Sydney
+    [transaction_billing_address_country] => AUS
+    [transaction_billing_address_postcodeZip] => 4556
+    [transaction_billing_address_stateProvince] => ACT
+    [transaction_billing_address_street] => Whiskey St
+    [transaction_customer_firstName] => test
+    [transaction_device_browser] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36
+    [transaction_device_ipAddress] => 27.72.157.158
+    [transaction_gatewayEntryPoint] => CHECKOUT
+    [transaction_merchant] => TESTAMBBUICOM201
+    [transaction_order_amount] => 10600.00
+    [transaction_order_creationTime] => 2017-05-05T08:04:13.797Z
+    [transaction_order_currency] => AUD
+    [transaction_order_description] => Commweb Order
+    [transaction_order_id] => 35
+    [transaction_order_status] => CAPTURED
+    [transaction_order_totalAuthorizedAmount] => 10600.00
+    [transaction_order_totalCapturedAmount] => 10600.00
+    [transaction_order_totalRefundedAmount] => 0.00
+    [transaction_response_acquirerCode] => 00
+    [transaction_response_acquirerMessage] => Approved
+    [transaction_response_cardSecurityCode_acquirerCode] => M
+    [transaction_response_cardSecurityCode_gatewayCode] => MATCH
+    [transaction_response_cardholderVerification_avs_acquirerCode] => W
+    [transaction_response_cardholderVerification_avs_gatewayCode] => ZIP_MATCH
+    [transaction_response_gatewayCode] => APPROVED
+    [transaction_result] => SUCCESS
+    [transaction_risk_response_gatewayCode] => ACCEPTED
+    [transaction_risk_response_review_decision] => NOT_REQUIRED
+    [transaction_risk_response_rule_data] => W
+    [transaction_risk_response_rule_name] => MERCHANT_AVS
+    [transaction_risk_response_rule_recommendation] => NO_ACTION
+    [transaction_risk_response_rule_type] => MERCHANT_RULE
+    [transaction_risk_response_rule] => Array
+        (
+            [10] => MSO_RULE
+            [1] => MERCHANT_RULE
+            [2] => MERCHANT_RULE
+            [3] => MERCHANT_RULE
+            [4] => MERCHANT_RULE
+            [5] => MERCHANT_RULE
+            [6] => MERCHANT_RULE
+            [7] => MSO_RULE
+            [8] => MSO_RULE
+            [9] => MSO_RULE
+        )
+
+    [transaction_sourceOfFunds_provided_card_brand] => MASTERCARD
+    [transaction_sourceOfFunds_provided_card_expiry_month] => 5
+    [transaction_sourceOfFunds_provided_card_expiry_year] => 17
+    [transaction_sourceOfFunds_provided_card_fundingMethod] => DEBIT
+    [transaction_sourceOfFunds_provided_card_issuer] => U.S. BANK NATIONAL ASSOCIATION, ND
+    [transaction_sourceOfFunds_provided_card_nameOnCard] => test
+    [transaction_sourceOfFunds_provided_card_number] => 511111xxxxxx1118
+    [transaction_sourceOfFunds_provided_card_scheme] => MASTERCARD
+    [transaction_sourceOfFunds_type] => CARD
+    [transaction_timeOfRecord] => 2017-05-05T08:04:13.797Z
+    [transaction_transaction_acquirer_batch] => 20170505
+    [transaction_transaction_acquirer_date] => 0505
+    [transaction_transaction_acquirer_id] => CBA_S2I
+    [transaction_transaction_acquirer_merchantId] => 353109499161636
+    [transaction_transaction_acquirer_transactionId] => 123456789
+    [transaction_transaction_amount] => 10600.00
+    [transaction_transaction_authorizationCode] => 138322
+    [transaction_transaction_currency] => AUD
+    [transaction_transaction_frequency] => SINGLE
+    [transaction_transaction_id] => 1
+    [transaction_transaction_receipt] => 712508138322
+    [transaction_transaction_source] => INTERNET
+    [transaction_transaction_terminal] => CBAS2I01
+    [transaction_transaction_type] => PAYMENT
+    [transaction_version] => 36
+)
+\n2017-05-05 15:04:15
+ Response from Complete callback of commweb: 
+Array
+(
+    [amount] => 10600.00
+    [billing_address_city] => Sydney
+    [billing_address_country] => AUS
+    [billing_address_postcodeZip] => 4556
+    [billing_address_stateProvince] => ACT
+    [billing_address_street] => Whiskey St
+    [creationTime] => 2017-05-05T08:04:13.797Z
+    [currency] => AUD
+    [customer_firstName] => test
+    [description] => Commweb Order
+    [device_browser] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36
+    [device_ipAddress] => 27.72.157.158
+    [id] => 35
+    [merchant] => TESTAMBBUICOM201
+    [result] => SUCCESS
+    [risk_response_gatewayCode] => ACCEPTED
+    [risk_response_review_decision] => NOT_REQUIRED
+    [risk_response_rule_data] => W
+    [risk_response_rule_name] => MERCHANT_AVS
+    [risk_response_rule_recommendation] => NO_ACTION
+    [risk_response_rule_type] => MERCHANT_RULE
+    [risk_response_rule] => Array
+        (
+            [10] => MSO_RULE
+            [1] => MERCHANT_RULE
+            [2] => MERCHANT_RULE
+            [3] => MERCHANT_RULE
+            [4] => MERCHANT_RULE
+            [5] => MERCHANT_RULE
+            [6] => MERCHANT_RULE
+            [7] => MSO_RULE
+            [8] => MSO_RULE
+            [9] => MSO_RULE
+        )
+
+    [sourceOfFunds_provided_card_brand] => MASTERCARD
+    [sourceOfFunds_provided_card_expiry_month] => 5
+    [sourceOfFunds_provided_card_expiry_year] => 17
+    [sourceOfFunds_provided_card_fundingMethod] => DEBIT
+    [sourceOfFunds_provided_card_issuer] => U.S. BANK NATIONAL ASSOCIATION, ND
+    [sourceOfFunds_provided_card_nameOnCard] => test
+    [sourceOfFunds_provided_card_number] => 511111xxxxxx1118
+    [sourceOfFunds_provided_card_scheme] => MASTERCARD
+    [sourceOfFunds_type] => CARD
+    [status] => CAPTURED
+    [totalAuthorizedAmount] => 10600.00
+    [totalCapturedAmount] => 10600.00
+    [totalRefundedAmount] => 0.00
+    [transaction_authorizationResponse_avsCode] => W
+    [transaction_authorizationResponse_cardSecurityCodeError] => M
+    [transaction_authorizationResponse_commercialCard] => 888
+    [transaction_authorizationResponse_commercialCardIndicator] => 3
+    [transaction_authorizationResponse_financialNetworkCode] => 777
+    [transaction_authorizationResponse_processingCode] => 003000
+    [transaction_authorizationResponse_responseCode] => 00
+    [transaction_authorizationResponse_stan] => 138322
+    [transaction_authorizationResponse_transactionIdentifier] => 123456789
+    [transaction_billing_address_city] => Sydney
+    [transaction_billing_address_country] => AUS
+    [transaction_billing_address_postcodeZip] => 4556
+    [transaction_billing_address_stateProvince] => ACT
+    [transaction_billing_address_street] => Whiskey St
+    [transaction_customer_firstName] => test
+    [transaction_device_browser] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36
+    [transaction_device_ipAddress] => 27.72.157.158
+    [transaction_gatewayEntryPoint] => CHECKOUT
+    [transaction_merchant] => TESTAMBBUICOM201
+    [transaction_order_amount] => 10600.00
+    [transaction_order_creationTime] => 2017-05-05T08:04:13.797Z
+    [transaction_order_currency] => AUD
+    [transaction_order_description] => Commweb Order
+    [transaction_order_id] => 35
+    [transaction_order_status] => CAPTURED
+    [transaction_order_totalAuthorizedAmount] => 10600.00
+    [transaction_order_totalCapturedAmount] => 10600.00
+    [transaction_order_totalRefundedAmount] => 0.00
+    [transaction_response_acquirerCode] => 00
+    [transaction_response_acquirerMessage] => Approved
+    [transaction_response_cardSecurityCode_acquirerCode] => M
+    [transaction_response_cardSecurityCode_gatewayCode] => MATCH
+    [transaction_response_cardholderVerification_avs_acquirerCode] => W
+    [transaction_response_cardholderVerification_avs_gatewayCode] => ZIP_MATCH
+    [transaction_response_gatewayCode] => APPROVED
+    [transaction_result] => SUCCESS
+    [transaction_risk_response_gatewayCode] => ACCEPTED
+    [transaction_risk_response_review_decision] => NOT_REQUIRED
+    [transaction_risk_response_rule_data] => W
+    [transaction_risk_response_rule_name] => MERCHANT_AVS
+    [transaction_risk_response_rule_recommendation] => NO_ACTION
+    [transaction_risk_response_rule_type] => MERCHANT_RULE
+    [transaction_risk_response_rule] => Array
+        (
+            [10] => MSO_RULE
+            [1] => MERCHANT_RULE
+            [2] => MERCHANT_RULE
+            [3] => MERCHANT_RULE
+            [4] => MERCHANT_RULE
+            [5] => MERCHANT_RULE
+            [6] => MERCHANT_RULE
+            [7] => MSO_RULE
+            [8] => MSO_RULE
+            [9] => MSO_RULE
+        )
+
+    [transaction_sourceOfFunds_provided_card_brand] => MASTERCARD
+    [transaction_sourceOfFunds_provided_card_expiry_month] => 5
+    [transaction_sourceOfFunds_provided_card_expiry_year] => 17
+    [transaction_sourceOfFunds_provided_card_fundingMethod] => DEBIT
+    [transaction_sourceOfFunds_provided_card_issuer] => U.S. BANK NATIONAL ASSOCIATION, ND
+    [transaction_sourceOfFunds_provided_card_nameOnCard] => test
+    [transaction_sourceOfFunds_provided_card_number] => 511111xxxxxx1118
+    [transaction_sourceOfFunds_provided_card_scheme] => MASTERCARD
+    [transaction_sourceOfFunds_type] => CARD
+    [transaction_timeOfRecord] => 2017-05-05T08:04:13.797Z
+    [transaction_transaction_acquirer_batch] => 20170505
+    [transaction_transaction_acquirer_date] => 0505
+    [transaction_transaction_acquirer_id] => CBA_S2I
+    [transaction_transaction_acquirer_merchantId] => 353109499161636
+    [transaction_transaction_acquirer_transactionId] => 123456789
+    [transaction_transaction_amount] => 10600.00
+    [transaction_transaction_authorizationCode] => 138322
+    [transaction_transaction_currency] => AUD
+    [transaction_transaction_frequency] => SINGLE
+    [transaction_transaction_id] => 1
+    [transaction_transaction_receipt] => 712508138322
+    [transaction_transaction_source] => INTERNET
+    [transaction_transaction_terminal] => CBAS2I01
+    [transaction_transaction_type] => PAYMENT
+    [transaction_version] => 36
+)
+
+Checkout session request: Array
+(
+    [apiOperation] => CREATE_CHECKOUT_SESSION
+    [apiPassword] => fad718b6a0bd99aaed8d2a2c127fffd0
+    [apiUsername] => merchant.TESTAMBBUICOM201
+    [merchant] => TESTAMBBUICOM201
+    [order.id] => 37
+    [order.amount] => 10600
+    [order.currency] => AUD
+)
+2017-05-05 15:07:36\n Checkout session response: Array
+(
+    [merchant] => TESTAMBBUICOM201
+    [result] => SUCCESS
+    [session_id] => SESSION0002572578126H7155382L98
+    [session_updateStatus] => SUCCESS
+    [session_version] => c81913cc01
+    [successIndicator] => 1b61559c462c438f
+)
+\nCheckout session request: Array
+(
+    [apiOperation] => CREATE_CHECKOUT_SESSION
+    [apiPassword] => fad718b6a0bd99aaed8d2a2c127fffd0
+    [apiUsername] => merchant.TESTAMBBUICOM201
+    [merchant] => TESTAMBBUICOM201
+    [order.id] => 37
+    [order.amount] => 10600
+    [order.currency] => AUD
+)
+2017-05-05 15:07:51\n Checkout session response: Array
+(
+    [merchant] => TESTAMBBUICOM201
+    [result] => SUCCESS
+    [session_id] => SESSION0002404750699J8753248N49
+    [session_updateStatus] => SUCCESS
+    [session_version] => b4a1a79c01
+    [successIndicator] => effdbeb0ba314bf7
+)
+\n2017-05-05 15:07:53\n Order detail from commweb: Array
+(
+    [amount] => 10600.00
+    [billing_address_city] => Sydney
+    [billing_address_country] => AUS
+    [billing_address_postcodeZip] => 4556
+    [billing_address_stateProvince] => ACT
+    [billing_address_street] => Whiskey St
+    [creationTime] => 2017-05-05T08:07:50.163Z
+    [currency] => AUD
+    [customer_firstName] => t
+    [description] => Commweb Order
+    [device_browser] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36
+    [device_ipAddress] => 27.72.157.158
+    [id] => 37
+    [merchant] => TESTAMBBUICOM201
+    [result] => SUCCESS
+    [risk_response_gatewayCode] => ACCEPTED
+    [risk_response_review_decision] => NOT_REQUIRED
+    [risk_response_rule_data] => W
+    [risk_response_rule_name] => MERCHANT_AVS
+    [risk_response_rule_recommendation] => NO_ACTION
+    [risk_response_rule_type] => MERCHANT_RULE
+    [risk_response_rule] => Array
+        (
+            [10] => MSO_RULE
+            [1] => MERCHANT_RULE
+            [2] => MERCHANT_RULE
+            [3] => MERCHANT_RULE
+            [4] => MERCHANT_RULE
+            [5] => MERCHANT_RULE
+            [6] => MERCHANT_RULE
+            [7] => MSO_RULE
+            [8] => MSO_RULE
+            [9] => MSO_RULE
+        )
+
+    [sourceOfFunds_provided_card_brand] => MASTERCARD
+    [sourceOfFunds_provided_card_expiry_month] => 5
+    [sourceOfFunds_provided_card_expiry_year] => 17
+    [sourceOfFunds_provided_card_fundingMethod] => DEBIT
+    [sourceOfFunds_provided_card_issuer] => U.S. BANK NATIONAL ASSOCIATION, ND
+    [sourceOfFunds_provided_card_nameOnCard] => t
+    [sourceOfFunds_provided_card_number] => 511111xxxxxx1118
+    [sourceOfFunds_provided_card_scheme] => MASTERCARD
+    [sourceOfFunds_type] => CARD
+    [status] => CAPTURED
+    [totalAuthorizedAmount] => 10600.00
+    [totalCapturedAmount] => 10600.00
+    [totalRefundedAmount] => 0.00
+    [transaction_authorizationResponse_avsCode] => W
+    [transaction_authorizationResponse_cardSecurityCodeError] => M
+    [transaction_authorizationResponse_commercialCard] => 888
+    [transaction_authorizationResponse_commercialCardIndicator] => 3
+    [transaction_authorizationResponse_financialNetworkCode] => 777
+    [transaction_authorizationResponse_processingCode] => 003000
+    [transaction_authorizationResponse_responseCode] => 00
+    [transaction_authorizationResponse_stan] => 140452
+    [transaction_authorizationResponse_transactionIdentifier] => 123456789
+    [transaction_billing_address_city] => Sydney
+    [transaction_billing_address_country] => AUS
+    [transaction_billing_address_postcodeZip] => 4556
+    [transaction_billing_address_stateProvince] => ACT
+    [transaction_billing_address_street] => Whiskey St
+    [transaction_customer_firstName] => t
+    [transaction_device_browser] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36
+    [transaction_device_ipAddress] => 27.72.157.158
+    [transaction_gatewayEntryPoint] => CHECKOUT
+    [transaction_merchant] => TESTAMBBUICOM201
+    [transaction_order_amount] => 10600.00
+    [transaction_order_creationTime] => 2017-05-05T08:07:50.163Z
+    [transaction_order_currency] => AUD
+    [transaction_order_description] => Commweb Order
+    [transaction_order_id] => 37
+    [transaction_order_status] => CAPTURED
+    [transaction_order_totalAuthorizedAmount] => 10600.00
+    [transaction_order_totalCapturedAmount] => 10600.00
+    [transaction_order_totalRefundedAmount] => 0.00
+    [transaction_response_acquirerCode] => 00
+    [transaction_response_acquirerMessage] => Approved
+    [transaction_response_cardSecurityCode_acquirerCode] => M
+    [transaction_response_cardSecurityCode_gatewayCode] => MATCH
+    [transaction_response_cardholderVerification_avs_acquirerCode] => W
+    [transaction_response_cardholderVerification_avs_gatewayCode] => ZIP_MATCH
+    [transaction_response_gatewayCode] => APPROVED
+    [transaction_result] => SUCCESS
+    [transaction_risk_response_gatewayCode] => ACCEPTED
+    [transaction_risk_response_review_decision] => NOT_REQUIRED
+    [transaction_risk_response_rule_data] => W
+    [transaction_risk_response_rule_name] => MERCHANT_AVS
+    [transaction_risk_response_rule_recommendation] => NO_ACTION
+    [transaction_risk_response_rule_type] => MERCHANT_RULE
+    [transaction_risk_response_rule] => Array
+        (
+            [10] => MSO_RULE
+            [1] => MERCHANT_RULE
+            [2] => MERCHANT_RULE
+            [3] => MERCHANT_RULE
+            [4] => MERCHANT_RULE
+            [5] => MERCHANT_RULE
+            [6] => MERCHANT_RULE
+            [7] => MSO_RULE
+            [8] => MSO_RULE
+            [9] => MSO_RULE
+        )
+
+    [transaction_sourceOfFunds_provided_card_brand] => MASTERCARD
+    [transaction_sourceOfFunds_provided_card_expiry_month] => 5
+    [transaction_sourceOfFunds_provided_card_expiry_year] => 17
+    [transaction_sourceOfFunds_provided_card_fundingMethod] => DEBIT
+    [transaction_sourceOfFunds_provided_card_issuer] => U.S. BANK NATIONAL ASSOCIATION, ND
+    [transaction_sourceOfFunds_provided_card_nameOnCard] => t
+    [transaction_sourceOfFunds_provided_card_number] => 511111xxxxxx1118
+    [transaction_sourceOfFunds_provided_card_scheme] => MASTERCARD
+    [transaction_sourceOfFunds_type] => CARD
+    [transaction_timeOfRecord] => 2017-05-05T08:07:50.163Z
+    [transaction_transaction_acquirer_batch] => 20170505
+    [transaction_transaction_acquirer_date] => 0505
+    [transaction_transaction_acquirer_id] => CBA_S2I
+    [transaction_transaction_acquirer_merchantId] => 353109499161636
+    [transaction_transaction_acquirer_transactionId] => 123456789
+    [transaction_transaction_amount] => 10600.00
+    [transaction_transaction_authorizationCode] => 140452
+    [transaction_transaction_currency] => AUD
+    [transaction_transaction_frequency] => SINGLE
+    [transaction_transaction_id] => 1
+    [transaction_transaction_receipt] => 712508140452
+    [transaction_transaction_source] => INTERNET
+    [transaction_transaction_terminal] => CBAS2I01
+    [transaction_transaction_type] => PAYMENT
+    [transaction_version] => 36
+)
+\n2017-05-05 15:07:53
+ Response from Complete callback of commweb: 
+Array
+(
+    [amount] => 10600.00
+    [billing_address_city] => Sydney
+    [billing_address_country] => AUS
+    [billing_address_postcodeZip] => 4556
+    [billing_address_stateProvince] => ACT
+    [billing_address_street] => Whiskey St
+    [creationTime] => 2017-05-05T08:07:50.163Z
+    [currency] => AUD
+    [customer_firstName] => t
+    [description] => Commweb Order
+    [device_browser] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36
+    [device_ipAddress] => 27.72.157.158
+    [id] => 37
+    [merchant] => TESTAMBBUICOM201
+    [result] => SUCCESS
+    [risk_response_gatewayCode] => ACCEPTED
+    [risk_response_review_decision] => NOT_REQUIRED
+    [risk_response_rule_data] => W
+    [risk_response_rule_name] => MERCHANT_AVS
+    [risk_response_rule_recommendation] => NO_ACTION
+    [risk_response_rule_type] => MERCHANT_RULE
+    [risk_response_rule] => Array
+        (
+            [10] => MSO_RULE
+            [1] => MERCHANT_RULE
+            [2] => MERCHANT_RULE
+            [3] => MERCHANT_RULE
+            [4] => MERCHANT_RULE
+            [5] => MERCHANT_RULE
+            [6] => MERCHANT_RULE
+            [7] => MSO_RULE
+            [8] => MSO_RULE
+            [9] => MSO_RULE
+        )
+
+    [sourceOfFunds_provided_card_brand] => MASTERCARD
+    [sourceOfFunds_provided_card_expiry_month] => 5
+    [sourceOfFunds_provided_card_expiry_year] => 17
+    [sourceOfFunds_provided_card_fundingMethod] => DEBIT
+    [sourceOfFunds_provided_card_issuer] => U.S. BANK NATIONAL ASSOCIATION, ND
+    [sourceOfFunds_provided_card_nameOnCard] => t
+    [sourceOfFunds_provided_card_number] => 511111xxxxxx1118
+    [sourceOfFunds_provided_card_scheme] => MASTERCARD
+    [sourceOfFunds_type] => CARD
+    [status] => CAPTURED
+    [totalAuthorizedAmount] => 10600.00
+    [totalCapturedAmount] => 10600.00
+    [totalRefundedAmount] => 0.00
+    [transaction_authorizationResponse_avsCode] => W
+    [transaction_authorizationResponse_cardSecurityCodeError] => M
+    [transaction_authorizationResponse_commercialCard] => 888
+    [transaction_authorizationResponse_commercialCardIndicator] => 3
+    [transaction_authorizationResponse_financialNetworkCode] => 777
+    [transaction_authorizationResponse_processingCode] => 003000
+    [transaction_authorizationResponse_responseCode] => 00
+    [transaction_authorizationResponse_stan] => 140452
+    [transaction_authorizationResponse_transactionIdentifier] => 123456789
+    [transaction_billing_address_city] => Sydney
+    [transaction_billing_address_country] => AUS
+    [transaction_billing_address_postcodeZip] => 4556
+    [transaction_billing_address_stateProvince] => ACT
+    [transaction_billing_address_street] => Whiskey St
+    [transaction_customer_firstName] => t
+    [transaction_device_browser] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36
+    [transaction_device_ipAddress] => 27.72.157.158
+    [transaction_gatewayEntryPoint] => CHECKOUT
+    [transaction_merchant] => TESTAMBBUICOM201
+    [transaction_order_amount] => 10600.00
+    [transaction_order_creationTime] => 2017-05-05T08:07:50.163Z
+    [transaction_order_currency] => AUD
+    [transaction_order_description] => Commweb Order
+    [transaction_order_id] => 37
+    [transaction_order_status] => CAPTURED
+    [transaction_order_totalAuthorizedAmount] => 10600.00
+    [transaction_order_totalCapturedAmount] => 10600.00
+    [transaction_order_totalRefundedAmount] => 0.00
+    [transaction_response_acquirerCode] => 00
+    [transaction_response_acquirerMessage] => Approved
+    [transaction_response_cardSecurityCode_acquirerCode] => M
+    [transaction_response_cardSecurityCode_gatewayCode] => MATCH
+    [transaction_response_cardholderVerification_avs_acquirerCode] => W
+    [transaction_response_cardholderVerification_avs_gatewayCode] => ZIP_MATCH
+    [transaction_response_gatewayCode] => APPROVED
+    [transaction_result] => SUCCESS
+    [transaction_risk_response_gatewayCode] => ACCEPTED
+    [transaction_risk_response_review_decision] => NOT_REQUIRED
+    [transaction_risk_response_rule_data] => W
+    [transaction_risk_response_rule_name] => MERCHANT_AVS
+    [transaction_risk_response_rule_recommendation] => NO_ACTION
+    [transaction_risk_response_rule_type] => MERCHANT_RULE
+    [transaction_risk_response_rule] => Array
+        (
+            [10] => MSO_RULE
+            [1] => MERCHANT_RULE
+            [2] => MERCHANT_RULE
+            [3] => MERCHANT_RULE
+            [4] => MERCHANT_RULE
+            [5] => MERCHANT_RULE
+            [6] => MERCHANT_RULE
+            [7] => MSO_RULE
+            [8] => MSO_RULE
+            [9] => MSO_RULE
+        )
+
+    [transaction_sourceOfFunds_provided_card_brand] => MASTERCARD
+    [transaction_sourceOfFunds_provided_card_expiry_month] => 5
+    [transaction_sourceOfFunds_provided_card_expiry_year] => 17
+    [transaction_sourceOfFunds_provided_card_fundingMethod] => DEBIT
+    [transaction_sourceOfFunds_provided_card_issuer] => U.S. BANK NATIONAL ASSOCIATION, ND
+    [transaction_sourceOfFunds_provided_card_nameOnCard] => t
+    [transaction_sourceOfFunds_provided_card_number] => 511111xxxxxx1118
+    [transaction_sourceOfFunds_provided_card_scheme] => MASTERCARD
+    [transaction_sourceOfFunds_type] => CARD
+    [transaction_timeOfRecord] => 2017-05-05T08:07:50.163Z
+    [transaction_transaction_acquirer_batch] => 20170505
+    [transaction_transaction_acquirer_date] => 0505
+    [transaction_transaction_acquirer_id] => CBA_S2I
+    [transaction_transaction_acquirer_merchantId] => 353109499161636
+    [transaction_transaction_acquirer_transactionId] => 123456789
+    [transaction_transaction_amount] => 10600.00
+    [transaction_transaction_authorizationCode] => 140452
+    [transaction_transaction_currency] => AUD
+    [transaction_transaction_frequency] => SINGLE
+    [transaction_transaction_id] => 1
+    [transaction_transaction_receipt] => 712508140452
+    [transaction_transaction_source] => INTERNET
+    [transaction_transaction_terminal] => CBAS2I01
+    [transaction_transaction_type] => PAYMENT
+    [transaction_version] => 36
+)
+
+Checkout session request: Array
+(
+    [apiOperation] => CREATE_CHECKOUT_SESSION
+    [apiPassword] => fad718b6a0bd99aaed8d2a2c127fffd0
+    [apiUsername] => merchant.TESTAMBBUICOM201
+    [merchant] => TESTAMBBUICOM201
+    [order.id] => 38
+    [order.amount] => 10600
+    [order.currency] => AUD
+)
+2017-05-05 15:08:23\n Checkout session response: Array
+(
+    [merchant] => TESTAMBBUICOM201
+    [result] => SUCCESS
+    [session_id] => SESSION0002812565893M6855454H16
+    [session_updateStatus] => SUCCESS
+    [session_version] => 6eb1fcb001
+    [successIndicator] => e5e6ba3c08e840c9
+)
+\nCheckout session request: Array
+(
+    [apiOperation] => CREATE_CHECKOUT_SESSION
+    [apiPassword] => fad718b6a0bd99aaed8d2a2c127fffd0
+    [apiUsername] => merchant.TESTAMBBUICOM201
+    [merchant] => TESTAMBBUICOM201
+    [order.id] => 38
+    [order.amount] => 10600
+    [order.currency] => AUD
+)
+2017-05-05 15:08:41\n Checkout session response: Array
+(
+    [merchant] => TESTAMBBUICOM201
+    [result] => SUCCESS
+    [session_id] => SESSION0002906056289N7372252J90
+    [session_updateStatus] => SUCCESS
+    [session_version] => ef15b09e01
+    [successIndicator] => 2ba1861fcf7643bc
+)
+\n2017-05-05 15:08:43\n Order detail from commweb: Array
+(
+    [amount] => 10600.00
+    [billing_address_city] => Sydney
+    [billing_address_country] => AUS
+    [billing_address_postcodeZip] => 4556
+    [billing_address_stateProvince] => ACT
+    [billing_address_street] => Whiskey St
+    [creationTime] => 2017-05-05T08:08:38.817Z
+    [currency] => AUD
+    [customer_firstName] => f
+    [description] => Commweb Order
+    [device_browser] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36
+    [device_ipAddress] => 27.72.157.158
+    [id] => 38
+    [merchant] => TESTAMBBUICOM201
+    [result] => SUCCESS
+    [risk_response_gatewayCode] => ACCEPTED
+    [risk_response_review_decision] => NOT_REQUIRED
+    [risk_response_rule_data] => W
+    [risk_response_rule_name] => MERCHANT_AVS
+    [risk_response_rule_recommendation] => NO_ACTION
+    [risk_response_rule_type] => MERCHANT_RULE
+    [risk_response_rule] => Array
+        (
+            [10] => MSO_RULE
+            [1] => MERCHANT_RULE
+            [2] => MERCHANT_RULE
+            [3] => MERCHANT_RULE
+            [4] => MERCHANT_RULE
+            [5] => MERCHANT_RULE
+            [6] => MERCHANT_RULE
+            [7] => MSO_RULE
+            [8] => MSO_RULE
+            [9] => MSO_RULE
+        )
+
+    [sourceOfFunds_provided_card_brand] => MASTERCARD
+    [sourceOfFunds_provided_card_expiry_month] => 5
+    [sourceOfFunds_provided_card_expiry_year] => 17
+    [sourceOfFunds_provided_card_fundingMethod] => DEBIT
+    [sourceOfFunds_provided_card_issuer] => U.S. BANK NATIONAL ASSOCIATION, ND
+    [sourceOfFunds_provided_card_nameOnCard] => f
+    [sourceOfFunds_provided_card_number] => 511111xxxxxx1118
+    [sourceOfFunds_provided_card_scheme] => MASTERCARD
+    [sourceOfFunds_type] => CARD
+    [status] => CAPTURED
+    [totalAuthorizedAmount] => 10600.00
+    [totalCapturedAmount] => 10600.00
+    [totalRefundedAmount] => 0.00
+    [transaction_authorizationResponse_avsCode] => W
+    [transaction_authorizationResponse_cardSecurityCodeError] => M
+    [transaction_authorizationResponse_commercialCard] => 888
+    [transaction_authorizationResponse_commercialCardIndicator] => 3
+    [transaction_authorizationResponse_financialNetworkCode] => 777
+    [transaction_authorizationResponse_processingCode] => 003000
+    [transaction_authorizationResponse_responseCode] => 00
+    [transaction_authorizationResponse_stan] => 141532
+    [transaction_authorizationResponse_transactionIdentifier] => 123456789
+    [transaction_billing_address_city] => Sydney
+    [transaction_billing_address_country] => AUS
+    [transaction_billing_address_postcodeZip] => 4556
+    [transaction_billing_address_stateProvince] => ACT
+    [transaction_billing_address_street] => Whiskey St
+    [transaction_customer_firstName] => f
+    [transaction_device_browser] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36
+    [transaction_device_ipAddress] => 27.72.157.158
+    [transaction_gatewayEntryPoint] => CHECKOUT
+    [transaction_merchant] => TESTAMBBUICOM201
+    [transaction_order_amount] => 10600.00
+    [transaction_order_creationTime] => 2017-05-05T08:08:38.817Z
+    [transaction_order_currency] => AUD
+    [transaction_order_description] => Commweb Order
+    [transaction_order_id] => 38
+    [transaction_order_status] => CAPTURED
+    [transaction_order_totalAuthorizedAmount] => 10600.00
+    [transaction_order_totalCapturedAmount] => 10600.00
+    [transaction_order_totalRefundedAmount] => 0.00
+    [transaction_response_acquirerCode] => 00
+    [transaction_response_acquirerMessage] => Approved
+    [transaction_response_cardSecurityCode_acquirerCode] => M
+    [transaction_response_cardSecurityCode_gatewayCode] => MATCH
+    [transaction_response_cardholderVerification_avs_acquirerCode] => W
+    [transaction_response_cardholderVerification_avs_gatewayCode] => ZIP_MATCH
+    [transaction_response_gatewayCode] => APPROVED
+    [transaction_result] => SUCCESS
+    [transaction_risk_response_gatewayCode] => ACCEPTED
+    [transaction_risk_response_review_decision] => NOT_REQUIRED
+    [transaction_risk_response_rule_data] => W
+    [transaction_risk_response_rule_name] => MERCHANT_AVS
+    [transaction_risk_response_rule_recommendation] => NO_ACTION
+    [transaction_risk_response_rule_type] => MERCHANT_RULE
+    [transaction_risk_response_rule] => Array
+        (
+            [10] => MSO_RULE
+            [1] => MERCHANT_RULE
+            [2] => MERCHANT_RULE
+            [3] => MERCHANT_RULE
+            [4] => MERCHANT_RULE
+            [5] => MERCHANT_RULE
+            [6] => MERCHANT_RULE
+            [7] => MSO_RULE
+            [8] => MSO_RULE
+            [9] => MSO_RULE
+        )
+
+    [transaction_sourceOfFunds_provided_card_brand] => MASTERCARD
+    [transaction_sourceOfFunds_provided_card_expiry_month] => 5
+    [transaction_sourceOfFunds_provided_card_expiry_year] => 17
+    [transaction_sourceOfFunds_provided_card_fundingMethod] => DEBIT
+    [transaction_sourceOfFunds_provided_card_issuer] => U.S. BANK NATIONAL ASSOCIATION, ND
+    [transaction_sourceOfFunds_provided_card_nameOnCard] => f
+    [transaction_sourceOfFunds_provided_card_number] => 511111xxxxxx1118
+    [transaction_sourceOfFunds_provided_card_scheme] => MASTERCARD
+    [transaction_sourceOfFunds_type] => CARD
+    [transaction_timeOfRecord] => 2017-05-05T08:08:38.817Z
+    [transaction_transaction_acquirer_batch] => 20170505
+    [transaction_transaction_acquirer_date] => 0505
+    [transaction_transaction_acquirer_id] => CBA_S2I
+    [transaction_transaction_acquirer_merchantId] => 353109499161636
+    [transaction_transaction_acquirer_transactionId] => 123456789
+    [transaction_transaction_amount] => 10600.00
+    [transaction_transaction_authorizationCode] => 141532
+    [transaction_transaction_currency] => AUD
+    [transaction_transaction_frequency] => SINGLE
+    [transaction_transaction_id] => 1
+    [transaction_transaction_receipt] => 712508141532
+    [transaction_transaction_source] => INTERNET
+    [transaction_transaction_terminal] => CBAS2I01
+    [transaction_transaction_type] => PAYMENT
+    [transaction_version] => 36
+)
+\n2017-05-05 15:08:43
+ Response from Complete callback of commweb: 
+Array
+(
+    [amount] => 10600.00
+    [billing_address_city] => Sydney
+    [billing_address_country] => AUS
+    [billing_address_postcodeZip] => 4556
+    [billing_address_stateProvince] => ACT
+    [billing_address_street] => Whiskey St
+    [creationTime] => 2017-05-05T08:08:38.817Z
+    [currency] => AUD
+    [customer_firstName] => f
+    [description] => Commweb Order
+    [device_browser] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36
+    [device_ipAddress] => 27.72.157.158
+    [id] => 38
+    [merchant] => TESTAMBBUICOM201
+    [result] => SUCCESS
+    [risk_response_gatewayCode] => ACCEPTED
+    [risk_response_review_decision] => NOT_REQUIRED
+    [risk_response_rule_data] => W
+    [risk_response_rule_name] => MERCHANT_AVS
+    [risk_response_rule_recommendation] => NO_ACTION
+    [risk_response_rule_type] => MERCHANT_RULE
+    [risk_response_rule] => Array
+        (
+            [10] => MSO_RULE
+            [1] => MERCHANT_RULE
+            [2] => MERCHANT_RULE
+            [3] => MERCHANT_RULE
+            [4] => MERCHANT_RULE
+            [5] => MERCHANT_RULE
+            [6] => MERCHANT_RULE
+            [7] => MSO_RULE
+            [8] => MSO_RULE
+            [9] => MSO_RULE
+        )
+
+    [sourceOfFunds_provided_card_brand] => MASTERCARD
+    [sourceOfFunds_provided_card_expiry_month] => 5
+    [sourceOfFunds_provided_card_expiry_year] => 17
+    [sourceOfFunds_provided_card_fundingMethod] => DEBIT
+    [sourceOfFunds_provided_card_issuer] => U.S. BANK NATIONAL ASSOCIATION, ND
+    [sourceOfFunds_provided_card_nameOnCard] => f
+    [sourceOfFunds_provided_card_number] => 511111xxxxxx1118
+    [sourceOfFunds_provided_card_scheme] => MASTERCARD
+    [sourceOfFunds_type] => CARD
+    [status] => CAPTURED
+    [totalAuthorizedAmount] => 10600.00
+    [totalCapturedAmount] => 10600.00
+    [totalRefundedAmount] => 0.00
+    [transaction_authorizationResponse_avsCode] => W
+    [transaction_authorizationResponse_cardSecurityCodeError] => M
+    [transaction_authorizationResponse_commercialCard] => 888
+    [transaction_authorizationResponse_commercialCardIndicator] => 3
+    [transaction_authorizationResponse_financialNetworkCode] => 777
+    [transaction_authorizationResponse_processingCode] => 003000
+    [transaction_authorizationResponse_responseCode] => 00
+    [transaction_authorizationResponse_stan] => 141532
+    [transaction_authorizationResponse_transactionIdentifier] => 123456789
+    [transaction_billing_address_city] => Sydney
+    [transaction_billing_address_country] => AUS
+    [transaction_billing_address_postcodeZip] => 4556
+    [transaction_billing_address_stateProvince] => ACT
+    [transaction_billing_address_street] => Whiskey St
+    [transaction_customer_firstName] => f
+    [transaction_device_browser] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36
+    [transaction_device_ipAddress] => 27.72.157.158
+    [transaction_gatewayEntryPoint] => CHECKOUT
+    [transaction_merchant] => TESTAMBBUICOM201
+    [transaction_order_amount] => 10600.00
+    [transaction_order_creationTime] => 2017-05-05T08:08:38.817Z
+    [transaction_order_currency] => AUD
+    [transaction_order_description] => Commweb Order
+    [transaction_order_id] => 38
+    [transaction_order_status] => CAPTURED
+    [transaction_order_totalAuthorizedAmount] => 10600.00
+    [transaction_order_totalCapturedAmount] => 10600.00
+    [transaction_order_totalRefundedAmount] => 0.00
+    [transaction_response_acquirerCode] => 00
+    [transaction_response_acquirerMessage] => Approved
+    [transaction_response_cardSecurityCode_acquirerCode] => M
+    [transaction_response_cardSecurityCode_gatewayCode] => MATCH
+    [transaction_response_cardholderVerification_avs_acquirerCode] => W
+    [transaction_response_cardholderVerification_avs_gatewayCode] => ZIP_MATCH
+    [transaction_response_gatewayCode] => APPROVED
+    [transaction_result] => SUCCESS
+    [transaction_risk_response_gatewayCode] => ACCEPTED
+    [transaction_risk_response_review_decision] => NOT_REQUIRED
+    [transaction_risk_response_rule_data] => W
+    [transaction_risk_response_rule_name] => MERCHANT_AVS
+    [transaction_risk_response_rule_recommendation] => NO_ACTION
+    [transaction_risk_response_rule_type] => MERCHANT_RULE
+    [transaction_risk_response_rule] => Array
+        (
+            [10] => MSO_RULE
+            [1] => MERCHANT_RULE
+            [2] => MERCHANT_RULE
+            [3] => MERCHANT_RULE
+            [4] => MERCHANT_RULE
+            [5] => MERCHANT_RULE
+            [6] => MERCHANT_RULE
+            [7] => MSO_RULE
+            [8] => MSO_RULE
+            [9] => MSO_RULE
+        )
+
+    [transaction_sourceOfFunds_provided_card_brand] => MASTERCARD
+    [transaction_sourceOfFunds_provided_card_expiry_month] => 5
+    [transaction_sourceOfFunds_provided_card_expiry_year] => 17
+    [transaction_sourceOfFunds_provided_card_fundingMethod] => DEBIT
+    [transaction_sourceOfFunds_provided_card_issuer] => U.S. BANK NATIONAL ASSOCIATION, ND
+    [transaction_sourceOfFunds_provided_card_nameOnCard] => f
+    [transaction_sourceOfFunds_provided_card_number] => 511111xxxxxx1118
+    [transaction_sourceOfFunds_provided_card_scheme] => MASTERCARD
+    [transaction_sourceOfFunds_type] => CARD
+    [transaction_timeOfRecord] => 2017-05-05T08:08:38.817Z
+    [transaction_transaction_acquirer_batch] => 20170505
+    [transaction_transaction_acquirer_date] => 0505
+    [transaction_transaction_acquirer_id] => CBA_S2I
+    [transaction_transaction_acquirer_merchantId] => 353109499161636
+    [transaction_transaction_acquirer_transactionId] => 123456789
+    [transaction_transaction_amount] => 10600.00
+    [transaction_transaction_authorizationCode] => 141532
+    [transaction_transaction_currency] => AUD
+    [transaction_transaction_frequency] => SINGLE
+    [transaction_transaction_id] => 1
+    [transaction_transaction_receipt] => 712508141532
+    [transaction_transaction_source] => INTERNET
+    [transaction_transaction_terminal] => CBAS2I01
+    [transaction_transaction_type] => PAYMENT
+    [transaction_version] => 36
+)
+
+Checkout session request: Array
+(
+    [apiOperation] => CREATE_CHECKOUT_SESSION
+    [apiPassword] => fad718b6a0bd99aaed8d2a2c127fffd0
+    [apiUsername] => merchant.TESTAMBBUICOM201
+    [merchant] => TESTAMBBUICOM201
+    [order.id] => 38
+    [order.amount] => 10600
+    [order.currency] => AUD
+)
+2017-05-05 15:09:45\n Checkout session response: Array
+(
+    [merchant] => TESTAMBBUICOM201
+    [result] => SUCCESS
+    [session_id] => SESSION0002477447850K7157138N48
+    [session_updateStatus] => SUCCESS
+    [session_version] => 277e3fd801
+    [successIndicator] => 518f77884d144ba3
+)
+\nCheckout session request: Array
+(
+    [apiOperation] => CREATE_CHECKOUT_SESSION
+    [apiPassword] => fad718b6a0bd99aaed8d2a2c127fffd0
+    [apiUsername] => merchant.TESTAMBBUICOM201
+    [merchant] => TESTAMBBUICOM201
+    [order.id] => 39
+    [order.amount] => 10600
+    [order.currency] => AUD
+)
+2017-05-05 15:09:58\n Checkout session response: Array
+(
+    [merchant] => TESTAMBBUICOM201
+    [result] => SUCCESS
+    [session_id] => SESSION0002703752834E4772924H50
+    [session_updateStatus] => SUCCESS
+    [session_version] => f23e1d7801
+    [successIndicator] => cee363556562446b
+)
+\nCheckout session request: Array
+(
+    [apiOperation] => CREATE_CHECKOUT_SESSION
+    [apiPassword] => fad718b6a0bd99aaed8d2a2c127fffd0
+    [apiUsername] => merchant.TESTAMBBUICOM201
+    [merchant] => TESTAMBBUICOM201
+    [order.id] => 39
+    [order.amount] => 10600
+    [order.currency] => AUD
+)
+2017-05-05 15:10:17\n Checkout session response: Array
+(
+    [merchant] => TESTAMBBUICOM201
+    [result] => SUCCESS
+    [session_id] => SESSION0002010552649E2147110F03
+    [session_updateStatus] => SUCCESS
+    [session_version] => a53ffc5f01
+    [successIndicator] => 2a63089d48264ee7
+)
+\nCheckout session request: Array
+(
+    [apiOperation] => CREATE_CHECKOUT_SESSION
+    [apiPassword] => fad718b6a0bd99aaed8d2a2c127fffd0
+    [apiUsername] => merchant.TESTAMBBUICOM201
+    [merchant] => TESTAMBBUICOM201
+    [order.id] => 39
+    [order.amount] => 10600
+    [order.currency] => AUD
+)
+2017-05-05 15:10:36\n Checkout session response: Array
+(
+    [merchant] => TESTAMBBUICOM201
+    [result] => SUCCESS
+    [session_id] => SESSION0002205764855G1379887F13
+    [session_updateStatus] => SUCCESS
+    [session_version] => fed62dfc01
+    [successIndicator] => 3754dda81478420f
+)
+\n2017-05-05 15:10:38\n Order detail from commweb: Array
+(
+    [amount] => 10600.00
+    [billing_address_city] => Sydney
+    [billing_address_country] => AUS
+    [billing_address_postcodeZip] => 4556
+    [billing_address_stateProvince] => ACT
+    [billing_address_street] => Whiskey St
+    [creationTime] => 2017-05-05T08:10:35.475Z
+    [currency] => AUD
+    [customer_firstName] => f
+    [description] => Commweb Order
+    [device_browser] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36
+    [device_ipAddress] => 27.72.157.158
+    [id] => 39
+    [merchant] => TESTAMBBUICOM201
+    [result] => SUCCESS
+    [risk_response_gatewayCode] => ACCEPTED
+    [risk_response_review_decision] => NOT_REQUIRED
+    [risk_response_rule_data] => W
+    [risk_response_rule_name] => MERCHANT_AVS
+    [risk_response_rule_recommendation] => NO_ACTION
+    [risk_response_rule_type] => MERCHANT_RULE
+    [risk_response_rule] => Array
+        (
+            [10] => MSO_RULE
+            [1] => MERCHANT_RULE
+            [2] => MERCHANT_RULE
+            [3] => MERCHANT_RULE
+            [4] => MERCHANT_RULE
+            [5] => MERCHANT_RULE
+            [6] => MERCHANT_RULE
+            [7] => MSO_RULE
+            [8] => MSO_RULE
+            [9] => MSO_RULE
+        )
+
+    [sourceOfFunds_provided_card_brand] => MASTERCARD
+    [sourceOfFunds_provided_card_expiry_month] => 5
+    [sourceOfFunds_provided_card_expiry_year] => 17
+    [sourceOfFunds_provided_card_fundingMethod] => DEBIT
+    [sourceOfFunds_provided_card_issuer] => U.S. BANK NATIONAL ASSOCIATION, ND
+    [sourceOfFunds_provided_card_nameOnCard] => f
+    [sourceOfFunds_provided_card_number] => 511111xxxxxx1118
+    [sourceOfFunds_provided_card_scheme] => MASTERCARD
+    [sourceOfFunds_type] => CARD
+    [status] => CAPTURED
+    [totalAuthorizedAmount] => 10600.00
+    [totalCapturedAmount] => 10600.00
+    [totalRefundedAmount] => 0.00
+    [transaction_authorizationResponse_avsCode] => W
+    [transaction_authorizationResponse_cardSecurityCodeError] => M
+    [transaction_authorizationResponse_commercialCard] => 888
+    [transaction_authorizationResponse_commercialCardIndicator] => 3
+    [transaction_authorizationResponse_financialNetworkCode] => 777
+    [transaction_authorizationResponse_processingCode] => 003000
+    [transaction_authorizationResponse_responseCode] => 00
+    [transaction_authorizationResponse_stan] => 135113
+    [transaction_authorizationResponse_transactionIdentifier] => 123456789
+    [transaction_billing_address_city] => Sydney
+    [transaction_billing_address_country] => AUS
+    [transaction_billing_address_postcodeZip] => 4556
+    [transaction_billing_address_stateProvince] => ACT
+    [transaction_billing_address_street] => Whiskey St
+    [transaction_customer_firstName] => f
+    [transaction_device_browser] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36
+    [transaction_device_ipAddress] => 27.72.157.158
+    [transaction_gatewayEntryPoint] => CHECKOUT
+    [transaction_merchant] => TESTAMBBUICOM201
+    [transaction_order_amount] => 10600.00
+    [transaction_order_creationTime] => 2017-05-05T08:10:35.475Z
+    [transaction_order_currency] => AUD
+    [transaction_order_description] => Commweb Order
+    [transaction_order_id] => 39
+    [transaction_order_status] => CAPTURED
+    [transaction_order_totalAuthorizedAmount] => 10600.00
+    [transaction_order_totalCapturedAmount] => 10600.00
+    [transaction_order_totalRefundedAmount] => 0.00
+    [transaction_response_acquirerCode] => 00
+    [transaction_response_acquirerMessage] => Approved
+    [transaction_response_cardSecurityCode_acquirerCode] => M
+    [transaction_response_cardSecurityCode_gatewayCode] => MATCH
+    [transaction_response_cardholderVerification_avs_acquirerCode] => W
+    [transaction_response_cardholderVerification_avs_gatewayCode] => ZIP_MATCH
+    [transaction_response_gatewayCode] => APPROVED
+    [transaction_result] => SUCCESS
+    [transaction_risk_response_gatewayCode] => ACCEPTED
+    [transaction_risk_response_review_decision] => NOT_REQUIRED
+    [transaction_risk_response_rule_data] => W
+    [transaction_risk_response_rule_name] => MERCHANT_AVS
+    [transaction_risk_response_rule_recommendation] => NO_ACTION
+    [transaction_risk_response_rule_type] => MERCHANT_RULE
+    [transaction_risk_response_rule] => Array
+        (
+            [10] => MSO_RULE
+            [1] => MERCHANT_RULE
+            [2] => MERCHANT_RULE
+            [3] => MERCHANT_RULE
+            [4] => MERCHANT_RULE
+            [5] => MERCHANT_RULE
+            [6] => MERCHANT_RULE
+            [7] => MSO_RULE
+            [8] => MSO_RULE
+            [9] => MSO_RULE
+        )
+
+    [transaction_sourceOfFunds_provided_card_brand] => MASTERCARD
+    [transaction_sourceOfFunds_provided_card_expiry_month] => 5
+    [transaction_sourceOfFunds_provided_card_expiry_year] => 17
+    [transaction_sourceOfFunds_provided_card_fundingMethod] => DEBIT
+    [transaction_sourceOfFunds_provided_card_issuer] => U.S. BANK NATIONAL ASSOCIATION, ND
+    [transaction_sourceOfFunds_provided_card_nameOnCard] => f
+    [transaction_sourceOfFunds_provided_card_number] => 511111xxxxxx1118
+    [transaction_sourceOfFunds_provided_card_scheme] => MASTERCARD
+    [transaction_sourceOfFunds_type] => CARD
+    [transaction_timeOfRecord] => 2017-05-05T08:10:35.475Z
+    [transaction_transaction_acquirer_batch] => 20170505
+    [transaction_transaction_acquirer_date] => 0505
+    [transaction_transaction_acquirer_id] => CBA_S2I
+    [transaction_transaction_acquirer_merchantId] => 353109499161636
+    [transaction_transaction_acquirer_transactionId] => 123456789
+    [transaction_transaction_amount] => 10600.00
+    [transaction_transaction_authorizationCode] => 135113
+    [transaction_transaction_currency] => AUD
+    [transaction_transaction_frequency] => SINGLE
+    [transaction_transaction_id] => 1
+    [transaction_transaction_receipt] => 712508135113
+    [transaction_transaction_source] => INTERNET
+    [transaction_transaction_terminal] => CBAS2I01
+    [transaction_transaction_type] => PAYMENT
+    [transaction_version] => 36
+)
+\n2017-05-05 15:10:38
+ Response from Complete callback of commweb: 
+Array
+(
+    [amount] => 10600.00
+    [billing_address_city] => Sydney
+    [billing_address_country] => AUS
+    [billing_address_postcodeZip] => 4556
+    [billing_address_stateProvince] => ACT
+    [billing_address_street] => Whiskey St
+    [creationTime] => 2017-05-05T08:10:35.475Z
+    [currency] => AUD
+    [customer_firstName] => f
+    [description] => Commweb Order
+    [device_browser] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36
+    [device_ipAddress] => 27.72.157.158
+    [id] => 39
+    [merchant] => TESTAMBBUICOM201
+    [result] => SUCCESS
+    [risk_response_gatewayCode] => ACCEPTED
+    [risk_response_review_decision] => NOT_REQUIRED
+    [risk_response_rule_data] => W
+    [risk_response_rule_name] => MERCHANT_AVS
+    [risk_response_rule_recommendation] => NO_ACTION
+    [risk_response_rule_type] => MERCHANT_RULE
+    [risk_response_rule] => Array
+        (
+            [10] => MSO_RULE
+            [1] => MERCHANT_RULE
+            [2] => MERCHANT_RULE
+            [3] => MERCHANT_RULE
+            [4] => MERCHANT_RULE
+            [5] => MERCHANT_RULE
+            [6] => MERCHANT_RULE
+            [7] => MSO_RULE
+            [8] => MSO_RULE
+            [9] => MSO_RULE
+        )
+
+    [sourceOfFunds_provided_card_brand] => MASTERCARD
+    [sourceOfFunds_provided_card_expiry_month] => 5
+    [sourceOfFunds_provided_card_expiry_year] => 17
+    [sourceOfFunds_provided_card_fundingMethod] => DEBIT
+    [sourceOfFunds_provided_card_issuer] => U.S. BANK NATIONAL ASSOCIATION, ND
+    [sourceOfFunds_provided_card_nameOnCard] => f
+    [sourceOfFunds_provided_card_number] => 511111xxxxxx1118
+    [sourceOfFunds_provided_card_scheme] => MASTERCARD
+    [sourceOfFunds_type] => CARD
+    [status] => CAPTURED
+    [totalAuthorizedAmount] => 10600.00
+    [totalCapturedAmount] => 10600.00
+    [totalRefundedAmount] => 0.00
+    [transaction_authorizationResponse_avsCode] => W
+    [transaction_authorizationResponse_cardSecurityCodeError] => M
+    [transaction_authorizationResponse_commercialCard] => 888
+    [transaction_authorizationResponse_commercialCardIndicator] => 3
+    [transaction_authorizationResponse_financialNetworkCode] => 777
+    [transaction_authorizationResponse_processingCode] => 003000
+    [transaction_authorizationResponse_responseCode] => 00
+    [transaction_authorizationResponse_stan] => 135113
+    [transaction_authorizationResponse_transactionIdentifier] => 123456789
+    [transaction_billing_address_city] => Sydney
+    [transaction_billing_address_country] => AUS
+    [transaction_billing_address_postcodeZip] => 4556
+    [transaction_billing_address_stateProvince] => ACT
+    [transaction_billing_address_street] => Whiskey St
+    [transaction_customer_firstName] => f
+    [transaction_device_browser] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36
+    [transaction_device_ipAddress] => 27.72.157.158
+    [transaction_gatewayEntryPoint] => CHECKOUT
+    [transaction_merchant] => TESTAMBBUICOM201
+    [transaction_order_amount] => 10600.00
+    [transaction_order_creationTime] => 2017-05-05T08:10:35.475Z
+    [transaction_order_currency] => AUD
+    [transaction_order_description] => Commweb Order
+    [transaction_order_id] => 39
+    [transaction_order_status] => CAPTURED
+    [transaction_order_totalAuthorizedAmount] => 10600.00
+    [transaction_order_totalCapturedAmount] => 10600.00
+    [transaction_order_totalRefundedAmount] => 0.00
+    [transaction_response_acquirerCode] => 00
+    [transaction_response_acquirerMessage] => Approved
+    [transaction_response_cardSecurityCode_acquirerCode] => M
+    [transaction_response_cardSecurityCode_gatewayCode] => MATCH
+    [transaction_response_cardholderVerification_avs_acquirerCode] => W
+    [transaction_response_cardholderVerification_avs_gatewayCode] => ZIP_MATCH
+    [transaction_response_gatewayCode] => APPROVED
+    [transaction_result] => SUCCESS
+    [transaction_risk_response_gatewayCode] => ACCEPTED
+    [transaction_risk_response_review_decision] => NOT_REQUIRED
+    [transaction_risk_response_rule_data] => W
+    [transaction_risk_response_rule_name] => MERCHANT_AVS
+    [transaction_risk_response_rule_recommendation] => NO_ACTION
+    [transaction_risk_response_rule_type] => MERCHANT_RULE
+    [transaction_risk_response_rule] => Array
+        (
+            [10] => MSO_RULE
+            [1] => MERCHANT_RULE
+            [2] => MERCHANT_RULE
+            [3] => MERCHANT_RULE
+            [4] => MERCHANT_RULE
+            [5] => MERCHANT_RULE
+            [6] => MERCHANT_RULE
+            [7] => MSO_RULE
+            [8] => MSO_RULE
+            [9] => MSO_RULE
+        )
+
+    [transaction_sourceOfFunds_provided_card_brand] => MASTERCARD
+    [transaction_sourceOfFunds_provided_card_expiry_month] => 5
+    [transaction_sourceOfFunds_provided_card_expiry_year] => 17
+    [transaction_sourceOfFunds_provided_card_fundingMethod] => DEBIT
+    [transaction_sourceOfFunds_provided_card_issuer] => U.S. BANK NATIONAL ASSOCIATION, ND
+    [transaction_sourceOfFunds_provided_card_nameOnCard] => f
+    [transaction_sourceOfFunds_provided_card_number] => 511111xxxxxx1118
+    [transaction_sourceOfFunds_provided_card_scheme] => MASTERCARD
+    [transaction_sourceOfFunds_type] => CARD
+    [transaction_timeOfRecord] => 2017-05-05T08:10:35.475Z
+    [transaction_transaction_acquirer_batch] => 20170505
+    [transaction_transaction_acquirer_date] => 0505
+    [transaction_transaction_acquirer_id] => CBA_S2I
+    [transaction_transaction_acquirer_merchantId] => 353109499161636
+    [transaction_transaction_acquirer_transactionId] => 123456789
+    [transaction_transaction_amount] => 10600.00
+    [transaction_transaction_authorizationCode] => 135113
+    [transaction_transaction_currency] => AUD
+    [transaction_transaction_frequency] => SINGLE
+    [transaction_transaction_id] => 1
+    [transaction_transaction_receipt] => 712508135113
+    [transaction_transaction_source] => INTERNET
+    [transaction_transaction_terminal] => CBAS2I01
+    [transaction_transaction_type] => PAYMENT
+    [transaction_version] => 36
+)
+
+Checkout session request: Array
+(
+    [apiOperation] => CREATE_CHECKOUT_SESSION
+    [apiPassword] => fad718b6a0bd99aaed8d2a2c127fffd0
+    [apiUsername] => merchant.TESTAMBBUICOM201
+    [merchant] => TESTAMBBUICOM201
+    [order.id] => 40
+    [order.amount] => 20700
+    [order.currency] => AUD
+)
+2017-05-05 15:11:32\n Checkout session response: Array
+(
+    [merchant] => TESTAMBBUICOM201
+    [result] => SUCCESS
+    [session_id] => SESSION0002104704954G5490312F22
+    [session_updateStatus] => SUCCESS
+    [session_version] => 34f0259f01
+    [successIndicator] => d4291df379304cb8
+)
+\nCheckout session request: Array
+(
+    [apiOperation] => CREATE_CHECKOUT_SESSION
+    [apiPassword] => fad718b6a0bd99aaed8d2a2c127fffd0
+    [apiUsername] => merchant.TESTAMBBUICOM201
+    [merchant] => TESTAMBBUICOM201
+    [order.id] => 40
+    [order.amount] => 20700
+    [order.currency] => AUD
+)
+2017-05-05 15:11:46\n Checkout session response: Array
+(
+    [merchant] => TESTAMBBUICOM201
+    [result] => SUCCESS
+    [session_id] => SESSION0002592383327F8742927K62
+    [session_updateStatus] => SUCCESS
+    [session_version] => 6de83f1201
+    [successIndicator] => 3ff20c82d68548f4
+)
+\nCheckout session request: Array
+(
+    [apiOperation] => CREATE_CHECKOUT_SESSION
+    [apiPassword] => fad718b6a0bd99aaed8d2a2c127fffd0
+    [apiUsername] => merchant.TESTAMBBUICOM201
+    [merchant] => TESTAMBBUICOM201
+    [order.id] => 40
+    [order.amount] => 20700
+    [order.currency] => AUD
+)
+2017-05-05 15:12:04\n Checkout session response: Array
+(
+    [merchant] => TESTAMBBUICOM201
+    [result] => SUCCESS
+    [session_id] => SESSION0002295336969N3584553F07
+    [session_updateStatus] => SUCCESS
+    [session_version] => fdb99bb701
+    [successIndicator] => c3cff8748df34b79
+)
+\nCheckout session request: Array
+(
+    [apiOperation] => CREATE_CHECKOUT_SESSION
+    [apiPassword] => fad718b6a0bd99aaed8d2a2c127fffd0
+    [apiUsername] => merchant.TESTAMBBUICOM201
+    [merchant] => TESTAMBBUICOM201
+    [order.id] => 40
+    [order.amount] => 20700
+    [order.currency] => AUD
+)
+2017-05-05 15:12:28\n Checkout session response: Array
+(
+    [merchant] => TESTAMBBUICOM201
+    [result] => SUCCESS
+    [session_id] => SESSION0002473740886G3660656N08
+    [session_updateStatus] => SUCCESS
+    [session_version] => 9129546601
+    [successIndicator] => d5553ec1be5b47c5
+)
+\nCheckout session request: Array
+(
+    [apiOperation] => CREATE_CHECKOUT_SESSION
+    [apiPassword] => fad718b6a0bd99aaed8d2a2c127fffd0
+    [apiUsername] => merchant.TESTAMBBUICOM201
+    [merchant] => TESTAMBBUICOM201
+    [order.id] => 41
+    [order.amount] => 20700
+    [order.currency] => AUD
+)
+2017-05-05 15:12:41\n Checkout session response: Array
+(
+    [merchant] => TESTAMBBUICOM201
+    [result] => SUCCESS
+    [session_id] => SESSION0002328349796G0505816K12
+    [session_updateStatus] => SUCCESS
+    [session_version] => 906f5ae201
+    [successIndicator] => cb3e70d77af54c33
+)
+\nCheckout session request: Array
+(
+    [apiOperation] => CREATE_CHECKOUT_SESSION
+    [apiPassword] => fad718b6a0bd99aaed8d2a2c127fffd0
+    [apiUsername] => merchant.TESTAMBBUICOM201
+    [merchant] => TESTAMBBUICOM201
+    [order.id] => 41
+    [order.amount] => 20700
+    [order.currency] => AUD
+)
+2017-05-05 15:13:08\n Checkout session response: Array
+(
+    [merchant] => TESTAMBBUICOM201
+    [result] => SUCCESS
+    [session_id] => SESSION0002261568282M5807828K15
+    [session_updateStatus] => SUCCESS
+    [session_version] => d9109d4301
+    [successIndicator] => 7726b029c7924174
+)
+\n2017-05-05 15:13:09\n Order detail from commweb: Array
+(
+    [amount] => 20700.00
+    [billing_address_city] => Sydney
+    [billing_address_country] => AUS
+    [billing_address_postcodeZip] => 4556
+    [billing_address_stateProvince] => ACT
+    [billing_address_street] => Whiskey St
+    [creationTime] => 2017-05-05T08:13:06.874Z
+    [currency] => AUD
+    [customer_firstName] => v
+    [description] => Commweb Order
+    [device_browser] => Mozilla/5.0 (Windows NT 10.0; WOW64; rv:49.0) Gecko/20100101 Firefox/49.0
+    [device_ipAddress] => 27.72.157.158
+    [id] => 41
+    [merchant] => TESTAMBBUICOM201
+    [result] => SUCCESS
+    [risk_response_gatewayCode] => ACCEPTED
+    [risk_response_review_decision] => NOT_REQUIRED
+    [risk_response_rule_data] => W
+    [risk_response_rule_name] => MERCHANT_AVS
+    [risk_response_rule_recommendation] => NO_ACTION
+    [risk_response_rule_type] => MERCHANT_RULE
+    [risk_response_rule] => Array
+        (
+            [10] => MSO_RULE
+            [1] => MERCHANT_RULE
+            [2] => MERCHANT_RULE
+            [3] => MERCHANT_RULE
+            [4] => MERCHANT_RULE
+            [5] => MERCHANT_RULE
+            [6] => MERCHANT_RULE
+            [7] => MSO_RULE
+            [8] => MSO_RULE
+            [9] => MSO_RULE
+        )
+
+    [sourceOfFunds_provided_card_brand] => MASTERCARD
+    [sourceOfFunds_provided_card_expiry_month] => 5
+    [sourceOfFunds_provided_card_expiry_year] => 17
+    [sourceOfFunds_provided_card_fundingMethod] => DEBIT
+    [sourceOfFunds_provided_card_issuer] => U.S. BANK NATIONAL ASSOCIATION, ND
+    [sourceOfFunds_provided_card_nameOnCard] => v
+    [sourceOfFunds_provided_card_number] => 511111xxxxxx1118
+    [sourceOfFunds_provided_card_scheme] => MASTERCARD
+    [sourceOfFunds_type] => CARD
+    [status] => CAPTURED
+    [totalAuthorizedAmount] => 20700.00
+    [totalCapturedAmount] => 20700.00
+    [totalRefundedAmount] => 0.00
+    [transaction_authorizationResponse_avsCode] => W
+    [transaction_authorizationResponse_cardSecurityCodeError] => M
+    [transaction_authorizationResponse_commercialCard] => 888
+    [transaction_authorizationResponse_commercialCardIndicator] => 3
+    [transaction_authorizationResponse_financialNetworkCode] => 777
+    [transaction_authorizationResponse_processingCode] => 003000
+    [transaction_authorizationResponse_responseCode] => 00
+    [transaction_authorizationResponse_stan] => 139373
+    [transaction_authorizationResponse_transactionIdentifier] => 123456789
+    [transaction_billing_address_city] => Sydney
+    [transaction_billing_address_country] => AUS
+    [transaction_billing_address_postcodeZip] => 4556
+    [transaction_billing_address_stateProvince] => ACT
+    [transaction_billing_address_street] => Whiskey St
+    [transaction_customer_firstName] => v
+    [transaction_device_browser] => Mozilla/5.0 (Windows NT 10.0; WOW64; rv:49.0) Gecko/20100101 Firefox/49.0
+    [transaction_device_ipAddress] => 27.72.157.158
+    [transaction_gatewayEntryPoint] => CHECKOUT
+    [transaction_merchant] => TESTAMBBUICOM201
+    [transaction_order_amount] => 20700.00
+    [transaction_order_creationTime] => 2017-05-05T08:13:06.874Z
+    [transaction_order_currency] => AUD
+    [transaction_order_description] => Commweb Order
+    [transaction_order_id] => 41
+    [transaction_order_status] => CAPTURED
+    [transaction_order_totalAuthorizedAmount] => 20700.00
+    [transaction_order_totalCapturedAmount] => 20700.00
+    [transaction_order_totalRefundedAmount] => 0.00
+    [transaction_response_acquirerCode] => 00
+    [transaction_response_acquirerMessage] => Approved
+    [transaction_response_cardSecurityCode_acquirerCode] => M
+    [transaction_response_cardSecurityCode_gatewayCode] => MATCH
+    [transaction_response_cardholderVerification_avs_acquirerCode] => W
+    [transaction_response_cardholderVerification_avs_gatewayCode] => ZIP_MATCH
+    [transaction_response_gatewayCode] => APPROVED
+    [transaction_result] => SUCCESS
+    [transaction_risk_response_gatewayCode] => ACCEPTED
+    [transaction_risk_response_review_decision] => NOT_REQUIRED
+    [transaction_risk_response_rule_data] => W
+    [transaction_risk_response_rule_name] => MERCHANT_AVS
+    [transaction_risk_response_rule_recommendation] => NO_ACTION
+    [transaction_risk_response_rule_type] => MERCHANT_RULE
+    [transaction_risk_response_rule] => Array
+        (
+            [10] => MSO_RULE
+            [1] => MERCHANT_RULE
+            [2] => MERCHANT_RULE
+            [3] => MERCHANT_RULE
+            [4] => MERCHANT_RULE
+            [5] => MERCHANT_RULE
+            [6] => MERCHANT_RULE
+            [7] => MSO_RULE
+            [8] => MSO_RULE
+            [9] => MSO_RULE
+        )
+
+    [transaction_sourceOfFunds_provided_card_brand] => MASTERCARD
+    [transaction_sourceOfFunds_provided_card_expiry_month] => 5
+    [transaction_sourceOfFunds_provided_card_expiry_year] => 17
+    [transaction_sourceOfFunds_provided_card_fundingMethod] => DEBIT
+    [transaction_sourceOfFunds_provided_card_issuer] => U.S. BANK NATIONAL ASSOCIATION, ND
+    [transaction_sourceOfFunds_provided_card_nameOnCard] => v
+    [transaction_sourceOfFunds_provided_card_number] => 511111xxxxxx1118
+    [transaction_sourceOfFunds_provided_card_scheme] => MASTERCARD
+    [transaction_sourceOfFunds_type] => CARD
+    [transaction_timeOfRecord] => 2017-05-05T08:13:06.874Z
+    [transaction_transaction_acquirer_batch] => 20170505
+    [transaction_transaction_acquirer_date] => 0505
+    [transaction_transaction_acquirer_id] => CBA_S2I
+    [transaction_transaction_acquirer_merchantId] => 353109499161636
+    [transaction_transaction_acquirer_transactionId] => 123456789
+    [transaction_transaction_amount] => 20700.00
+    [transaction_transaction_authorizationCode] => 139373
+    [transaction_transaction_currency] => AUD
+    [transaction_transaction_frequency] => SINGLE
+    [transaction_transaction_id] => 1
+    [transaction_transaction_receipt] => 712508139373
+    [transaction_transaction_source] => INTERNET
+    [transaction_transaction_terminal] => CBAS2I01
+    [transaction_transaction_type] => PAYMENT
+    [transaction_version] => 36
+)
+\n2017-05-05 15:13:09
+ Response from Complete callback of commweb: 
+Array
+(
+    [amount] => 20700.00
+    [billing_address_city] => Sydney
+    [billing_address_country] => AUS
+    [billing_address_postcodeZip] => 4556
+    [billing_address_stateProvince] => ACT
+    [billing_address_street] => Whiskey St
+    [creationTime] => 2017-05-05T08:13:06.874Z
+    [currency] => AUD
+    [customer_firstName] => v
+    [description] => Commweb Order
+    [device_browser] => Mozilla/5.0 (Windows NT 10.0; WOW64; rv:49.0) Gecko/20100101 Firefox/49.0
+    [device_ipAddress] => 27.72.157.158
+    [id] => 41
+    [merchant] => TESTAMBBUICOM201
+    [result] => SUCCESS
+    [risk_response_gatewayCode] => ACCEPTED
+    [risk_response_review_decision] => NOT_REQUIRED
+    [risk_response_rule_data] => W
+    [risk_response_rule_name] => MERCHANT_AVS
+    [risk_response_rule_recommendation] => NO_ACTION
+    [risk_response_rule_type] => MERCHANT_RULE
+    [risk_response_rule] => Array
+        (
+            [10] => MSO_RULE
+            [1] => MERCHANT_RULE
+            [2] => MERCHANT_RULE
+            [3] => MERCHANT_RULE
+            [4] => MERCHANT_RULE
+            [5] => MERCHANT_RULE
+            [6] => MERCHANT_RULE
+            [7] => MSO_RULE
+            [8] => MSO_RULE
+            [9] => MSO_RULE
+        )
+
+    [sourceOfFunds_provided_card_brand] => MASTERCARD
+    [sourceOfFunds_provided_card_expiry_month] => 5
+    [sourceOfFunds_provided_card_expiry_year] => 17
+    [sourceOfFunds_provided_card_fundingMethod] => DEBIT
+    [sourceOfFunds_provided_card_issuer] => U.S. BANK NATIONAL ASSOCIATION, ND
+    [sourceOfFunds_provided_card_nameOnCard] => v
+    [sourceOfFunds_provided_card_number] => 511111xxxxxx1118
+    [sourceOfFunds_provided_card_scheme] => MASTERCARD
+    [sourceOfFunds_type] => CARD
+    [status] => CAPTURED
+    [totalAuthorizedAmount] => 20700.00
+    [totalCapturedAmount] => 20700.00
+    [totalRefundedAmount] => 0.00
+    [transaction_authorizationResponse_avsCode] => W
+    [transaction_authorizationResponse_cardSecurityCodeError] => M
+    [transaction_authorizationResponse_commercialCard] => 888
+    [transaction_authorizationResponse_commercialCardIndicator] => 3
+    [transaction_authorizationResponse_financialNetworkCode] => 777
+    [transaction_authorizationResponse_processingCode] => 003000
+    [transaction_authorizationResponse_responseCode] => 00
+    [transaction_authorizationResponse_stan] => 139373
+    [transaction_authorizationResponse_transactionIdentifier] => 123456789
+    [transaction_billing_address_city] => Sydney
+    [transaction_billing_address_country] => AUS
+    [transaction_billing_address_postcodeZip] => 4556
+    [transaction_billing_address_stateProvince] => ACT
+    [transaction_billing_address_street] => Whiskey St
+    [transaction_customer_firstName] => v
+    [transaction_device_browser] => Mozilla/5.0 (Windows NT 10.0; WOW64; rv:49.0) Gecko/20100101 Firefox/49.0
+    [transaction_device_ipAddress] => 27.72.157.158
+    [transaction_gatewayEntryPoint] => CHECKOUT
+    [transaction_merchant] => TESTAMBBUICOM201
+    [transaction_order_amount] => 20700.00
+    [transaction_order_creationTime] => 2017-05-05T08:13:06.874Z
+    [transaction_order_currency] => AUD
+    [transaction_order_description] => Commweb Order
+    [transaction_order_id] => 41
+    [transaction_order_status] => CAPTURED
+    [transaction_order_totalAuthorizedAmount] => 20700.00
+    [transaction_order_totalCapturedAmount] => 20700.00
+    [transaction_order_totalRefundedAmount] => 0.00
+    [transaction_response_acquirerCode] => 00
+    [transaction_response_acquirerMessage] => Approved
+    [transaction_response_cardSecurityCode_acquirerCode] => M
+    [transaction_response_cardSecurityCode_gatewayCode] => MATCH
+    [transaction_response_cardholderVerification_avs_acquirerCode] => W
+    [transaction_response_cardholderVerification_avs_gatewayCode] => ZIP_MATCH
+    [transaction_response_gatewayCode] => APPROVED
+    [transaction_result] => SUCCESS
+    [transaction_risk_response_gatewayCode] => ACCEPTED
+    [transaction_risk_response_review_decision] => NOT_REQUIRED
+    [transaction_risk_response_rule_data] => W
+    [transaction_risk_response_rule_name] => MERCHANT_AVS
+    [transaction_risk_response_rule_recommendation] => NO_ACTION
+    [transaction_risk_response_rule_type] => MERCHANT_RULE
+    [transaction_risk_response_rule] => Array
+        (
+            [10] => MSO_RULE
+            [1] => MERCHANT_RULE
+            [2] => MERCHANT_RULE
+            [3] => MERCHANT_RULE
+            [4] => MERCHANT_RULE
+            [5] => MERCHANT_RULE
+            [6] => MERCHANT_RULE
+            [7] => MSO_RULE
+            [8] => MSO_RULE
+            [9] => MSO_RULE
+        )
+
+    [transaction_sourceOfFunds_provided_card_brand] => MASTERCARD
+    [transaction_sourceOfFunds_provided_card_expiry_month] => 5
+    [transaction_sourceOfFunds_provided_card_expiry_year] => 17
+    [transaction_sourceOfFunds_provided_card_fundingMethod] => DEBIT
+    [transaction_sourceOfFunds_provided_card_issuer] => U.S. BANK NATIONAL ASSOCIATION, ND
+    [transaction_sourceOfFunds_provided_card_nameOnCard] => v
+    [transaction_sourceOfFunds_provided_card_number] => 511111xxxxxx1118
+    [transaction_sourceOfFunds_provided_card_scheme] => MASTERCARD
+    [transaction_sourceOfFunds_type] => CARD
+    [transaction_timeOfRecord] => 2017-05-05T08:13:06.874Z
+    [transaction_transaction_acquirer_batch] => 20170505
+    [transaction_transaction_acquirer_date] => 0505
+    [transaction_transaction_acquirer_id] => CBA_S2I
+    [transaction_transaction_acquirer_merchantId] => 353109499161636
+    [transaction_transaction_acquirer_transactionId] => 123456789
+    [transaction_transaction_amount] => 20700.00
+    [transaction_transaction_authorizationCode] => 139373
+    [transaction_transaction_currency] => AUD
+    [transaction_transaction_frequency] => SINGLE
+    [transaction_transaction_id] => 1
+    [transaction_transaction_receipt] => 712508139373
+    [transaction_transaction_source] => INTERNET
+    [transaction_transaction_terminal] => CBAS2I01
+    [transaction_transaction_type] => PAYMENT
+    [transaction_version] => 36
+)
+
+Checkout session request: Array
+(
+    [apiOperation] => CREATE_CHECKOUT_SESSION
+    [apiPassword] => fad718b6a0bd99aaed8d2a2c127fffd0
+    [apiUsername] => merchant.TESTAMBBUICOM201
+    [merchant] => TESTAMBBUICOM201
+    [order.id] => 42
+    [order.amount] => 10600
+    [order.currency] => AUD
+)
+2017-05-05 15:14:04\n Checkout session response: Array
+(
+    [merchant] => TESTAMBBUICOM201
+    [result] => SUCCESS
+    [session_id] => SESSION0002846199060G2047446F36
+    [session_updateStatus] => SUCCESS
+    [session_version] => 3d56713301
+    [successIndicator] => b9aedc1d130c4d2a
+)
+\nCheckout session request: Array
+(
+    [apiOperation] => CREATE_CHECKOUT_SESSION
+    [apiPassword] => fad718b6a0bd99aaed8d2a2c127fffd0
+    [apiUsername] => merchant.TESTAMBBUICOM201
+    [merchant] => TESTAMBBUICOM201
+    [order.id] => 42
+    [order.amount] => 10600
+    [order.currency] => AUD
+)
+2017-05-05 15:14:19\n Checkout session response: Array
+(
+    [merchant] => TESTAMBBUICOM201
+    [result] => SUCCESS
+    [session_id] => SESSION0002204352755H5794303N08
+    [session_updateStatus] => SUCCESS
+    [session_version] => bf00200001
+    [successIndicator] => edddb52dd0e24217
+)
+\n2017-05-05 15:14:20\n Order detail from commweb: Array
+(
+    [amount] => 10600.00
+    [billing_address_city] => Sydney
+    [billing_address_country] => AUS
+    [billing_address_postcodeZip] => 4556
+    [billing_address_stateProvince] => ACT
+    [billing_address_street] => Whiskey St
+    [creationTime] => 2017-05-05T08:14:18.216Z
+    [currency] => AUD
+    [customer_firstName] => 5111111111111118
+    [description] => Commweb Order
+    [device_browser] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36
+    [device_ipAddress] => 27.72.157.158
+    [id] => 42
+    [merchant] => TESTAMBBUICOM201
+    [result] => SUCCESS
+    [risk_response_gatewayCode] => ACCEPTED
+    [risk_response_review_decision] => NOT_REQUIRED
+    [risk_response_rule_data] => W
+    [risk_response_rule_name] => MERCHANT_AVS
+    [risk_response_rule_recommendation] => NO_ACTION
+    [risk_response_rule_type] => MERCHANT_RULE
+    [risk_response_rule] => Array
+        (
+            [10] => MSO_RULE
+            [1] => MERCHANT_RULE
+            [2] => MERCHANT_RULE
+            [3] => MERCHANT_RULE
+            [4] => MERCHANT_RULE
+            [5] => MERCHANT_RULE
+            [6] => MERCHANT_RULE
+            [7] => MSO_RULE
+            [8] => MSO_RULE
+            [9] => MSO_RULE
+        )
+
+    [sourceOfFunds_provided_card_brand] => MASTERCARD
+    [sourceOfFunds_provided_card_expiry_month] => 5
+    [sourceOfFunds_provided_card_expiry_year] => 17
+    [sourceOfFunds_provided_card_fundingMethod] => DEBIT
+    [sourceOfFunds_provided_card_issuer] => U.S. BANK NATIONAL ASSOCIATION, ND
+    [sourceOfFunds_provided_card_nameOnCard] => 5111111111111118
+    [sourceOfFunds_provided_card_number] => 511111xxxxxx1118
+    [sourceOfFunds_provided_card_scheme] => MASTERCARD
+    [sourceOfFunds_type] => CARD
+    [status] => CAPTURED
+    [totalAuthorizedAmount] => 10600.00
+    [totalCapturedAmount] => 10600.00
+    [totalRefundedAmount] => 0.00
+    [transaction_authorizationResponse_avsCode] => W
+    [transaction_authorizationResponse_cardSecurityCodeError] => M
+    [transaction_authorizationResponse_commercialCard] => 888
+    [transaction_authorizationResponse_commercialCardIndicator] => 3
+    [transaction_authorizationResponse_financialNetworkCode] => 777
+    [transaction_authorizationResponse_processingCode] => 003000
+    [transaction_authorizationResponse_responseCode] => 00
+    [transaction_authorizationResponse_stan] => 140453
+    [transaction_authorizationResponse_transactionIdentifier] => 123456789
+    [transaction_billing_address_city] => Sydney
+    [transaction_billing_address_country] => AUS
+    [transaction_billing_address_postcodeZip] => 4556
+    [transaction_billing_address_stateProvince] => ACT
+    [transaction_billing_address_street] => Whiskey St
+    [transaction_customer_firstName] => 5111111111111118
+    [transaction_device_browser] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36
+    [transaction_device_ipAddress] => 27.72.157.158
+    [transaction_gatewayEntryPoint] => CHECKOUT
+    [transaction_merchant] => TESTAMBBUICOM201
+    [transaction_order_amount] => 10600.00
+    [transaction_order_creationTime] => 2017-05-05T08:14:18.216Z
+    [transaction_order_currency] => AUD
+    [transaction_order_description] => Commweb Order
+    [transaction_order_id] => 42
+    [transaction_order_status] => CAPTURED
+    [transaction_order_totalAuthorizedAmount] => 10600.00
+    [transaction_order_totalCapturedAmount] => 10600.00
+    [transaction_order_totalRefundedAmount] => 0.00
+    [transaction_response_acquirerCode] => 00
+    [transaction_response_acquirerMessage] => Approved
+    [transaction_response_cardSecurityCode_acquirerCode] => M
+    [transaction_response_cardSecurityCode_gatewayCode] => MATCH
+    [transaction_response_cardholderVerification_avs_acquirerCode] => W
+    [transaction_response_cardholderVerification_avs_gatewayCode] => ZIP_MATCH
+    [transaction_response_gatewayCode] => APPROVED
+    [transaction_result] => SUCCESS
+    [transaction_risk_response_gatewayCode] => ACCEPTED
+    [transaction_risk_response_review_decision] => NOT_REQUIRED
+    [transaction_risk_response_rule_data] => W
+    [transaction_risk_response_rule_name] => MERCHANT_AVS
+    [transaction_risk_response_rule_recommendation] => NO_ACTION
+    [transaction_risk_response_rule_type] => MERCHANT_RULE
+    [transaction_risk_response_rule] => Array
+        (
+            [10] => MSO_RULE
+            [1] => MERCHANT_RULE
+            [2] => MERCHANT_RULE
+            [3] => MERCHANT_RULE
+            [4] => MERCHANT_RULE
+            [5] => MERCHANT_RULE
+            [6] => MERCHANT_RULE
+            [7] => MSO_RULE
+            [8] => MSO_RULE
+            [9] => MSO_RULE
+        )
+
+    [transaction_sourceOfFunds_provided_card_brand] => MASTERCARD
+    [transaction_sourceOfFunds_provided_card_expiry_month] => 5
+    [transaction_sourceOfFunds_provided_card_expiry_year] => 17
+    [transaction_sourceOfFunds_provided_card_fundingMethod] => DEBIT
+    [transaction_sourceOfFunds_provided_card_issuer] => U.S. BANK NATIONAL ASSOCIATION, ND
+    [transaction_sourceOfFunds_provided_card_nameOnCard] => 5111111111111118
+    [transaction_sourceOfFunds_provided_card_number] => 511111xxxxxx1118
+    [transaction_sourceOfFunds_provided_card_scheme] => MASTERCARD
+    [transaction_sourceOfFunds_type] => CARD
+    [transaction_timeOfRecord] => 2017-05-05T08:14:18.216Z
+    [transaction_transaction_acquirer_batch] => 20170505
+    [transaction_transaction_acquirer_date] => 0505
+    [transaction_transaction_acquirer_id] => CBA_S2I
+    [transaction_transaction_acquirer_merchantId] => 353109499161636
+    [transaction_transaction_acquirer_transactionId] => 123456789
+    [transaction_transaction_amount] => 10600.00
+    [transaction_transaction_authorizationCode] => 140453
+    [transaction_transaction_currency] => AUD
+    [transaction_transaction_frequency] => SINGLE
+    [transaction_transaction_id] => 1
+    [transaction_transaction_receipt] => 712508140453
+    [transaction_transaction_source] => INTERNET
+    [transaction_transaction_terminal] => CBAS2I01
+    [transaction_transaction_type] => PAYMENT
+    [transaction_version] => 36
+)
+\n2017-05-05 15:14:20
+ Response from Complete callback of commweb: 
+Array
+(
+    [amount] => 10600.00
+    [billing_address_city] => Sydney
+    [billing_address_country] => AUS
+    [billing_address_postcodeZip] => 4556
+    [billing_address_stateProvince] => ACT
+    [billing_address_street] => Whiskey St
+    [creationTime] => 2017-05-05T08:14:18.216Z
+    [currency] => AUD
+    [customer_firstName] => 5111111111111118
+    [description] => Commweb Order
+    [device_browser] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36
+    [device_ipAddress] => 27.72.157.158
+    [id] => 42
+    [merchant] => TESTAMBBUICOM201
+    [result] => SUCCESS
+    [risk_response_gatewayCode] => ACCEPTED
+    [risk_response_review_decision] => NOT_REQUIRED
+    [risk_response_rule_data] => W
+    [risk_response_rule_name] => MERCHANT_AVS
+    [risk_response_rule_recommendation] => NO_ACTION
+    [risk_response_rule_type] => MERCHANT_RULE
+    [risk_response_rule] => Array
+        (
+            [10] => MSO_RULE
+            [1] => MERCHANT_RULE
+            [2] => MERCHANT_RULE
+            [3] => MERCHANT_RULE
+            [4] => MERCHANT_RULE
+            [5] => MERCHANT_RULE
+            [6] => MERCHANT_RULE
+            [7] => MSO_RULE
+            [8] => MSO_RULE
+            [9] => MSO_RULE
+        )
+
+    [sourceOfFunds_provided_card_brand] => MASTERCARD
+    [sourceOfFunds_provided_card_expiry_month] => 5
+    [sourceOfFunds_provided_card_expiry_year] => 17
+    [sourceOfFunds_provided_card_fundingMethod] => DEBIT
+    [sourceOfFunds_provided_card_issuer] => U.S. BANK NATIONAL ASSOCIATION, ND
+    [sourceOfFunds_provided_card_nameOnCard] => 5111111111111118
+    [sourceOfFunds_provided_card_number] => 511111xxxxxx1118
+    [sourceOfFunds_provided_card_scheme] => MASTERCARD
+    [sourceOfFunds_type] => CARD
+    [status] => CAPTURED
+    [totalAuthorizedAmount] => 10600.00
+    [totalCapturedAmount] => 10600.00
+    [totalRefundedAmount] => 0.00
+    [transaction_authorizationResponse_avsCode] => W
+    [transaction_authorizationResponse_cardSecurityCodeError] => M
+    [transaction_authorizationResponse_commercialCard] => 888
+    [transaction_authorizationResponse_commercialCardIndicator] => 3
+    [transaction_authorizationResponse_financialNetworkCode] => 777
+    [transaction_authorizationResponse_processingCode] => 003000
+    [transaction_authorizationResponse_responseCode] => 00
+    [transaction_authorizationResponse_stan] => 140453
+    [transaction_authorizationResponse_transactionIdentifier] => 123456789
+    [transaction_billing_address_city] => Sydney
+    [transaction_billing_address_country] => AUS
+    [transaction_billing_address_postcodeZip] => 4556
+    [transaction_billing_address_stateProvince] => ACT
+    [transaction_billing_address_street] => Whiskey St
+    [transaction_customer_firstName] => 5111111111111118
+    [transaction_device_browser] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36
+    [transaction_device_ipAddress] => 27.72.157.158
+    [transaction_gatewayEntryPoint] => CHECKOUT
+    [transaction_merchant] => TESTAMBBUICOM201
+    [transaction_order_amount] => 10600.00
+    [transaction_order_creationTime] => 2017-05-05T08:14:18.216Z
+    [transaction_order_currency] => AUD
+    [transaction_order_description] => Commweb Order
+    [transaction_order_id] => 42
+    [transaction_order_status] => CAPTURED
+    [transaction_order_totalAuthorizedAmount] => 10600.00
+    [transaction_order_totalCapturedAmount] => 10600.00
+    [transaction_order_totalRefundedAmount] => 0.00
+    [transaction_response_acquirerCode] => 00
+    [transaction_response_acquirerMessage] => Approved
+    [transaction_response_cardSecurityCode_acquirerCode] => M
+    [transaction_response_cardSecurityCode_gatewayCode] => MATCH
+    [transaction_response_cardholderVerification_avs_acquirerCode] => W
+    [transaction_response_cardholderVerification_avs_gatewayCode] => ZIP_MATCH
+    [transaction_response_gatewayCode] => APPROVED
+    [transaction_result] => SUCCESS
+    [transaction_risk_response_gatewayCode] => ACCEPTED
+    [transaction_risk_response_review_decision] => NOT_REQUIRED
+    [transaction_risk_response_rule_data] => W
+    [transaction_risk_response_rule_name] => MERCHANT_AVS
+    [transaction_risk_response_rule_recommendation] => NO_ACTION
+    [transaction_risk_response_rule_type] => MERCHANT_RULE
+    [transaction_risk_response_rule] => Array
+        (
+            [10] => MSO_RULE
+            [1] => MERCHANT_RULE
+            [2] => MERCHANT_RULE
+            [3] => MERCHANT_RULE
+            [4] => MERCHANT_RULE
+            [5] => MERCHANT_RULE
+            [6] => MERCHANT_RULE
+            [7] => MSO_RULE
+            [8] => MSO_RULE
+            [9] => MSO_RULE
+        )
+
+    [transaction_sourceOfFunds_provided_card_brand] => MASTERCARD
+    [transaction_sourceOfFunds_provided_card_expiry_month] => 5
+    [transaction_sourceOfFunds_provided_card_expiry_year] => 17
+    [transaction_sourceOfFunds_provided_card_fundingMethod] => DEBIT
+    [transaction_sourceOfFunds_provided_card_issuer] => U.S. BANK NATIONAL ASSOCIATION, ND
+    [transaction_sourceOfFunds_provided_card_nameOnCard] => 5111111111111118
+    [transaction_sourceOfFunds_provided_card_number] => 511111xxxxxx1118
+    [transaction_sourceOfFunds_provided_card_scheme] => MASTERCARD
+    [transaction_sourceOfFunds_type] => CARD
+    [transaction_timeOfRecord] => 2017-05-05T08:14:18.216Z
+    [transaction_transaction_acquirer_batch] => 20170505
+    [transaction_transaction_acquirer_date] => 0505
+    [transaction_transaction_acquirer_id] => CBA_S2I
+    [transaction_transaction_acquirer_merchantId] => 353109499161636
+    [transaction_transaction_acquirer_transactionId] => 123456789
+    [transaction_transaction_amount] => 10600.00
+    [transaction_transaction_authorizationCode] => 140453
+    [transaction_transaction_currency] => AUD
+    [transaction_transaction_frequency] => SINGLE
+    [transaction_transaction_id] => 1
+    [transaction_transaction_receipt] => 712508140453
+    [transaction_transaction_source] => INTERNET
+    [transaction_transaction_terminal] => CBAS2I01
+    [transaction_transaction_type] => PAYMENT
+    [transaction_version] => 36
+)
+
+Checkout session request: Array
+(
+    [apiOperation] => CREATE_CHECKOUT_SESSION
+    [apiPassword] => fad718b6a0bd99aaed8d2a2c127fffd0
+    [apiUsername] => merchant.TESTAMBBUICOM201
+    [merchant] => TESTAMBBUICOM201
+    [order.id] => 43
+    [order.amount] => 20700
+    [order.currency] => AUD
+)
+2017-05-05 15:15:04\n Checkout session response: Array
+(
+    [merchant] => TESTAMBBUICOM201
+    [result] => SUCCESS
+    [session_id] => SESSION0002066678748H0177778I76
+    [session_updateStatus] => SUCCESS
+    [session_version] => 4e46eef301
+    [successIndicator] => 82d972001eef4e2c
+)
+\nCheckout session request: Array
+(
+    [apiOperation] => CREATE_CHECKOUT_SESSION
+    [apiPassword] => fad718b6a0bd99aaed8d2a2c127fffd0
+    [apiUsername] => merchant.TESTAMBBUICOM201
+    [merchant] => TESTAMBBUICOM201
+    [order.id] => 43
+    [order.amount] => 20700
+    [order.currency] => AUD
+)
+2017-05-05 15:15:26\n Checkout session response: Array
+(
+    [merchant] => TESTAMBBUICOM201
+    [result] => SUCCESS
+    [session_id] => SESSION0002473470521M3523397I97
+    [session_updateStatus] => SUCCESS
+    [session_version] => 7a481c0801
+    [successIndicator] => dbd1438fec454e34
+)
+\n2017-05-05 15:15:28\n Order detail from commweb: Array
+(
+    [amount] => 20700.00
+    [billing_address_city] => Sydney
+    [billing_address_country] => AUS
+    [billing_address_postcodeZip] => 4556
+    [billing_address_stateProvince] => ACT
+    [billing_address_street] => Whiskey St
+    [creationTime] => 2017-05-05T08:15:25.288Z
+    [currency] => AUD
+    [customer_firstName] => 5111111111111118
+    [description] => Commweb Order
+    [device_browser] => Mozilla/5.0 (Windows NT 10.0; WOW64; rv:49.0) Gecko/20100101 Firefox/49.0
+    [device_ipAddress] => 27.72.157.158
+    [id] => 43
+    [merchant] => TESTAMBBUICOM201
+    [result] => SUCCESS
+    [risk_response_gatewayCode] => ACCEPTED
+    [risk_response_review_decision] => NOT_REQUIRED
+    [risk_response_rule_data] => W
+    [risk_response_rule_name] => MERCHANT_AVS
+    [risk_response_rule_recommendation] => NO_ACTION
+    [risk_response_rule_type] => MERCHANT_RULE
+    [risk_response_rule] => Array
+        (
+            [10] => MSO_RULE
+            [1] => MERCHANT_RULE
+            [2] => MERCHANT_RULE
+            [3] => MERCHANT_RULE
+            [4] => MERCHANT_RULE
+            [5] => MERCHANT_RULE
+            [6] => MERCHANT_RULE
+            [7] => MSO_RULE
+            [8] => MSO_RULE
+            [9] => MSO_RULE
+        )
+
+    [sourceOfFunds_provided_card_brand] => MASTERCARD
+    [sourceOfFunds_provided_card_expiry_month] => 5
+    [sourceOfFunds_provided_card_expiry_year] => 17
+    [sourceOfFunds_provided_card_fundingMethod] => DEBIT
+    [sourceOfFunds_provided_card_issuer] => U.S. BANK NATIONAL ASSOCIATION, ND
+    [sourceOfFunds_provided_card_nameOnCard] => 5111111111111118
+    [sourceOfFunds_provided_card_number] => 511111xxxxxx1118
+    [sourceOfFunds_provided_card_scheme] => MASTERCARD
+    [sourceOfFunds_type] => CARD
+    [status] => CAPTURED
+    [totalAuthorizedAmount] => 20700.00
+    [totalCapturedAmount] => 20700.00
+    [totalRefundedAmount] => 0.00
+    [transaction_authorizationResponse_avsCode] => W
+    [transaction_authorizationResponse_cardSecurityCodeError] => M
+    [transaction_authorizationResponse_commercialCard] => 888
+    [transaction_authorizationResponse_commercialCardIndicator] => 3
+    [transaction_authorizationResponse_financialNetworkCode] => 777
+    [transaction_authorizationResponse_processingCode] => 003000
+    [transaction_authorizationResponse_responseCode] => 00
+    [transaction_authorizationResponse_stan] => 142593
+    [transaction_authorizationResponse_transactionIdentifier] => 123456789
+    [transaction_billing_address_city] => Sydney
+    [transaction_billing_address_country] => AUS
+    [transaction_billing_address_postcodeZip] => 4556
+    [transaction_billing_address_stateProvince] => ACT
+    [transaction_billing_address_street] => Whiskey St
+    [transaction_customer_firstName] => 5111111111111118
+    [transaction_device_browser] => Mozilla/5.0 (Windows NT 10.0; WOW64; rv:49.0) Gecko/20100101 Firefox/49.0
+    [transaction_device_ipAddress] => 27.72.157.158
+    [transaction_gatewayEntryPoint] => CHECKOUT
+    [transaction_merchant] => TESTAMBBUICOM201
+    [transaction_order_amount] => 20700.00
+    [transaction_order_creationTime] => 2017-05-05T08:15:25.288Z
+    [transaction_order_currency] => AUD
+    [transaction_order_description] => Commweb Order
+    [transaction_order_id] => 43
+    [transaction_order_status] => CAPTURED
+    [transaction_order_totalAuthorizedAmount] => 20700.00
+    [transaction_order_totalCapturedAmount] => 20700.00
+    [transaction_order_totalRefundedAmount] => 0.00
+    [transaction_response_acquirerCode] => 00
+    [transaction_response_acquirerMessage] => Approved
+    [transaction_response_cardSecurityCode_acquirerCode] => M
+    [transaction_response_cardSecurityCode_gatewayCode] => MATCH
+    [transaction_response_cardholderVerification_avs_acquirerCode] => W
+    [transaction_response_cardholderVerification_avs_gatewayCode] => ZIP_MATCH
+    [transaction_response_gatewayCode] => APPROVED
+    [transaction_result] => SUCCESS
+    [transaction_risk_response_gatewayCode] => ACCEPTED
+    [transaction_risk_response_review_decision] => NOT_REQUIRED
+    [transaction_risk_response_rule_data] => W
+    [transaction_risk_response_rule_name] => MERCHANT_AVS
+    [transaction_risk_response_rule_recommendation] => NO_ACTION
+    [transaction_risk_response_rule_type] => MERCHANT_RULE
+    [transaction_risk_response_rule] => Array
+        (
+            [10] => MSO_RULE
+            [1] => MERCHANT_RULE
+            [2] => MERCHANT_RULE
+            [3] => MERCHANT_RULE
+            [4] => MERCHANT_RULE
+            [5] => MERCHANT_RULE
+            [6] => MERCHANT_RULE
+            [7] => MSO_RULE
+            [8] => MSO_RULE
+            [9] => MSO_RULE
+        )
+
+    [transaction_sourceOfFunds_provided_card_brand] => MASTERCARD
+    [transaction_sourceOfFunds_provided_card_expiry_month] => 5
+    [transaction_sourceOfFunds_provided_card_expiry_year] => 17
+    [transaction_sourceOfFunds_provided_card_fundingMethod] => DEBIT
+    [transaction_sourceOfFunds_provided_card_issuer] => U.S. BANK NATIONAL ASSOCIATION, ND
+    [transaction_sourceOfFunds_provided_card_nameOnCard] => 5111111111111118
+    [transaction_sourceOfFunds_provided_card_number] => 511111xxxxxx1118
+    [transaction_sourceOfFunds_provided_card_scheme] => MASTERCARD
+    [transaction_sourceOfFunds_type] => CARD
+    [transaction_timeOfRecord] => 2017-05-05T08:15:25.288Z
+    [transaction_transaction_acquirer_batch] => 20170505
+    [transaction_transaction_acquirer_date] => 0505
+    [transaction_transaction_acquirer_id] => CBA_S2I
+    [transaction_transaction_acquirer_merchantId] => 353109499161636
+    [transaction_transaction_acquirer_transactionId] => 123456789
+    [transaction_transaction_amount] => 20700.00
+    [transaction_transaction_authorizationCode] => 142593
+    [transaction_transaction_currency] => AUD
+    [transaction_transaction_frequency] => SINGLE
+    [transaction_transaction_id] => 1
+    [transaction_transaction_receipt] => 712508142593
+    [transaction_transaction_source] => INTERNET
+    [transaction_transaction_terminal] => CBAS2I01
+    [transaction_transaction_type] => PAYMENT
+    [transaction_version] => 36
+)
+\n2017-05-05 15:15:28
+ Response from Complete callback of commweb: 
+Array
+(
+    [amount] => 20700.00
+    [billing_address_city] => Sydney
+    [billing_address_country] => AUS
+    [billing_address_postcodeZip] => 4556
+    [billing_address_stateProvince] => ACT
+    [billing_address_street] => Whiskey St
+    [creationTime] => 2017-05-05T08:15:25.288Z
+    [currency] => AUD
+    [customer_firstName] => 5111111111111118
+    [description] => Commweb Order
+    [device_browser] => Mozilla/5.0 (Windows NT 10.0; WOW64; rv:49.0) Gecko/20100101 Firefox/49.0
+    [device_ipAddress] => 27.72.157.158
+    [id] => 43
+    [merchant] => TESTAMBBUICOM201
+    [result] => SUCCESS
+    [risk_response_gatewayCode] => ACCEPTED
+    [risk_response_review_decision] => NOT_REQUIRED
+    [risk_response_rule_data] => W
+    [risk_response_rule_name] => MERCHANT_AVS
+    [risk_response_rule_recommendation] => NO_ACTION
+    [risk_response_rule_type] => MERCHANT_RULE
+    [risk_response_rule] => Array
+        (
+            [10] => MSO_RULE
+            [1] => MERCHANT_RULE
+            [2] => MERCHANT_RULE
+            [3] => MERCHANT_RULE
+            [4] => MERCHANT_RULE
+            [5] => MERCHANT_RULE
+            [6] => MERCHANT_RULE
+            [7] => MSO_RULE
+            [8] => MSO_RULE
+            [9] => MSO_RULE
+        )
+
+    [sourceOfFunds_provided_card_brand] => MASTERCARD
+    [sourceOfFunds_provided_card_expiry_month] => 5
+    [sourceOfFunds_provided_card_expiry_year] => 17
+    [sourceOfFunds_provided_card_fundingMethod] => DEBIT
+    [sourceOfFunds_provided_card_issuer] => U.S. BANK NATIONAL ASSOCIATION, ND
+    [sourceOfFunds_provided_card_nameOnCard] => 5111111111111118
+    [sourceOfFunds_provided_card_number] => 511111xxxxxx1118
+    [sourceOfFunds_provided_card_scheme] => MASTERCARD
+    [sourceOfFunds_type] => CARD
+    [status] => CAPTURED
+    [totalAuthorizedAmount] => 20700.00
+    [totalCapturedAmount] => 20700.00
+    [totalRefundedAmount] => 0.00
+    [transaction_authorizationResponse_avsCode] => W
+    [transaction_authorizationResponse_cardSecurityCodeError] => M
+    [transaction_authorizationResponse_commercialCard] => 888
+    [transaction_authorizationResponse_commercialCardIndicator] => 3
+    [transaction_authorizationResponse_financialNetworkCode] => 777
+    [transaction_authorizationResponse_processingCode] => 003000
+    [transaction_authorizationResponse_responseCode] => 00
+    [transaction_authorizationResponse_stan] => 142593
+    [transaction_authorizationResponse_transactionIdentifier] => 123456789
+    [transaction_billing_address_city] => Sydney
+    [transaction_billing_address_country] => AUS
+    [transaction_billing_address_postcodeZip] => 4556
+    [transaction_billing_address_stateProvince] => ACT
+    [transaction_billing_address_street] => Whiskey St
+    [transaction_customer_firstName] => 5111111111111118
+    [transaction_device_browser] => Mozilla/5.0 (Windows NT 10.0; WOW64; rv:49.0) Gecko/20100101 Firefox/49.0
+    [transaction_device_ipAddress] => 27.72.157.158
+    [transaction_gatewayEntryPoint] => CHECKOUT
+    [transaction_merchant] => TESTAMBBUICOM201
+    [transaction_order_amount] => 20700.00
+    [transaction_order_creationTime] => 2017-05-05T08:15:25.288Z
+    [transaction_order_currency] => AUD
+    [transaction_order_description] => Commweb Order
+    [transaction_order_id] => 43
+    [transaction_order_status] => CAPTURED
+    [transaction_order_totalAuthorizedAmount] => 20700.00
+    [transaction_order_totalCapturedAmount] => 20700.00
+    [transaction_order_totalRefundedAmount] => 0.00
+    [transaction_response_acquirerCode] => 00
+    [transaction_response_acquirerMessage] => Approved
+    [transaction_response_cardSecurityCode_acquirerCode] => M
+    [transaction_response_cardSecurityCode_gatewayCode] => MATCH
+    [transaction_response_cardholderVerification_avs_acquirerCode] => W
+    [transaction_response_cardholderVerification_avs_gatewayCode] => ZIP_MATCH
+    [transaction_response_gatewayCode] => APPROVED
+    [transaction_result] => SUCCESS
+    [transaction_risk_response_gatewayCode] => ACCEPTED
+    [transaction_risk_response_review_decision] => NOT_REQUIRED
+    [transaction_risk_response_rule_data] => W
+    [transaction_risk_response_rule_name] => MERCHANT_AVS
+    [transaction_risk_response_rule_recommendation] => NO_ACTION
+    [transaction_risk_response_rule_type] => MERCHANT_RULE
+    [transaction_risk_response_rule] => Array
+        (
+            [10] => MSO_RULE
+            [1] => MERCHANT_RULE
+            [2] => MERCHANT_RULE
+            [3] => MERCHANT_RULE
+            [4] => MERCHANT_RULE
+            [5] => MERCHANT_RULE
+            [6] => MERCHANT_RULE
+            [7] => MSO_RULE
+            [8] => MSO_RULE
+            [9] => MSO_RULE
+        )
+
+    [transaction_sourceOfFunds_provided_card_brand] => MASTERCARD
+    [transaction_sourceOfFunds_provided_card_expiry_month] => 5
+    [transaction_sourceOfFunds_provided_card_expiry_year] => 17
+    [transaction_sourceOfFunds_provided_card_fundingMethod] => DEBIT
+    [transaction_sourceOfFunds_provided_card_issuer] => U.S. BANK NATIONAL ASSOCIATION, ND
+    [transaction_sourceOfFunds_provided_card_nameOnCard] => 5111111111111118
+    [transaction_sourceOfFunds_provided_card_number] => 511111xxxxxx1118
+    [transaction_sourceOfFunds_provided_card_scheme] => MASTERCARD
+    [transaction_sourceOfFunds_type] => CARD
+    [transaction_timeOfRecord] => 2017-05-05T08:15:25.288Z
+    [transaction_transaction_acquirer_batch] => 20170505
+    [transaction_transaction_acquirer_date] => 0505
+    [transaction_transaction_acquirer_id] => CBA_S2I
+    [transaction_transaction_acquirer_merchantId] => 353109499161636
+    [transaction_transaction_acquirer_transactionId] => 123456789
+    [transaction_transaction_amount] => 20700.00
+    [transaction_transaction_authorizationCode] => 142593
+    [transaction_transaction_currency] => AUD
+    [transaction_transaction_frequency] => SINGLE
+    [transaction_transaction_id] => 1
+    [transaction_transaction_receipt] => 712508142593
+    [transaction_transaction_source] => INTERNET
+    [transaction_transaction_terminal] => CBAS2I01
+    [transaction_transaction_type] => PAYMENT
+    [transaction_version] => 36
+)
+
+Checkout session request: Array
+(
+    [apiOperation] => CREATE_CHECKOUT_SESSION
+    [apiPassword] => fad718b6a0bd99aaed8d2a2c127fffd0
+    [apiUsername] => merchant.TESTAMBBUICOM201
+    [merchant] => TESTAMBBUICOM201
+    [order.id] => 44
+    [order.amount] => 10600
+    [order.currency] => AUD
+)
+2017-05-05 15:16:25\n Checkout session response: Array
+(
+    [merchant] => TESTAMBBUICOM201
+    [result] => SUCCESS
+    [session_id] => SESSION0002349567345J4815979E23
+    [session_updateStatus] => SUCCESS
+    [session_version] => 6fbe471401
+    [successIndicator] => 47abf81295b241fa
+)
+\nCheckout session request: Array
+(
+    [apiOperation] => CREATE_CHECKOUT_SESSION
+    [apiPassword] => fad718b6a0bd99aaed8d2a2c127fffd0
+    [apiUsername] => merchant.TESTAMBBUICOM201
+    [merchant] => TESTAMBBUICOM201
+    [order.id] => 44
+    [order.amount] => 10600
+    [order.currency] => AUD
+)
+2017-05-05 15:16:40\n Checkout session response: Array
+(
+    [merchant] => TESTAMBBUICOM201
+    [result] => SUCCESS
+    [session_id] => SESSION0002481844558G7053062M33
+    [session_updateStatus] => SUCCESS
+    [session_version] => e0e122bd01
+    [successIndicator] => fadd02b72dc84af8
+)
+\n2017-05-05 15:16:42\n Order detail from commweb: Array
+(
+    [amount] => 10600.00
+    [billing_address_city] => Sydney
+    [billing_address_country] => AUS
+    [billing_address_postcodeZip] => 4556
+    [billing_address_stateProvince] => ACT
+    [billing_address_street] => Whiskey St
+    [creationTime] => 2017-05-05T08:16:39.582Z
+    [currency] => AUD
+    [customer_firstName] => 5111111111111118
+    [description] => Commweb Order
+    [device_browser] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36
+    [device_ipAddress] => 27.72.157.158
+    [id] => 44
+    [merchant] => TESTAMBBUICOM201
+    [result] => SUCCESS
+    [risk_response_gatewayCode] => ACCEPTED
+    [risk_response_review_decision] => NOT_REQUIRED
+    [risk_response_rule_data] => W
+    [risk_response_rule_name] => MERCHANT_AVS
+    [risk_response_rule_recommendation] => NO_ACTION
+    [risk_response_rule_type] => MERCHANT_RULE
+    [risk_response_rule] => Array
+        (
+            [10] => MSO_RULE
+            [1] => MERCHANT_RULE
+            [2] => MERCHANT_RULE
+            [3] => MERCHANT_RULE
+            [4] => MERCHANT_RULE
+            [5] => MERCHANT_RULE
+            [6] => MERCHANT_RULE
+            [7] => MSO_RULE
+            [8] => MSO_RULE
+            [9] => MSO_RULE
+        )
+
+    [sourceOfFunds_provided_card_brand] => MASTERCARD
+    [sourceOfFunds_provided_card_expiry_month] => 5
+    [sourceOfFunds_provided_card_expiry_year] => 17
+    [sourceOfFunds_provided_card_fundingMethod] => DEBIT
+    [sourceOfFunds_provided_card_issuer] => U.S. BANK NATIONAL ASSOCIATION, ND
+    [sourceOfFunds_provided_card_nameOnCard] => 5111111111111118
+    [sourceOfFunds_provided_card_number] => 511111xxxxxx1118
+    [sourceOfFunds_provided_card_scheme] => MASTERCARD
+    [sourceOfFunds_type] => CARD
+    [status] => CAPTURED
+    [totalAuthorizedAmount] => 10600.00
+    [totalCapturedAmount] => 10600.00
+    [totalRefundedAmount] => 0.00
+    [transaction_authorizationResponse_avsCode] => W
+    [transaction_authorizationResponse_cardSecurityCodeError] => M
+    [transaction_authorizationResponse_commercialCard] => 888
+    [transaction_authorizationResponse_commercialCardIndicator] => 3
+    [transaction_authorizationResponse_financialNetworkCode] => 777
+    [transaction_authorizationResponse_processingCode] => 003000
+    [transaction_authorizationResponse_responseCode] => 00
+    [transaction_authorizationResponse_stan] => 134044
+    [transaction_authorizationResponse_transactionIdentifier] => 123456789
+    [transaction_billing_address_city] => Sydney
+    [transaction_billing_address_country] => AUS
+    [transaction_billing_address_postcodeZip] => 4556
+    [transaction_billing_address_stateProvince] => ACT
+    [transaction_billing_address_street] => Whiskey St
+    [transaction_customer_firstName] => 5111111111111118
+    [transaction_device_browser] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36
+    [transaction_device_ipAddress] => 27.72.157.158
+    [transaction_gatewayEntryPoint] => CHECKOUT
+    [transaction_merchant] => TESTAMBBUICOM201
+    [transaction_order_amount] => 10600.00
+    [transaction_order_creationTime] => 2017-05-05T08:16:39.582Z
+    [transaction_order_currency] => AUD
+    [transaction_order_description] => Commweb Order
+    [transaction_order_id] => 44
+    [transaction_order_status] => CAPTURED
+    [transaction_order_totalAuthorizedAmount] => 10600.00
+    [transaction_order_totalCapturedAmount] => 10600.00
+    [transaction_order_totalRefundedAmount] => 0.00
+    [transaction_response_acquirerCode] => 00
+    [transaction_response_acquirerMessage] => Approved
+    [transaction_response_cardSecurityCode_acquirerCode] => M
+    [transaction_response_cardSecurityCode_gatewayCode] => MATCH
+    [transaction_response_cardholderVerification_avs_acquirerCode] => W
+    [transaction_response_cardholderVerification_avs_gatewayCode] => ZIP_MATCH
+    [transaction_response_gatewayCode] => APPROVED
+    [transaction_result] => SUCCESS
+    [transaction_risk_response_gatewayCode] => ACCEPTED
+    [transaction_risk_response_review_decision] => NOT_REQUIRED
+    [transaction_risk_response_rule_data] => W
+    [transaction_risk_response_rule_name] => MERCHANT_AVS
+    [transaction_risk_response_rule_recommendation] => NO_ACTION
+    [transaction_risk_response_rule_type] => MERCHANT_RULE
+    [transaction_risk_response_rule] => Array
+        (
+            [10] => MSO_RULE
+            [1] => MERCHANT_RULE
+            [2] => MERCHANT_RULE
+            [3] => MERCHANT_RULE
+            [4] => MERCHANT_RULE
+            [5] => MERCHANT_RULE
+            [6] => MERCHANT_RULE
+            [7] => MSO_RULE
+            [8] => MSO_RULE
+            [9] => MSO_RULE
+        )
+
+    [transaction_sourceOfFunds_provided_card_brand] => MASTERCARD
+    [transaction_sourceOfFunds_provided_card_expiry_month] => 5
+    [transaction_sourceOfFunds_provided_card_expiry_year] => 17
+    [transaction_sourceOfFunds_provided_card_fundingMethod] => DEBIT
+    [transaction_sourceOfFunds_provided_card_issuer] => U.S. BANK NATIONAL ASSOCIATION, ND
+    [transaction_sourceOfFunds_provided_card_nameOnCard] => 5111111111111118
+    [transaction_sourceOfFunds_provided_card_number] => 511111xxxxxx1118
+    [transaction_sourceOfFunds_provided_card_scheme] => MASTERCARD
+    [transaction_sourceOfFunds_type] => CARD
+    [transaction_timeOfRecord] => 2017-05-05T08:16:39.582Z
+    [transaction_transaction_acquirer_batch] => 20170505
+    [transaction_transaction_acquirer_date] => 0505
+    [transaction_transaction_acquirer_id] => CBA_S2I
+    [transaction_transaction_acquirer_merchantId] => 353109499161636
+    [transaction_transaction_acquirer_transactionId] => 123456789
+    [transaction_transaction_amount] => 10600.00
+    [transaction_transaction_authorizationCode] => 134044
+    [transaction_transaction_currency] => AUD
+    [transaction_transaction_frequency] => SINGLE
+    [transaction_transaction_id] => 1
+    [transaction_transaction_receipt] => 712508134044
+    [transaction_transaction_source] => INTERNET
+    [transaction_transaction_terminal] => CBAS2I01
+    [transaction_transaction_type] => PAYMENT
+    [transaction_version] => 36
+)
+\n2017-05-05 15:16:42
+ Response from Complete callback of commweb: 
+Array
+(
+    [amount] => 10600.00
+    [billing_address_city] => Sydney
+    [billing_address_country] => AUS
+    [billing_address_postcodeZip] => 4556
+    [billing_address_stateProvince] => ACT
+    [billing_address_street] => Whiskey St
+    [creationTime] => 2017-05-05T08:16:39.582Z
+    [currency] => AUD
+    [customer_firstName] => 5111111111111118
+    [description] => Commweb Order
+    [device_browser] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36
+    [device_ipAddress] => 27.72.157.158
+    [id] => 44
+    [merchant] => TESTAMBBUICOM201
+    [result] => SUCCESS
+    [risk_response_gatewayCode] => ACCEPTED
+    [risk_response_review_decision] => NOT_REQUIRED
+    [risk_response_rule_data] => W
+    [risk_response_rule_name] => MERCHANT_AVS
+    [risk_response_rule_recommendation] => NO_ACTION
+    [risk_response_rule_type] => MERCHANT_RULE
+    [risk_response_rule] => Array
+        (
+            [10] => MSO_RULE
+            [1] => MERCHANT_RULE
+            [2] => MERCHANT_RULE
+            [3] => MERCHANT_RULE
+            [4] => MERCHANT_RULE
+            [5] => MERCHANT_RULE
+            [6] => MERCHANT_RULE
+            [7] => MSO_RULE
+            [8] => MSO_RULE
+            [9] => MSO_RULE
+        )
+
+    [sourceOfFunds_provided_card_brand] => MASTERCARD
+    [sourceOfFunds_provided_card_expiry_month] => 5
+    [sourceOfFunds_provided_card_expiry_year] => 17
+    [sourceOfFunds_provided_card_fundingMethod] => DEBIT
+    [sourceOfFunds_provided_card_issuer] => U.S. BANK NATIONAL ASSOCIATION, ND
+    [sourceOfFunds_provided_card_nameOnCard] => 5111111111111118
+    [sourceOfFunds_provided_card_number] => 511111xxxxxx1118
+    [sourceOfFunds_provided_card_scheme] => MASTERCARD
+    [sourceOfFunds_type] => CARD
+    [status] => CAPTURED
+    [totalAuthorizedAmount] => 10600.00
+    [totalCapturedAmount] => 10600.00
+    [totalRefundedAmount] => 0.00
+    [transaction_authorizationResponse_avsCode] => W
+    [transaction_authorizationResponse_cardSecurityCodeError] => M
+    [transaction_authorizationResponse_commercialCard] => 888
+    [transaction_authorizationResponse_commercialCardIndicator] => 3
+    [transaction_authorizationResponse_financialNetworkCode] => 777
+    [transaction_authorizationResponse_processingCode] => 003000
+    [transaction_authorizationResponse_responseCode] => 00
+    [transaction_authorizationResponse_stan] => 134044
+    [transaction_authorizationResponse_transactionIdentifier] => 123456789
+    [transaction_billing_address_city] => Sydney
+    [transaction_billing_address_country] => AUS
+    [transaction_billing_address_postcodeZip] => 4556
+    [transaction_billing_address_stateProvince] => ACT
+    [transaction_billing_address_street] => Whiskey St
+    [transaction_customer_firstName] => 5111111111111118
+    [transaction_device_browser] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36
+    [transaction_device_ipAddress] => 27.72.157.158
+    [transaction_gatewayEntryPoint] => CHECKOUT
+    [transaction_merchant] => TESTAMBBUICOM201
+    [transaction_order_amount] => 10600.00
+    [transaction_order_creationTime] => 2017-05-05T08:16:39.582Z
+    [transaction_order_currency] => AUD
+    [transaction_order_description] => Commweb Order
+    [transaction_order_id] => 44
+    [transaction_order_status] => CAPTURED
+    [transaction_order_totalAuthorizedAmount] => 10600.00
+    [transaction_order_totalCapturedAmount] => 10600.00
+    [transaction_order_totalRefundedAmount] => 0.00
+    [transaction_response_acquirerCode] => 00
+    [transaction_response_acquirerMessage] => Approved
+    [transaction_response_cardSecurityCode_acquirerCode] => M
+    [transaction_response_cardSecurityCode_gatewayCode] => MATCH
+    [transaction_response_cardholderVerification_avs_acquirerCode] => W
+    [transaction_response_cardholderVerification_avs_gatewayCode] => ZIP_MATCH
+    [transaction_response_gatewayCode] => APPROVED
+    [transaction_result] => SUCCESS
+    [transaction_risk_response_gatewayCode] => ACCEPTED
+    [transaction_risk_response_review_decision] => NOT_REQUIRED
+    [transaction_risk_response_rule_data] => W
+    [transaction_risk_response_rule_name] => MERCHANT_AVS
+    [transaction_risk_response_rule_recommendation] => NO_ACTION
+    [transaction_risk_response_rule_type] => MERCHANT_RULE
+    [transaction_risk_response_rule] => Array
+        (
+            [10] => MSO_RULE
+            [1] => MERCHANT_RULE
+            [2] => MERCHANT_RULE
+            [3] => MERCHANT_RULE
+            [4] => MERCHANT_RULE
+            [5] => MERCHANT_RULE
+            [6] => MERCHANT_RULE
+            [7] => MSO_RULE
+            [8] => MSO_RULE
+            [9] => MSO_RULE
+        )
+
+    [transaction_sourceOfFunds_provided_card_brand] => MASTERCARD
+    [transaction_sourceOfFunds_provided_card_expiry_month] => 5
+    [transaction_sourceOfFunds_provided_card_expiry_year] => 17
+    [transaction_sourceOfFunds_provided_card_fundingMethod] => DEBIT
+    [transaction_sourceOfFunds_provided_card_issuer] => U.S. BANK NATIONAL ASSOCIATION, ND
+    [transaction_sourceOfFunds_provided_card_nameOnCard] => 5111111111111118
+    [transaction_sourceOfFunds_provided_card_number] => 511111xxxxxx1118
+    [transaction_sourceOfFunds_provided_card_scheme] => MASTERCARD
+    [transaction_sourceOfFunds_type] => CARD
+    [transaction_timeOfRecord] => 2017-05-05T08:16:39.582Z
+    [transaction_transaction_acquirer_batch] => 20170505
+    [transaction_transaction_acquirer_date] => 0505
+    [transaction_transaction_acquirer_id] => CBA_S2I
+    [transaction_transaction_acquirer_merchantId] => 353109499161636
+    [transaction_transaction_acquirer_transactionId] => 123456789
+    [transaction_transaction_amount] => 10600.00
+    [transaction_transaction_authorizationCode] => 134044
+    [transaction_transaction_currency] => AUD
+    [transaction_transaction_frequency] => SINGLE
+    [transaction_transaction_id] => 1
+    [transaction_transaction_receipt] => 712508134044
+    [transaction_transaction_source] => INTERNET
+    [transaction_transaction_terminal] => CBAS2I01
+    [transaction_transaction_type] => PAYMENT
+    [transaction_version] => 36
+)
+
+Checkout session request: Array
+(
+    [apiOperation] => CREATE_CHECKOUT_SESSION
+    [apiPassword] => fad718b6a0bd99aaed8d2a2c127fffd0
+    [apiUsername] => merchant.TESTAMBBUICOM201
+    [merchant] => TESTAMBBUICOM201
+    [order.id] => 44
+    [order.amount] => 10600
+    [order.currency] => AUD
+)
+2017-05-05 15:17:04\n Checkout session response: Array
+(
+    [merchant] => TESTAMBBUICOM201
+    [result] => SUCCESS
+    [session_id] => SESSION0002267122722I5126144H53
+    [session_updateStatus] => SUCCESS
+    [session_version] => d9123f3a01
+    [successIndicator] => b24ec8cd9d524b19
+)
+\nCheckout session request: Array
+(
+    [apiOperation] => CREATE_CHECKOUT_SESSION
+    [apiPassword] => fad718b6a0bd99aaed8d2a2c127fffd0
+    [apiUsername] => merchant.TESTAMBBUICOM201
+    [merchant] => TESTAMBBUICOM201
+    [order.id] => 45
+    [order.amount] => 10600
+    [order.currency] => AUD
+)
+2017-05-05 15:17:13\n Checkout session response: Array
+(
+    [merchant] => TESTAMBBUICOM201
+    [result] => SUCCESS
+    [session_id] => SESSION0002930383288E2892557K10
+    [session_updateStatus] => SUCCESS
+    [session_version] => bfd09f7c01
+    [successIndicator] => aaa3d15528e041b0
+)
+\nCheckout session request: Array
+(
+    [apiOperation] => CREATE_CHECKOUT_SESSION
+    [apiPassword] => fad718b6a0bd99aaed8d2a2c127fffd0
+    [apiUsername] => merchant.TESTAMBBUICOM201
+    [merchant] => TESTAMBBUICOM201
+    [order.id] => 45
+    [order.amount] => 10600
+    [order.currency] => AUD
+)
+2017-05-05 15:17:28\n Checkout session response: Array
+(
+    [merchant] => TESTAMBBUICOM201
+    [result] => SUCCESS
+    [session_id] => SESSION0002180332051M7564906I59
+    [session_updateStatus] => SUCCESS
+    [session_version] => d5e682dc01
+    [successIndicator] => 39864ad39fca4860
+)
+\nCheckout session request: Array
+(
+    [apiOperation] => CREATE_CHECKOUT_SESSION
+    [apiPassword] => fad718b6a0bd99aaed8d2a2c127fffd0
+    [apiUsername] => merchant.TESTAMBBUICOM201
+    [merchant] => TESTAMBBUICOM201
+    [order.id] => 46
+    [order.amount] => 10600
+    [order.currency] => AUD
+)
+2017-05-05 15:18:40\n Checkout session response: Array
+(
+    [merchant] => TESTAMBBUICOM201
+    [result] => SUCCESS
+    [session_id] => SESSION0002315406017F5499440F03
+    [session_updateStatus] => SUCCESS
+    [session_version] => 65229f0301
+    [successIndicator] => bc2e3cdbbc5a47f9
+)
+\nCheckout session request: Array
+(
+    [apiOperation] => CREATE_CHECKOUT_SESSION
+    [apiPassword] => fad718b6a0bd99aaed8d2a2c127fffd0
+    [apiUsername] => merchant.TESTAMBBUICOM201
+    [merchant] => TESTAMBBUICOM201
+    [order.id] => 46
+    [order.amount] => 10600
+    [order.currency] => AUD
+)
+2017-05-05 15:18:55\n Checkout session response: Array
+(
+    [merchant] => TESTAMBBUICOM201
+    [result] => SUCCESS
+    [session_id] => SESSION0002181286934G4731807G15
+    [session_updateStatus] => SUCCESS
+    [session_version] => 7316679e01
+    [successIndicator] => a5deb59badd44613
+)
+\n2017-05-05 15:18:56\n Order detail from commweb: Array
+(
+    [amount] => 10600.00
+    [billing_address_city] => Sydney
+    [billing_address_country] => AUS
+    [billing_address_postcodeZip] => 4556
+    [billing_address_stateProvince] => ACT
+    [billing_address_street] => Whiskey St
+    [creationTime] => 2017-05-05T08:18:53.735Z
+    [currency] => AUD
+    [customer_firstName] => tét
+    [description] => Commweb Order
+    [device_browser] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36
+    [device_ipAddress] => 27.72.157.158
+    [id] => 46
+    [merchant] => TESTAMBBUICOM201
+    [result] => SUCCESS
+    [risk_response_gatewayCode] => ACCEPTED
+    [risk_response_review_decision] => NOT_REQUIRED
+    [risk_response_rule_data] => W
+    [risk_response_rule_name] => MERCHANT_AVS
+    [risk_response_rule_recommendation] => NO_ACTION
+    [risk_response_rule_type] => MERCHANT_RULE
+    [risk_response_rule] => Array
+        (
+            [10] => MSO_RULE
+            [1] => MERCHANT_RULE
+            [2] => MERCHANT_RULE
+            [3] => MERCHANT_RULE
+            [4] => MERCHANT_RULE
+            [5] => MERCHANT_RULE
+            [6] => MERCHANT_RULE
+            [7] => MSO_RULE
+            [8] => MSO_RULE
+            [9] => MSO_RULE
+        )
+
+    [sourceOfFunds_provided_card_brand] => MASTERCARD
+    [sourceOfFunds_provided_card_expiry_month] => 5
+    [sourceOfFunds_provided_card_expiry_year] => 17
+    [sourceOfFunds_provided_card_fundingMethod] => DEBIT
+    [sourceOfFunds_provided_card_issuer] => U.S. BANK NATIONAL ASSOCIATION, ND
+    [sourceOfFunds_provided_card_nameOnCard] => tét
+    [sourceOfFunds_provided_card_number] => 511111xxxxxx1118
+    [sourceOfFunds_provided_card_scheme] => MASTERCARD
+    [sourceOfFunds_type] => CARD
+    [status] => CAPTURED
+    [totalAuthorizedAmount] => 10600.00
+    [totalCapturedAmount] => 10600.00
+    [totalRefundedAmount] => 0.00
+    [transaction_authorizationResponse_avsCode] => W
+    [transaction_authorizationResponse_cardSecurityCodeError] => M
+    [transaction_authorizationResponse_commercialCard] => 888
+    [transaction_authorizationResponse_commercialCardIndicator] => 3
+    [transaction_authorizationResponse_financialNetworkCode] => 777
+    [transaction_authorizationResponse_processingCode] => 003000
+    [transaction_authorizationResponse_responseCode] => 00
+    [transaction_authorizationResponse_stan] => 136174
+    [transaction_authorizationResponse_transactionIdentifier] => 123456789
+    [transaction_billing_address_city] => Sydney
+    [transaction_billing_address_country] => AUS
+    [transaction_billing_address_postcodeZip] => 4556
+    [transaction_billing_address_stateProvince] => ACT
+    [transaction_billing_address_street] => Whiskey St
+    [transaction_customer_firstName] => tét
+    [transaction_device_browser] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36
+    [transaction_device_ipAddress] => 27.72.157.158
+    [transaction_gatewayEntryPoint] => CHECKOUT
+    [transaction_merchant] => TESTAMBBUICOM201
+    [transaction_order_amount] => 10600.00
+    [transaction_order_creationTime] => 2017-05-05T08:18:53.735Z
+    [transaction_order_currency] => AUD
+    [transaction_order_description] => Commweb Order
+    [transaction_order_id] => 46
+    [transaction_order_status] => CAPTURED
+    [transaction_order_totalAuthorizedAmount] => 10600.00
+    [transaction_order_totalCapturedAmount] => 10600.00
+    [transaction_order_totalRefundedAmount] => 0.00
+    [transaction_response_acquirerCode] => 00
+    [transaction_response_acquirerMessage] => Approved
+    [transaction_response_cardSecurityCode_acquirerCode] => M
+    [transaction_response_cardSecurityCode_gatewayCode] => MATCH
+    [transaction_response_cardholderVerification_avs_acquirerCode] => W
+    [transaction_response_cardholderVerification_avs_gatewayCode] => ZIP_MATCH
+    [transaction_response_gatewayCode] => APPROVED
+    [transaction_result] => SUCCESS
+    [transaction_risk_response_gatewayCode] => ACCEPTED
+    [transaction_risk_response_review_decision] => NOT_REQUIRED
+    [transaction_risk_response_rule_data] => W
+    [transaction_risk_response_rule_name] => MERCHANT_AVS
+    [transaction_risk_response_rule_recommendation] => NO_ACTION
+    [transaction_risk_response_rule_type] => MERCHANT_RULE
+    [transaction_risk_response_rule] => Array
+        (
+            [10] => MSO_RULE
+            [1] => MERCHANT_RULE
+            [2] => MERCHANT_RULE
+            [3] => MERCHANT_RULE
+            [4] => MERCHANT_RULE
+            [5] => MERCHANT_RULE
+            [6] => MERCHANT_RULE
+            [7] => MSO_RULE
+            [8] => MSO_RULE
+            [9] => MSO_RULE
+        )
+
+    [transaction_sourceOfFunds_provided_card_brand] => MASTERCARD
+    [transaction_sourceOfFunds_provided_card_expiry_month] => 5
+    [transaction_sourceOfFunds_provided_card_expiry_year] => 17
+    [transaction_sourceOfFunds_provided_card_fundingMethod] => DEBIT
+    [transaction_sourceOfFunds_provided_card_issuer] => U.S. BANK NATIONAL ASSOCIATION, ND
+    [transaction_sourceOfFunds_provided_card_nameOnCard] => tét
+    [transaction_sourceOfFunds_provided_card_number] => 511111xxxxxx1118
+    [transaction_sourceOfFunds_provided_card_scheme] => MASTERCARD
+    [transaction_sourceOfFunds_type] => CARD
+    [transaction_timeOfRecord] => 2017-05-05T08:18:53.735Z
+    [transaction_transaction_acquirer_batch] => 20170505
+    [transaction_transaction_acquirer_date] => 0505
+    [transaction_transaction_acquirer_id] => CBA_S2I
+    [transaction_transaction_acquirer_merchantId] => 353109499161636
+    [transaction_transaction_acquirer_transactionId] => 123456789
+    [transaction_transaction_amount] => 10600.00
+    [transaction_transaction_authorizationCode] => 136174
+    [transaction_transaction_currency] => AUD
+    [transaction_transaction_frequency] => SINGLE
+    [transaction_transaction_id] => 1
+    [transaction_transaction_receipt] => 712508136174
+    [transaction_transaction_source] => INTERNET
+    [transaction_transaction_terminal] => CBAS2I01
+    [transaction_transaction_type] => PAYMENT
+    [transaction_version] => 36
+)
+\n2017-05-05 15:18:56
+ Response from Complete callback of commweb: 
+Array
+(
+    [amount] => 10600.00
+    [billing_address_city] => Sydney
+    [billing_address_country] => AUS
+    [billing_address_postcodeZip] => 4556
+    [billing_address_stateProvince] => ACT
+    [billing_address_street] => Whiskey St
+    [creationTime] => 2017-05-05T08:18:53.735Z
+    [currency] => AUD
+    [customer_firstName] => tét
+    [description] => Commweb Order
+    [device_browser] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36
+    [device_ipAddress] => 27.72.157.158
+    [id] => 46
+    [merchant] => TESTAMBBUICOM201
+    [result] => SUCCESS
+    [risk_response_gatewayCode] => ACCEPTED
+    [risk_response_review_decision] => NOT_REQUIRED
+    [risk_response_rule_data] => W
+    [risk_response_rule_name] => MERCHANT_AVS
+    [risk_response_rule_recommendation] => NO_ACTION
+    [risk_response_rule_type] => MERCHANT_RULE
+    [risk_response_rule] => Array
+        (
+            [10] => MSO_RULE
+            [1] => MERCHANT_RULE
+            [2] => MERCHANT_RULE
+            [3] => MERCHANT_RULE
+            [4] => MERCHANT_RULE
+            [5] => MERCHANT_RULE
+            [6] => MERCHANT_RULE
+            [7] => MSO_RULE
+            [8] => MSO_RULE
+            [9] => MSO_RULE
+        )
+
+    [sourceOfFunds_provided_card_brand] => MASTERCARD
+    [sourceOfFunds_provided_card_expiry_month] => 5
+    [sourceOfFunds_provided_card_expiry_year] => 17
+    [sourceOfFunds_provided_card_fundingMethod] => DEBIT
+    [sourceOfFunds_provided_card_issuer] => U.S. BANK NATIONAL ASSOCIATION, ND
+    [sourceOfFunds_provided_card_nameOnCard] => tét
+    [sourceOfFunds_provided_card_number] => 511111xxxxxx1118
+    [sourceOfFunds_provided_card_scheme] => MASTERCARD
+    [sourceOfFunds_type] => CARD
+    [status] => CAPTURED
+    [totalAuthorizedAmount] => 10600.00
+    [totalCapturedAmount] => 10600.00
+    [totalRefundedAmount] => 0.00
+    [transaction_authorizationResponse_avsCode] => W
+    [transaction_authorizationResponse_cardSecurityCodeError] => M
+    [transaction_authorizationResponse_commercialCard] => 888
+    [transaction_authorizationResponse_commercialCardIndicator] => 3
+    [transaction_authorizationResponse_financialNetworkCode] => 777
+    [transaction_authorizationResponse_processingCode] => 003000
+    [transaction_authorizationResponse_responseCode] => 00
+    [transaction_authorizationResponse_stan] => 136174
+    [transaction_authorizationResponse_transactionIdentifier] => 123456789
+    [transaction_billing_address_city] => Sydney
+    [transaction_billing_address_country] => AUS
+    [transaction_billing_address_postcodeZip] => 4556
+    [transaction_billing_address_stateProvince] => ACT
+    [transaction_billing_address_street] => Whiskey St
+    [transaction_customer_firstName] => tét
+    [transaction_device_browser] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36
+    [transaction_device_ipAddress] => 27.72.157.158
+    [transaction_gatewayEntryPoint] => CHECKOUT
+    [transaction_merchant] => TESTAMBBUICOM201
+    [transaction_order_amount] => 10600.00
+    [transaction_order_creationTime] => 2017-05-05T08:18:53.735Z
+    [transaction_order_currency] => AUD
+    [transaction_order_description] => Commweb Order
+    [transaction_order_id] => 46
+    [transaction_order_status] => CAPTURED
+    [transaction_order_totalAuthorizedAmount] => 10600.00
+    [transaction_order_totalCapturedAmount] => 10600.00
+    [transaction_order_totalRefundedAmount] => 0.00
+    [transaction_response_acquirerCode] => 00
+    [transaction_response_acquirerMessage] => Approved
+    [transaction_response_cardSecurityCode_acquirerCode] => M
+    [transaction_response_cardSecurityCode_gatewayCode] => MATCH
+    [transaction_response_cardholderVerification_avs_acquirerCode] => W
+    [transaction_response_cardholderVerification_avs_gatewayCode] => ZIP_MATCH
+    [transaction_response_gatewayCode] => APPROVED
+    [transaction_result] => SUCCESS
+    [transaction_risk_response_gatewayCode] => ACCEPTED
+    [transaction_risk_response_review_decision] => NOT_REQUIRED
+    [transaction_risk_response_rule_data] => W
+    [transaction_risk_response_rule_name] => MERCHANT_AVS
+    [transaction_risk_response_rule_recommendation] => NO_ACTION
+    [transaction_risk_response_rule_type] => MERCHANT_RULE
+    [transaction_risk_response_rule] => Array
+        (
+            [10] => MSO_RULE
+            [1] => MERCHANT_RULE
+            [2] => MERCHANT_RULE
+            [3] => MERCHANT_RULE
+            [4] => MERCHANT_RULE
+            [5] => MERCHANT_RULE
+            [6] => MERCHANT_RULE
+            [7] => MSO_RULE
+            [8] => MSO_RULE
+            [9] => MSO_RULE
+        )
+
+    [transaction_sourceOfFunds_provided_card_brand] => MASTERCARD
+    [transaction_sourceOfFunds_provided_card_expiry_month] => 5
+    [transaction_sourceOfFunds_provided_card_expiry_year] => 17
+    [transaction_sourceOfFunds_provided_card_fundingMethod] => DEBIT
+    [transaction_sourceOfFunds_provided_card_issuer] => U.S. BANK NATIONAL ASSOCIATION, ND
+    [transaction_sourceOfFunds_provided_card_nameOnCard] => tét
+    [transaction_sourceOfFunds_provided_card_number] => 511111xxxxxx1118
+    [transaction_sourceOfFunds_provided_card_scheme] => MASTERCARD
+    [transaction_sourceOfFunds_type] => CARD
+    [transaction_timeOfRecord] => 2017-05-05T08:18:53.735Z
+    [transaction_transaction_acquirer_batch] => 20170505
+    [transaction_transaction_acquirer_date] => 0505
+    [transaction_transaction_acquirer_id] => CBA_S2I
+    [transaction_transaction_acquirer_merchantId] => 353109499161636
+    [transaction_transaction_acquirer_transactionId] => 123456789
+    [transaction_transaction_amount] => 10600.00
+    [transaction_transaction_authorizationCode] => 136174
+    [transaction_transaction_currency] => AUD
+    [transaction_transaction_frequency] => SINGLE
+    [transaction_transaction_id] => 1
+    [transaction_transaction_receipt] => 712508136174
+    [transaction_transaction_source] => INTERNET
+    [transaction_transaction_terminal] => CBAS2I01
+    [transaction_transaction_type] => PAYMENT
+    [transaction_version] => 36
+)
+
+Checkout session request: Array
+(
+    [apiOperation] => CREATE_CHECKOUT_SESSION
+    [apiPassword] => fad718b6a0bd99aaed8d2a2c127fffd0
+    [apiUsername] => merchant.TESTAMBBUICOM201
+    [merchant] => TESTAMBBUICOM201
+    [order.id] => 47
+    [order.amount] => 10600
+    [order.currency] => AUD
+)
+2017-05-05 15:19:22\n Checkout session response: Array
+(
+    [merchant] => TESTAMBBUICOM201
+    [result] => SUCCESS
+    [session_id] => SESSION0002413878653G8194196I72
+    [session_updateStatus] => SUCCESS
+    [session_version] => 42c17f7601
+    [successIndicator] => e7d9c0f7c09647ce
+)
+\nCheckout session request: Array
+(
+    [apiOperation] => CREATE_CHECKOUT_SESSION
+    [apiPassword] => fad718b6a0bd99aaed8d2a2c127fffd0
+    [apiUsername] => merchant.TESTAMBBUICOM201
+    [merchant] => TESTAMBBUICOM201
+    [order.id] => 47
+    [order.amount] => 10600
+    [order.currency] => AUD
+)
+2017-05-05 15:19:46\n Checkout session response: Array
+(
+    [merchant] => TESTAMBBUICOM201
+    [result] => SUCCESS
+    [session_id] => SESSION0002373571646K3579186F87
+    [session_updateStatus] => SUCCESS
+    [session_version] => dfdde4b601
+    [successIndicator] => 489abc64e2a94b35
+)
+\n2017-05-05 15:19:47\n Order detail from commweb: Array
+(
+    [amount] => 10600.00
+    [billing_address_city] => Sydney
+    [billing_address_country] => AUS
+    [billing_address_postcodeZip] => 4556
+    [billing_address_stateProvince] => ACT
+    [billing_address_street] => Whiskey St
+    [creationTime] => 2017-05-05T08:19:44.560Z
+    [currency] => AUD
+    [customer_firstName] => t
+    [description] => Commweb Order
+    [device_browser] => Mozilla/5.0 (Windows NT 10.0; WOW64; rv:49.0) Gecko/20100101 Firefox/49.0
+    [device_ipAddress] => 27.72.157.158
+    [id] => 47
+    [merchant] => TESTAMBBUICOM201
+    [result] => SUCCESS
+    [risk_response_gatewayCode] => ACCEPTED
+    [risk_response_review_decision] => NOT_REQUIRED
+    [risk_response_rule_data] => W
+    [risk_response_rule_name] => MERCHANT_AVS
+    [risk_response_rule_recommendation] => NO_ACTION
+    [risk_response_rule_type] => MERCHANT_RULE
+    [risk_response_rule] => Array
+        (
+            [10] => MSO_RULE
+            [1] => MERCHANT_RULE
+            [2] => MERCHANT_RULE
+            [3] => MERCHANT_RULE
+            [4] => MERCHANT_RULE
+            [5] => MERCHANT_RULE
+            [6] => MERCHANT_RULE
+            [7] => MSO_RULE
+            [8] => MSO_RULE
+            [9] => MSO_RULE
+        )
+
+    [sourceOfFunds_provided_card_brand] => MASTERCARD
+    [sourceOfFunds_provided_card_expiry_month] => 5
+    [sourceOfFunds_provided_card_expiry_year] => 17
+    [sourceOfFunds_provided_card_fundingMethod] => DEBIT
+    [sourceOfFunds_provided_card_issuer] => U.S. BANK NATIONAL ASSOCIATION, ND
+    [sourceOfFunds_provided_card_nameOnCard] => t
+    [sourceOfFunds_provided_card_number] => 511111xxxxxx1118
+    [sourceOfFunds_provided_card_scheme] => MASTERCARD
+    [sourceOfFunds_type] => CARD
+    [status] => CAPTURED
+    [totalAuthorizedAmount] => 10600.00
+    [totalCapturedAmount] => 10600.00
+    [totalRefundedAmount] => 0.00
+    [transaction_authorizationResponse_avsCode] => W
+    [transaction_authorizationResponse_cardSecurityCodeError] => M
+    [transaction_authorizationResponse_commercialCard] => 888
+    [transaction_authorizationResponse_commercialCardIndicator] => 3
+    [transaction_authorizationResponse_financialNetworkCode] => 777
+    [transaction_authorizationResponse_processingCode] => 003000
+    [transaction_authorizationResponse_responseCode] => 00
+    [transaction_authorizationResponse_stan] => 137244
+    [transaction_authorizationResponse_transactionIdentifier] => 123456789
+    [transaction_billing_address_city] => Sydney
+    [transaction_billing_address_country] => AUS
+    [transaction_billing_address_postcodeZip] => 4556
+    [transaction_billing_address_stateProvince] => ACT
+    [transaction_billing_address_street] => Whiskey St
+    [transaction_customer_firstName] => t
+    [transaction_device_browser] => Mozilla/5.0 (Windows NT 10.0; WOW64; rv:49.0) Gecko/20100101 Firefox/49.0
+    [transaction_device_ipAddress] => 27.72.157.158
+    [transaction_gatewayEntryPoint] => CHECKOUT
+    [transaction_merchant] => TESTAMBBUICOM201
+    [transaction_order_amount] => 10600.00
+    [transaction_order_creationTime] => 2017-05-05T08:19:44.560Z
+    [transaction_order_currency] => AUD
+    [transaction_order_description] => Commweb Order
+    [transaction_order_id] => 47
+    [transaction_order_status] => CAPTURED
+    [transaction_order_totalAuthorizedAmount] => 10600.00
+    [transaction_order_totalCapturedAmount] => 10600.00
+    [transaction_order_totalRefundedAmount] => 0.00
+    [transaction_response_acquirerCode] => 00
+    [transaction_response_acquirerMessage] => Approved
+    [transaction_response_cardSecurityCode_acquirerCode] => M
+    [transaction_response_cardSecurityCode_gatewayCode] => MATCH
+    [transaction_response_cardholderVerification_avs_acquirerCode] => W
+    [transaction_response_cardholderVerification_avs_gatewayCode] => ZIP_MATCH
+    [transaction_response_gatewayCode] => APPROVED
+    [transaction_result] => SUCCESS
+    [transaction_risk_response_gatewayCode] => ACCEPTED
+    [transaction_risk_response_review_decision] => NOT_REQUIRED
+    [transaction_risk_response_rule_data] => W
+    [transaction_risk_response_rule_name] => MERCHANT_AVS
+    [transaction_risk_response_rule_recommendation] => NO_ACTION
+    [transaction_risk_response_rule_type] => MERCHANT_RULE
+    [transaction_risk_response_rule] => Array
+        (
+            [10] => MSO_RULE
+            [1] => MERCHANT_RULE
+            [2] => MERCHANT_RULE
+            [3] => MERCHANT_RULE
+            [4] => MERCHANT_RULE
+            [5] => MERCHANT_RULE
+            [6] => MERCHANT_RULE
+            [7] => MSO_RULE
+            [8] => MSO_RULE
+            [9] => MSO_RULE
+        )
+
+    [transaction_sourceOfFunds_provided_card_brand] => MASTERCARD
+    [transaction_sourceOfFunds_provided_card_expiry_month] => 5
+    [transaction_sourceOfFunds_provided_card_expiry_year] => 17
+    [transaction_sourceOfFunds_provided_card_fundingMethod] => DEBIT
+    [transaction_sourceOfFunds_provided_card_issuer] => U.S. BANK NATIONAL ASSOCIATION, ND
+    [transaction_sourceOfFunds_provided_card_nameOnCard] => t
+    [transaction_sourceOfFunds_provided_card_number] => 511111xxxxxx1118
+    [transaction_sourceOfFunds_provided_card_scheme] => MASTERCARD
+    [transaction_sourceOfFunds_type] => CARD
+    [transaction_timeOfRecord] => 2017-05-05T08:19:44.560Z
+    [transaction_transaction_acquirer_batch] => 20170505
+    [transaction_transaction_acquirer_date] => 0505
+    [transaction_transaction_acquirer_id] => CBA_S2I
+    [transaction_transaction_acquirer_merchantId] => 353109499161636
+    [transaction_transaction_acquirer_transactionId] => 123456789
+    [transaction_transaction_amount] => 10600.00
+    [transaction_transaction_authorizationCode] => 137244
+    [transaction_transaction_currency] => AUD
+    [transaction_transaction_frequency] => SINGLE
+    [transaction_transaction_id] => 1
+    [transaction_transaction_receipt] => 712508137244
+    [transaction_transaction_source] => INTERNET
+    [transaction_transaction_terminal] => CBAS2I01
+    [transaction_transaction_type] => PAYMENT
+    [transaction_version] => 36
+)
+\n2017-05-05 15:19:47
+ Response from Complete callback of commweb: 
+Array
+(
+    [amount] => 10600.00
+    [billing_address_city] => Sydney
+    [billing_address_country] => AUS
+    [billing_address_postcodeZip] => 4556
+    [billing_address_stateProvince] => ACT
+    [billing_address_street] => Whiskey St
+    [creationTime] => 2017-05-05T08:19:44.560Z
+    [currency] => AUD
+    [customer_firstName] => t
+    [description] => Commweb Order
+    [device_browser] => Mozilla/5.0 (Windows NT 10.0; WOW64; rv:49.0) Gecko/20100101 Firefox/49.0
+    [device_ipAddress] => 27.72.157.158
+    [id] => 47
+    [merchant] => TESTAMBBUICOM201
+    [result] => SUCCESS
+    [risk_response_gatewayCode] => ACCEPTED
+    [risk_response_review_decision] => NOT_REQUIRED
+    [risk_response_rule_data] => W
+    [risk_response_rule_name] => MERCHANT_AVS
+    [risk_response_rule_recommendation] => NO_ACTION
+    [risk_response_rule_type] => MERCHANT_RULE
+    [risk_response_rule] => Array
+        (
+            [10] => MSO_RULE
+            [1] => MERCHANT_RULE
+            [2] => MERCHANT_RULE
+            [3] => MERCHANT_RULE
+            [4] => MERCHANT_RULE
+            [5] => MERCHANT_RULE
+            [6] => MERCHANT_RULE
+            [7] => MSO_RULE
+            [8] => MSO_RULE
+            [9] => MSO_RULE
+        )
+
+    [sourceOfFunds_provided_card_brand] => MASTERCARD
+    [sourceOfFunds_provided_card_expiry_month] => 5
+    [sourceOfFunds_provided_card_expiry_year] => 17
+    [sourceOfFunds_provided_card_fundingMethod] => DEBIT
+    [sourceOfFunds_provided_card_issuer] => U.S. BANK NATIONAL ASSOCIATION, ND
+    [sourceOfFunds_provided_card_nameOnCard] => t
+    [sourceOfFunds_provided_card_number] => 511111xxxxxx1118
+    [sourceOfFunds_provided_card_scheme] => MASTERCARD
+    [sourceOfFunds_type] => CARD
+    [status] => CAPTURED
+    [totalAuthorizedAmount] => 10600.00
+    [totalCapturedAmount] => 10600.00
+    [totalRefundedAmount] => 0.00
+    [transaction_authorizationResponse_avsCode] => W
+    [transaction_authorizationResponse_cardSecurityCodeError] => M
+    [transaction_authorizationResponse_commercialCard] => 888
+    [transaction_authorizationResponse_commercialCardIndicator] => 3
+    [transaction_authorizationResponse_financialNetworkCode] => 777
+    [transaction_authorizationResponse_processingCode] => 003000
+    [transaction_authorizationResponse_responseCode] => 00
+    [transaction_authorizationResponse_stan] => 137244
+    [transaction_authorizationResponse_transactionIdentifier] => 123456789
+    [transaction_billing_address_city] => Sydney
+    [transaction_billing_address_country] => AUS
+    [transaction_billing_address_postcodeZip] => 4556
+    [transaction_billing_address_stateProvince] => ACT
+    [transaction_billing_address_street] => Whiskey St
+    [transaction_customer_firstName] => t
+    [transaction_device_browser] => Mozilla/5.0 (Windows NT 10.0; WOW64; rv:49.0) Gecko/20100101 Firefox/49.0
+    [transaction_device_ipAddress] => 27.72.157.158
+    [transaction_gatewayEntryPoint] => CHECKOUT
+    [transaction_merchant] => TESTAMBBUICOM201
+    [transaction_order_amount] => 10600.00
+    [transaction_order_creationTime] => 2017-05-05T08:19:44.560Z
+    [transaction_order_currency] => AUD
+    [transaction_order_description] => Commweb Order
+    [transaction_order_id] => 47
+    [transaction_order_status] => CAPTURED
+    [transaction_order_totalAuthorizedAmount] => 10600.00
+    [transaction_order_totalCapturedAmount] => 10600.00
+    [transaction_order_totalRefundedAmount] => 0.00
+    [transaction_response_acquirerCode] => 00
+    [transaction_response_acquirerMessage] => Approved
+    [transaction_response_cardSecurityCode_acquirerCode] => M
+    [transaction_response_cardSecurityCode_gatewayCode] => MATCH
+    [transaction_response_cardholderVerification_avs_acquirerCode] => W
+    [transaction_response_cardholderVerification_avs_gatewayCode] => ZIP_MATCH
+    [transaction_response_gatewayCode] => APPROVED
+    [transaction_result] => SUCCESS
+    [transaction_risk_response_gatewayCode] => ACCEPTED
+    [transaction_risk_response_review_decision] => NOT_REQUIRED
+    [transaction_risk_response_rule_data] => W
+    [transaction_risk_response_rule_name] => MERCHANT_AVS
+    [transaction_risk_response_rule_recommendation] => NO_ACTION
+    [transaction_risk_response_rule_type] => MERCHANT_RULE
+    [transaction_risk_response_rule] => Array
+        (
+            [10] => MSO_RULE
+            [1] => MERCHANT_RULE
+            [2] => MERCHANT_RULE
+            [3] => MERCHANT_RULE
+            [4] => MERCHANT_RULE
+            [5] => MERCHANT_RULE
+            [6] => MERCHANT_RULE
+            [7] => MSO_RULE
+            [8] => MSO_RULE
+            [9] => MSO_RULE
+        )
+
+    [transaction_sourceOfFunds_provided_card_brand] => MASTERCARD
+    [transaction_sourceOfFunds_provided_card_expiry_month] => 5
+    [transaction_sourceOfFunds_provided_card_expiry_year] => 17
+    [transaction_sourceOfFunds_provided_card_fundingMethod] => DEBIT
+    [transaction_sourceOfFunds_provided_card_issuer] => U.S. BANK NATIONAL ASSOCIATION, ND
+    [transaction_sourceOfFunds_provided_card_nameOnCard] => t
+    [transaction_sourceOfFunds_provided_card_number] => 511111xxxxxx1118
+    [transaction_sourceOfFunds_provided_card_scheme] => MASTERCARD
+    [transaction_sourceOfFunds_type] => CARD
+    [transaction_timeOfRecord] => 2017-05-05T08:19:44.560Z
+    [transaction_transaction_acquirer_batch] => 20170505
+    [transaction_transaction_acquirer_date] => 0505
+    [transaction_transaction_acquirer_id] => CBA_S2I
+    [transaction_transaction_acquirer_merchantId] => 353109499161636
+    [transaction_transaction_acquirer_transactionId] => 123456789
+    [transaction_transaction_amount] => 10600.00
+    [transaction_transaction_authorizationCode] => 137244
+    [transaction_transaction_currency] => AUD
+    [transaction_transaction_frequency] => SINGLE
+    [transaction_transaction_id] => 1
+    [transaction_transaction_receipt] => 712508137244
+    [transaction_transaction_source] => INTERNET
+    [transaction_transaction_terminal] => CBAS2I01
+    [transaction_transaction_type] => PAYMENT
+    [transaction_version] => 36
+)
+
+Checkout session request: Array
+(
+    [apiOperation] => CREATE_CHECKOUT_SESSION
+    [apiPassword] => fad718b6a0bd99aaed8d2a2c127fffd0
+    [apiUsername] => merchant.TESTAMBBUICOM201
+    [merchant] => TESTAMBBUICOM201
+    [order.id] => 48
+    [order.amount] => 10600
+    [order.currency] => AUD
+)
+2017-05-05 15:29:50\n Checkout session response: Array
+(
+    [merchant] => TESTAMBBUICOM201
+    [result] => SUCCESS
+    [session_id] => SESSION0002069046001K8083104H88
+    [session_updateStatus] => SUCCESS
+    [session_version] => 89df189201
+    [successIndicator] => 42058d4a99b84fe8
+)
+\nCheckout session request: Array
+(
+    [apiOperation] => CREATE_CHECKOUT_SESSION
+    [apiPassword] => fad718b6a0bd99aaed8d2a2c127fffd0
+    [apiUsername] => merchant.TESTAMBBUICOM201
+    [merchant] => TESTAMBBUICOM201
+    [order.id] => 48
+    [order.amount] => 10600
+    [order.currency] => AUD
+)
+2017-05-05 15:30:04\n Checkout session response: Array
+(
+    [merchant] => TESTAMBBUICOM201
+    [result] => SUCCESS
+    [session_id] => SESSION0002055791771N0774094F91
+    [session_updateStatus] => SUCCESS
+    [session_version] => 4b89740601
+    [successIndicator] => 179cf5d9f6f947bb
+)
+\n2017-05-05 15:30:06\n Order detail from commweb: Array
+(
+    [amount] => 10600.00
+    [billing_address_city] => Sydney
+    [billing_address_country] => AUS
+    [billing_address_postcodeZip] => 4556
+    [billing_address_stateProvince] => ACT
+    [billing_address_street] => Whiskey St
+    [creationTime] => 2017-05-05T08:30:03.642Z
+    [currency] => AUD
+    [customer_firstName] => v
+    [description] => Commweb Order
+    [device_browser] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36
+    [device_ipAddress] => 27.72.157.158
+    [id] => 48
+    [merchant] => TESTAMBBUICOM201
+    [result] => SUCCESS
+    [risk_response_gatewayCode] => ACCEPTED
+    [risk_response_review_decision] => NOT_REQUIRED
+    [risk_response_rule_data] => W
+    [risk_response_rule_name] => MERCHANT_AVS
+    [risk_response_rule_recommendation] => NO_ACTION
+    [risk_response_rule_type] => MERCHANT_RULE
+    [risk_response_rule] => Array
+        (
+            [10] => MSO_RULE
+            [1] => MERCHANT_RULE
+            [2] => MERCHANT_RULE
+            [3] => MERCHANT_RULE
+            [4] => MERCHANT_RULE
+            [5] => MERCHANT_RULE
+            [6] => MERCHANT_RULE
+            [7] => MSO_RULE
+            [8] => MSO_RULE
+            [9] => MSO_RULE
+        )
+
+    [sourceOfFunds_provided_card_brand] => MASTERCARD
+    [sourceOfFunds_provided_card_expiry_month] => 5
+    [sourceOfFunds_provided_card_expiry_year] => 17
+    [sourceOfFunds_provided_card_fundingMethod] => DEBIT
+    [sourceOfFunds_provided_card_issuer] => U.S. BANK NATIONAL ASSOCIATION, ND
+    [sourceOfFunds_provided_card_nameOnCard] => v
+    [sourceOfFunds_provided_card_number] => 511111xxxxxx1118
+    [sourceOfFunds_provided_card_scheme] => MASTERCARD
+    [sourceOfFunds_type] => CARD
+    [status] => CAPTURED
+    [totalAuthorizedAmount] => 10600.00
+    [totalCapturedAmount] => 10600.00
+    [totalRefundedAmount] => 0.00
+    [transaction_authorizationResponse_avsCode] => W
+    [transaction_authorizationResponse_cardSecurityCodeError] => M
+    [transaction_authorizationResponse_commercialCard] => 888
+    [transaction_authorizationResponse_commercialCardIndicator] => 3
+    [transaction_authorizationResponse_financialNetworkCode] => 777
+    [transaction_authorizationResponse_processingCode] => 003000
+    [transaction_authorizationResponse_responseCode] => 00
+    [transaction_authorizationResponse_stan] => 140454
+    [transaction_authorizationResponse_transactionIdentifier] => 123456789
+    [transaction_billing_address_city] => Sydney
+    [transaction_billing_address_country] => AUS
+    [transaction_billing_address_postcodeZip] => 4556
+    [transaction_billing_address_stateProvince] => ACT
+    [transaction_billing_address_street] => Whiskey St
+    [transaction_customer_firstName] => v
+    [transaction_device_browser] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36
+    [transaction_device_ipAddress] => 27.72.157.158
+    [transaction_gatewayEntryPoint] => CHECKOUT
+    [transaction_merchant] => TESTAMBBUICOM201
+    [transaction_order_amount] => 10600.00
+    [transaction_order_creationTime] => 2017-05-05T08:30:03.642Z
+    [transaction_order_currency] => AUD
+    [transaction_order_description] => Commweb Order
+    [transaction_order_id] => 48
+    [transaction_order_status] => CAPTURED
+    [transaction_order_totalAuthorizedAmount] => 10600.00
+    [transaction_order_totalCapturedAmount] => 10600.00
+    [transaction_order_totalRefundedAmount] => 0.00
+    [transaction_response_acquirerCode] => 00
+    [transaction_response_acquirerMessage] => Approved
+    [transaction_response_cardSecurityCode_acquirerCode] => M
+    [transaction_response_cardSecurityCode_gatewayCode] => MATCH
+    [transaction_response_cardholderVerification_avs_acquirerCode] => W
+    [transaction_response_cardholderVerification_avs_gatewayCode] => ZIP_MATCH
+    [transaction_response_gatewayCode] => APPROVED
+    [transaction_result] => SUCCESS
+    [transaction_risk_response_gatewayCode] => ACCEPTED
+    [transaction_risk_response_review_decision] => NOT_REQUIRED
+    [transaction_risk_response_rule_data] => W
+    [transaction_risk_response_rule_name] => MERCHANT_AVS
+    [transaction_risk_response_rule_recommendation] => NO_ACTION
+    [transaction_risk_response_rule_type] => MERCHANT_RULE
+    [transaction_risk_response_rule] => Array
+        (
+            [10] => MSO_RULE
+            [1] => MERCHANT_RULE
+            [2] => MERCHANT_RULE
+            [3] => MERCHANT_RULE
+            [4] => MERCHANT_RULE
+            [5] => MERCHANT_RULE
+            [6] => MERCHANT_RULE
+            [7] => MSO_RULE
+            [8] => MSO_RULE
+            [9] => MSO_RULE
+        )
+
+    [transaction_sourceOfFunds_provided_card_brand] => MASTERCARD
+    [transaction_sourceOfFunds_provided_card_expiry_month] => 5
+    [transaction_sourceOfFunds_provided_card_expiry_year] => 17
+    [transaction_sourceOfFunds_provided_card_fundingMethod] => DEBIT
+    [transaction_sourceOfFunds_provided_card_issuer] => U.S. BANK NATIONAL ASSOCIATION, ND
+    [transaction_sourceOfFunds_provided_card_nameOnCard] => v
+    [transaction_sourceOfFunds_provided_card_number] => 511111xxxxxx1118
+    [transaction_sourceOfFunds_provided_card_scheme] => MASTERCARD
+    [transaction_sourceOfFunds_type] => CARD
+    [transaction_timeOfRecord] => 2017-05-05T08:30:03.642Z
+    [transaction_transaction_acquirer_batch] => 20170505
+    [transaction_transaction_acquirer_date] => 0505
+    [transaction_transaction_acquirer_id] => CBA_S2I
+    [transaction_transaction_acquirer_merchantId] => 353109499161636
+    [transaction_transaction_acquirer_transactionId] => 123456789
+    [transaction_transaction_amount] => 10600.00
+    [transaction_transaction_authorizationCode] => 140454
+    [transaction_transaction_currency] => AUD
+    [transaction_transaction_frequency] => SINGLE
+    [transaction_transaction_id] => 1
+    [transaction_transaction_receipt] => 712508140454
+    [transaction_transaction_source] => INTERNET
+    [transaction_transaction_terminal] => CBAS2I01
+    [transaction_transaction_type] => PAYMENT
+    [transaction_version] => 36
+)
+\n2017-05-05 15:30:06
+ Response from Complete callback of commweb: 
+Array
+(
+    [amount] => 10600.00
+    [billing_address_city] => Sydney
+    [billing_address_country] => AUS
+    [billing_address_postcodeZip] => 4556
+    [billing_address_stateProvince] => ACT
+    [billing_address_street] => Whiskey St
+    [creationTime] => 2017-05-05T08:30:03.642Z
+    [currency] => AUD
+    [customer_firstName] => v
+    [description] => Commweb Order
+    [device_browser] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36
+    [device_ipAddress] => 27.72.157.158
+    [id] => 48
+    [merchant] => TESTAMBBUICOM201
+    [result] => SUCCESS
+    [risk_response_gatewayCode] => ACCEPTED
+    [risk_response_review_decision] => NOT_REQUIRED
+    [risk_response_rule_data] => W
+    [risk_response_rule_name] => MERCHANT_AVS
+    [risk_response_rule_recommendation] => NO_ACTION
+    [risk_response_rule_type] => MERCHANT_RULE
+    [risk_response_rule] => Array
+        (
+            [10] => MSO_RULE
+            [1] => MERCHANT_RULE
+            [2] => MERCHANT_RULE
+            [3] => MERCHANT_RULE
+            [4] => MERCHANT_RULE
+            [5] => MERCHANT_RULE
+            [6] => MERCHANT_RULE
+            [7] => MSO_RULE
+            [8] => MSO_RULE
+            [9] => MSO_RULE
+        )
+
+    [sourceOfFunds_provided_card_brand] => MASTERCARD
+    [sourceOfFunds_provided_card_expiry_month] => 5
+    [sourceOfFunds_provided_card_expiry_year] => 17
+    [sourceOfFunds_provided_card_fundingMethod] => DEBIT
+    [sourceOfFunds_provided_card_issuer] => U.S. BANK NATIONAL ASSOCIATION, ND
+    [sourceOfFunds_provided_card_nameOnCard] => v
+    [sourceOfFunds_provided_card_number] => 511111xxxxxx1118
+    [sourceOfFunds_provided_card_scheme] => MASTERCARD
+    [sourceOfFunds_type] => CARD
+    [status] => CAPTURED
+    [totalAuthorizedAmount] => 10600.00
+    [totalCapturedAmount] => 10600.00
+    [totalRefundedAmount] => 0.00
+    [transaction_authorizationResponse_avsCode] => W
+    [transaction_authorizationResponse_cardSecurityCodeError] => M
+    [transaction_authorizationResponse_commercialCard] => 888
+    [transaction_authorizationResponse_commercialCardIndicator] => 3
+    [transaction_authorizationResponse_financialNetworkCode] => 777
+    [transaction_authorizationResponse_processingCode] => 003000
+    [transaction_authorizationResponse_responseCode] => 00
+    [transaction_authorizationResponse_stan] => 140454
+    [transaction_authorizationResponse_transactionIdentifier] => 123456789
+    [transaction_billing_address_city] => Sydney
+    [transaction_billing_address_country] => AUS
+    [transaction_billing_address_postcodeZip] => 4556
+    [transaction_billing_address_stateProvince] => ACT
+    [transaction_billing_address_street] => Whiskey St
+    [transaction_customer_firstName] => v
+    [transaction_device_browser] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36
+    [transaction_device_ipAddress] => 27.72.157.158
+    [transaction_gatewayEntryPoint] => CHECKOUT
+    [transaction_merchant] => TESTAMBBUICOM201
+    [transaction_order_amount] => 10600.00
+    [transaction_order_creationTime] => 2017-05-05T08:30:03.642Z
+    [transaction_order_currency] => AUD
+    [transaction_order_description] => Commweb Order
+    [transaction_order_id] => 48
+    [transaction_order_status] => CAPTURED
+    [transaction_order_totalAuthorizedAmount] => 10600.00
+    [transaction_order_totalCapturedAmount] => 10600.00
+    [transaction_order_totalRefundedAmount] => 0.00
+    [transaction_response_acquirerCode] => 00
+    [transaction_response_acquirerMessage] => Approved
+    [transaction_response_cardSecurityCode_acquirerCode] => M
+    [transaction_response_cardSecurityCode_gatewayCode] => MATCH
+    [transaction_response_cardholderVerification_avs_acquirerCode] => W
+    [transaction_response_cardholderVerification_avs_gatewayCode] => ZIP_MATCH
+    [transaction_response_gatewayCode] => APPROVED
+    [transaction_result] => SUCCESS
+    [transaction_risk_response_gatewayCode] => ACCEPTED
+    [transaction_risk_response_review_decision] => NOT_REQUIRED
+    [transaction_risk_response_rule_data] => W
+    [transaction_risk_response_rule_name] => MERCHANT_AVS
+    [transaction_risk_response_rule_recommendation] => NO_ACTION
+    [transaction_risk_response_rule_type] => MERCHANT_RULE
+    [transaction_risk_response_rule] => Array
+        (
+            [10] => MSO_RULE
+            [1] => MERCHANT_RULE
+            [2] => MERCHANT_RULE
+            [3] => MERCHANT_RULE
+            [4] => MERCHANT_RULE
+            [5] => MERCHANT_RULE
+            [6] => MERCHANT_RULE
+            [7] => MSO_RULE
+            [8] => MSO_RULE
+            [9] => MSO_RULE
+        )
+
+    [transaction_sourceOfFunds_provided_card_brand] => MASTERCARD
+    [transaction_sourceOfFunds_provided_card_expiry_month] => 5
+    [transaction_sourceOfFunds_provided_card_expiry_year] => 17
+    [transaction_sourceOfFunds_provided_card_fundingMethod] => DEBIT
+    [transaction_sourceOfFunds_provided_card_issuer] => U.S. BANK NATIONAL ASSOCIATION, ND
+    [transaction_sourceOfFunds_provided_card_nameOnCard] => v
+    [transaction_sourceOfFunds_provided_card_number] => 511111xxxxxx1118
+    [transaction_sourceOfFunds_provided_card_scheme] => MASTERCARD
+    [transaction_sourceOfFunds_type] => CARD
+    [transaction_timeOfRecord] => 2017-05-05T08:30:03.642Z
+    [transaction_transaction_acquirer_batch] => 20170505
+    [transaction_transaction_acquirer_date] => 0505
+    [transaction_transaction_acquirer_id] => CBA_S2I
+    [transaction_transaction_acquirer_merchantId] => 353109499161636
+    [transaction_transaction_acquirer_transactionId] => 123456789
+    [transaction_transaction_amount] => 10600.00
+    [transaction_transaction_authorizationCode] => 140454
+    [transaction_transaction_currency] => AUD
+    [transaction_transaction_frequency] => SINGLE
+    [transaction_transaction_id] => 1
+    [transaction_transaction_receipt] => 712508140454
+    [transaction_transaction_source] => INTERNET
+    [transaction_transaction_terminal] => CBAS2I01
+    [transaction_transaction_type] => PAYMENT
+    [transaction_version] => 36
+)
+

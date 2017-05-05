@@ -20,7 +20,19 @@ class VM_COMMWEB_HOSTED_API {
     }
 
     public function log($filelog, $contentlog) {
-        file_put_contents(dirname(dirname(__FILE__)) . '/' . $filelog, $contentlog, FILE_APPEND);
+        file_put_contents(dirname(dirname(dirname(dirname(dirname(dirname(__FILE__)))))) . '/system/storage/logs/' . $filelog, $contentlog, FILE_APPEND);
+    }
+
+    public function getMerchantId() {
+        return $this->commweb_merchant_id;
+    }
+
+    public function getApiPassword() {
+        return $this->commweb_api_password;
+    }
+
+    public function getMerchantName() {
+        return $this->merchant_name;
     }
 
     public function getApiUsername() {

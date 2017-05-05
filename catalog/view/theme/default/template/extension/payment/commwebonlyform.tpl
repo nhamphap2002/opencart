@@ -1,6 +1,5 @@
-<?php echo $header; ?><?php echo $column_left; ?><?php echo $column_right; ?>
-<div class="container"><?php echo $content_top; ?>
-    <style>
+
+<style>
     #loading{
         position: fixed;
         left: 0px;
@@ -9,7 +8,7 @@
         height: 100%;
         z-index: 9999;
         background: url('<?php echo $image_loading;
-?>') 50% 50% no-repeat;
+            ?>') 50% 50% no-repeat;
     }
 </style>
 <script type="text/javascript">
@@ -53,9 +52,8 @@
             }
         }
     });
-<?php echo $payment_method; ?>
+                <?php echo $payment_method; ?>
 </script>
 <div id="loading"></div>
 </div>
 
-<?php echo $footer; ?>
