@@ -1,5 +1,4 @@
 <?php
-
 /*
  * Created on : May 03, 2017, 9:54:39 AM
  * Author: Tran Trong Thang
@@ -28,10 +27,7 @@ class ControllerExtensionPaymentCommweb extends Controller {
 
         $amount = number_format($order_info['total'], 2, '.', '') * 100;
 
-        $return_url = $this->config->get('config_ssl') . 'catalog/controller/extension/payment/commweb_return.php';
-        //$this->url->link('extension/payment/commweb/success', '', 'SSL');//'http://demo.vnphpexpert.com/opencart_2/test.php';//
         $notify_url = $this->url->link('extension/payment/commweb/callback', '', 'SSL');
-        $cancel_url = $this->config->get('config_ssl') . 'catalog/controller/extension/payment/commweb_return.php'; //$this->url->link('checkout/checkout');
         //save card info
         $parameters["store"] = "yes";
         $parameters["store_type"] = "PAYOR";
@@ -107,20 +103,20 @@ class ControllerExtensionPaymentCommweb extends Controller {
         $total = number_format($order_info['total'], 2, '.', '') * 100;
         $data['total'] = $total;
         //$data['complete_callback'] = $this->url->link('checkout/success');
-        $data['complete_callback'] = $this->url->link('extension/payment/commweb/callback&on=' . $order_id, '', true);
-        $data['cancel_callback'] = $this->url->link('checkout/checkout', '', true);
+        $data['complete_callback'] = $complete_callback = $this->url->link('extension/payment/commweb/callback&on=' . $order_id, '', true);
+        $data['cancel_callback'] = $cancel_callback = $this->url->link('checkout/checkout', '', true);
 
 
-        $data['street'] = $order_info['payment_address_1'];
-        $data['city'] = $order_info['payment_city'];
-        $data['billing_postcode'] = $order_info['payment_postcode'];
-        $data['state'] = $order_info['payment_zone_code'];
-        $data['country'] = $order_info['payment_iso_code_3'];
+        $data['street'] = $street = $order_info['payment_address_1'];
+        $data['city'] = $city = $order_info['payment_city'];
+        $data['billing_postcode'] = $billing_postcode = $order_info['payment_postcode'];
+        $data['state'] = $state = $order_info['payment_zone_code'];
+        $data['country'] = $country = $order_info['payment_iso_code_3'];
 
         if (isset($this->request->server['HTTPS']) && (($this->request->server['HTTPS'] == 'on') || ($this->request->server['HTTPS'] == '1'))) {
-            $data['image_loading'] = $this->config->get('config_ssl') . 'catalog/view/theme/default/image/loading.gif';
+            $image_loading = $data['image_loading'] = $this->config->get('config_ssl') . 'catalog/view/theme/default/image/loading.gif';
         } else {
-            $data['image_loading'] = $this->config->get('config_url') . 'catalog/view/theme/default/image/loading.gif';
+            $image_loading = $data['image_loading'] = $this->config->get('config_url') . 'catalog/view/theme/default/image/loading.gif';
         }
 
         $data['column_left'] = $this->load->controller('common/column_left');
@@ -132,7 +128,7 @@ class ControllerExtensionPaymentCommweb extends Controller {
         if ($checkout_method == 'Lightbox') {
             $this->response->setOutput($this->load->view('extension/payment/commwebform', $data));
         } else {
-            $this->response->setOutput($this->load->view('extension/payment/commwebform', $data));
+            $this->response->setOutput($this->load->view('extension/payment/commwebonlyform', $data));
         }
     }
 
@@ -206,5 +202,4 @@ class ControllerExtensionPaymentCommweb extends Controller {
     }
 
 }
-
 ?>

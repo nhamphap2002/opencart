@@ -1,5 +1,4 @@
 <?php
-
 /*
  * Created on : May 03, 2017, 9:54:39 AM
  * Author: Tran Trong Thang
@@ -46,6 +45,27 @@ class ControllerExtensionPaymentCommweb extends Controller {
             return $this->load->view(DIR_APPLICATION . 'view/theme/' . $this->config->get('config_template') . '/extension/payment/commweb.tpl', $data);
         } else {
             return $this->load->view('extension/payment/commweb.tpl', $data);
+        }
+    }
+
+    public function success() {
+        $merchant_id = $this->config->get('commweb_merchant_id');
+        $transaction_password = $this->config->get('commweb_transaction_password');
+
+        $order_id = $_GET["refid"];
+        $fingerprint = $_GET["fingerprint"];
+        $timestamp = $_GET["timestamp"];
+        $amount = $_GET["amount"];
+        $summarycode = $_GET["summarycode"];
+
+        $rescode = $_GET["rescode"];
+
+        $fingerprint_string = $merchant_id . '|' . $transaction_password . '|' . $order_id . '|' . $amount . '|' . $timestamp . '|' . $summarycode;
+        $fingerprint_hash = hash('sha1', $fingerprint_string);
+        if ($fingerprint_hash == $fingerprint && in_array($rescode, array('00', '08', '11'))) {
+            $this->response->redirect($this->url->link('checkout/success', '', 'SSL'));
+        } else {
+            $this->response->redirect($this->url->link('checkout/checkout', '', 'SSL'));
         }
     }
 
@@ -108,7 +128,79 @@ class ControllerExtensionPaymentCommweb extends Controller {
         if ($checkout_method == 'Lightbox') {
             $this->response->setOutput($this->load->view('extension/payment/commwebform', $data));
         } else {
-            $this->response->setOutput($this->load->view('extension/payment/commwebonlyform', $data));
+            $logger = new Log('test.log');
+            $logger->write($complete_callback);
+            ob_start();
+            ?>
+            <html>
+                <head>
+                    <title><?php echo $commweb->merchant_name; ?></title>
+                </head>
+                <body>
+                    <style>
+                        #loading{
+                            position: fixed;
+                            left: 0px;
+                            top: 0px;
+                            width: 100%;
+                            height: 100%;
+                            z-index: 9999;
+                            background: url('<?php echo $image_loading;
+            ?>') 50% 50% no-repeat;
+                        }
+                    </style>
+
+                    <script src="<?php echo $commweb->_checkout_url_js; ?>" 
+                            data-error="errorCallback"
+                            data-complete="completeCallback"
+                            data-cancel="cancelCallback">
+                    </script>
+
+                    <script type="text/javascript">
+                        completeCallback = "<?php echo $complete_callback; ?>";
+                        cancelCallback = "<?php echo $cancel_callback; ?>";
+                        function errorCallback(error) {
+                            console.log(JSON.stringify(error))
+                            alert(JSON.stringify(error.explanation));
+                        }
+                    </script>
+                    <script type="text/javascript">
+                        Checkout.configure({
+                            merchant: "<?php echo $commweb->commweb_merchant_id; ?>",
+                            session: {
+                                id: "<?php echo $checkout_session_id; ?>"
+                            },
+                            order: {
+                                amount: "<?php echo $total; ?>",
+                                currency: "AUD",
+                                description: "Commweb Order",
+                                id: "<?php echo $id_for_commweb; ?>"
+                            },
+                            billing: {
+                                address: {
+                                    street: "<?php echo $street; ?>",
+                                    city: "<?php echo $city; ?>",
+                                    postcodeZip: "<?php echo $billing_postcode; ?>",
+                                    stateProvince: "<?php echo $state; ?>",
+                                    country: "<?php echo $country; ?>"
+                                }
+                            },
+                            interaction: {
+                                merchant: {
+                                    name: "<?php echo $commweb->merchant_name; ?>"
+                                }
+                            }
+                        });
+            <?php echo $payment_method; ?>
+                    </script>
+                    <div id="loading"></div>
+                </body>
+            </html>
+            <?php
+            $html = ob_get_contents();
+            ob_end_clean();
+            echo $html;
+            exit();
         }
     }
 
@@ -174,12 +266,10 @@ class ControllerExtensionPaymentCommweb extends Controller {
                 $this->model_extension_payment_commweb->addTransaction($commweb_transaction_data);
                 $this->response->redirect($this->url->link('checkout/success', '', 'SSL'));
             } else {
-                $this->session->data['error'] = 'Your transaction was unsuccessful, please check your details and try again(error account 3d). Please contact the server administrator';
-                $this->response->redirect($this->url->link('checkout/checkout', '', true));
+                $this->response->redirect($this->url->link('checkout/success', 'Your transaction was unsuccessful, please check your details and try again(error account 3d). Please contact the server administrator', 'SSL'));
             }
         } else {
-            $this->session->data['error'] = 'Your transaction was unsuccessful, please check your details and try again. Please contact the server administrator';
-            $this->response->redirect($this->url->link('checkout/checkout', '', true));
+            $this->response->redirect($this->url->link('checkout/success', 'Your transaction was unsuccessful, please check your details and try again. Please contact the server administrator', 'SSL'));
         }
     }
 

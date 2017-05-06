@@ -7,11 +7,3 @@
         </div>
     </div>
 </form>
-<script type="text/javascript">
-
-    /*jQuery(document).ready(function ($) {
-     $(document).on('click', '#Commweb_form #Commweb_submit', function (e) {
-     $(document).find("#pay_showformcommweb #submit_commweb").click();
-     })
-     });*/
-</script>
