@@ -49,6 +49,27 @@ class ControllerExtensionPaymentCommweb extends Controller {
         }
     }
 
+    public function success() {
+        $merchant_id = $this->config->get('commweb_merchant_id');
+        $transaction_password = $this->config->get('commweb_transaction_password');
+
+        $order_id = $_GET["refid"];
+        $fingerprint = $_GET["fingerprint"];
+        $timestamp = $_GET["timestamp"];
+        $amount = $_GET["amount"];
+        $summarycode = $_GET["summarycode"];
+
+        $rescode = $_GET["rescode"];
+
+        $fingerprint_string = $merchant_id . '|' . $transaction_password . '|' . $order_id . '|' . $amount . '|' . $timestamp . '|' . $summarycode;
+        $fingerprint_hash = hash('sha1', $fingerprint_string);
+        if ($fingerprint_hash == $fingerprint && in_array($rescode, array('00', '08', '11'))) {
+            $this->response->redirect($this->url->link('checkout/success', '', 'SSL'));
+        } else {
+            $this->response->redirect($this->url->link('checkout/checkout', '', 'SSL'));
+        }
+    }
+
     public function showformpaymentCommweb() {
 
         $data['merchant_id'] = $merchant_id = $this->config->get('commweb_merchant_id');
@@ -69,7 +90,14 @@ class ControllerExtensionPaymentCommweb extends Controller {
 
         $id_for_commweb = $order_id;
         $_SESSION['id_for_commweb'] = $id_for_commweb;
-        $checkout_session_id = $commweb->getCheckoutSession($order_info, $id_for_commweb);
+        if (isset($_SESSION['CurrentOrderId']) && $_SESSION['CurrentOrderId'] == $order_id) {
+            $checkout_session_id = '';
+            $id_for_commweb = '';
+            unset($_SESSION['CurrentOrderId']);
+        } else {
+            $checkout_session_id = $commweb->getCheckoutSession($order_info, $id_for_commweb);
+            $_SESSION['CurrentOrderId'] = $id_for_commweb;
+        }
 
         if ($checkout_method == 'Lightbox') {
             $payment_method = 'Checkout.showLightbox();';
@@ -130,7 +158,9 @@ class ControllerExtensionPaymentCommweb extends Controller {
         $order_info = $this->model_checkout_order->getOrder($order_id);
 
         if ($commweb->debug)
-            $commweb->log('commweb.log', date('Y-m-d H:i:s') . "\n Response from Complete callback of commweb: \n" . print_r($order_detail_commweb, true) . "\n");
+            $commweb->log('commweb.log', date('Y-m-d H:i:s') . "\n Response from Complete callback of commweb: \n" . print_r($_REQUEST, true) . "\n");
+        /* $logger = new Log('amazon.log');
+          $logger->write('amazon/order - started'); */
         $order_status_id = $this->config->get('commweb_order_status_id');
         if ($order_detail_commweb['result'] == 'SUCCESS') {
             if ($commweb_3d_secure) {
@@ -174,14 +204,13 @@ class ControllerExtensionPaymentCommweb extends Controller {
                 $this->model_extension_payment_commweb->addTransaction($commweb_transaction_data);
                 $this->response->redirect($this->url->link('checkout/success', '', 'SSL'));
             } else {
-                $this->session->data['error'] = 'Your transaction was unsuccessful, please check your details and try again(error account 3d). Please contact the server administrator';
-                $this->response->redirect($this->url->link('checkout/checkout', '', true));
+                $this->response->redirect($this->url->link('checkout/success', 'Your transaction was unsuccessful, please check your details and try again(error account 3d). Please contact the server administrator', 'SSL'));
             }
         } else {
-            $this->session->data['error'] = 'Your transaction was unsuccessful, please check your details and try again. Please contact the server administrator';
-            $this->response->redirect($this->url->link('checkout/checkout', '', true));
+            $this->response->redirect($this->url->link('checkout/success', 'Your transaction was unsuccessful, please check your details and try again. Please contact the server administrator', 'SSL'));
         }
     }
 
 }
+
 ?>

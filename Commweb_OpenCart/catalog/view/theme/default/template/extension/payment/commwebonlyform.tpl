@@ -16,8 +16,9 @@
         completeCallback = "<?php echo $complete_callback; ?>";
         cancelCallback = "<?php echo $cancel_callback; ?>";
         function errorCallback(error) {
-            console.log(JSON.stringify(error))
-            alert(JSON.stringify(error.explanation));
+            console.log(error)
+            if (error.field != 'session.id')
+                alert(JSON.stringify(error.explanation));
         }
     </script>
     <script src="<?php echo $commweb->_checkout_url_js; ?>" 
@@ -54,7 +55,7 @@
             }
         });
                 <?php echo $payment_method; ?>
-    </script>
+                </script>
     <div id="loading"></div>
 </div>
 

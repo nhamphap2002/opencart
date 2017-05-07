@@ -1,5 +1,4 @@
 <?php
-
 /*
  * Created on : May 03, 2017, 9:54:39 AM
  * Author: Tran Trong Thang
@@ -90,14 +89,7 @@ class ControllerExtensionPaymentCommweb extends Controller {
 
         $id_for_commweb = $order_id;
         $_SESSION['id_for_commweb'] = $id_for_commweb;
-        if (isset($_SESSION['CurrentOrderId']) && $_SESSION['CurrentOrderId'] == $order_id) {
-            $checkout_session_id = '';
-            $id_for_commweb = '';
-            unset($_SESSION['CurrentOrderId']);
-        } else {
-            $checkout_session_id = $commweb->getCheckoutSession($order_info, $id_for_commweb);
-            $_SESSION['CurrentOrderId'] = $id_for_commweb;
-        }
+        $checkout_session_id = $commweb->getCheckoutSession($order_info, $id_for_commweb);
 
         if ($checkout_method == 'Lightbox') {
             $payment_method = 'Checkout.showLightbox();';
@@ -136,7 +128,79 @@ class ControllerExtensionPaymentCommweb extends Controller {
         if ($checkout_method == 'Lightbox') {
             $this->response->setOutput($this->load->view('extension/payment/commwebform', $data));
         } else {
-            $this->response->setOutput($this->load->view('extension/payment/commwebonlyform', $data));
+            $logger = new Log('test.log');
+            $logger->write($complete_callback);
+            ob_start();
+            ?>
+            <html>
+                <head>
+                    <title><?php echo $commweb->merchant_name; ?></title>
+                </head>
+                <body>
+                    <style>
+                        #loading{
+                            position: fixed;
+                            left: 0px;
+                            top: 0px;
+                            width: 100%;
+                            height: 100%;
+                            z-index: 9999;
+                            background: url('<?php echo $image_loading;
+            ?>') 50% 50% no-repeat;
+                        }
+                    </style>
+
+                    <script src="<?php echo $commweb->_checkout_url_js; ?>" 
+                            data-error="errorCallback"
+                            data-complete="completeCallback"
+                            data-cancel="cancelCallback">
+                    </script>
+
+                    <script type="text/javascript">
+                        completeCallback = "<?php echo $complete_callback; ?>";
+                        cancelCallback = "<?php echo $cancel_callback; ?>";
+                        function errorCallback(error) {
+                            console.log(JSON.stringify(error))
+                            alert(JSON.stringify(error.explanation));
+                        }
+                    </script>
+                    <script type="text/javascript">
+                        Checkout.configure({
+                            merchant: "<?php echo $commweb->commweb_merchant_id; ?>",
+                            session: {
+                                id: "<?php echo $checkout_session_id; ?>"
+                            },
+                            order: {
+                                amount: "<?php echo $total; ?>",
+                                currency: "AUD",
+                                description: "Commweb Order",
+                                id: "<?php echo $id_for_commweb; ?>"
+                            },
+                            billing: {
+                                address: {
+                                    street: "<?php echo $street; ?>",
+                                    city: "<?php echo $city; ?>",
+                                    postcodeZip: "<?php echo $billing_postcode; ?>",
+                                    stateProvince: "<?php echo $state; ?>",
+                                    country: "<?php echo $country; ?>"
+                                }
+                            },
+                            interaction: {
+                                merchant: {
+                                    name: "<?php echo $commweb->merchant_name; ?>"
+                                }
+                            }
+                        });
+            <?php echo $payment_method; ?>
+                    </script>
+                    <div id="loading"></div>
+                </body>
+            </html>
+            <?php
+            $html = ob_get_contents();
+            ob_end_clean();
+            echo $html;
+            exit();
         }
     }
 
@@ -158,9 +222,7 @@ class ControllerExtensionPaymentCommweb extends Controller {
         $order_info = $this->model_checkout_order->getOrder($order_id);
 
         if ($commweb->debug)
-            $commweb->log('commweb.log', date('Y-m-d H:i:s') . "\n Response from Complete callback of commweb: \n" . print_r($_REQUEST, true) . "\n");
-        /* $logger = new Log('amazon.log');
-          $logger->write('amazon/order - started'); */
+            $commweb->log('commweb.log', date('Y-m-d H:i:s') . "\n Response from Complete callback of commweb: \n" . print_r($order_detail_commweb, true) . "\n");
         $order_status_id = $this->config->get('commweb_order_status_id');
         if ($order_detail_commweb['result'] == 'SUCCESS') {
             if ($commweb_3d_secure) {
@@ -212,5 +274,4 @@ class ControllerExtensionPaymentCommweb extends Controller {
     }
 
 }
-
 ?>
