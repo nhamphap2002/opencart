@@ -29,44 +29,14 @@ class ControllerExtensionPaymentCommweb extends Controller {
         $amount = number_format($order_info['total'], 2, '.', '');
 
         $notify_url = $this->url->link('extension/payment/commweb/callback', '', 'SSL');
-        //save card info
-        $parameters["store"] = "yes";
-        $parameters["store_type"] = "PAYOR";
-        $parameters["payor"] = 'commweb_' . $this->customer->getId();
-
-
-
-        $data['parameters'] = $parameters;
-
+       
         $data['action_showform'] = $this->url->link('extension/payment/commweb/showformpaymentCommweb&on=' . $order_id, '', 'SSL');
         $data["orderid"] = $order_id;
-        $data["payor"] = 'commweb_' . $this->customer->getId();
-
+ 
         if (file_exists(DIR_APPLICATION . 'view/theme/' . $this->config->get('config_template') . '/extension/payment/commweb.tpl')) {
             return $this->load->view(DIR_APPLICATION . 'view/theme/' . $this->config->get('config_template') . '/extension/payment/commweb.tpl', $data);
         } else {
             return $this->load->view('extension/payment/commweb.tpl', $data);
-        }
-    }
-
-    public function success() {
-        $merchant_id = $this->config->get('commweb_merchant_id');
-        $transaction_password = $this->config->get('commweb_transaction_password');
-
-        $order_id = $_GET["refid"];
-        $fingerprint = $_GET["fingerprint"];
-        $timestamp = $_GET["timestamp"];
-        $amount = $_GET["amount"];
-        $summarycode = $_GET["summarycode"];
-
-        $rescode = $_GET["rescode"];
-
-        $fingerprint_string = $merchant_id . '|' . $transaction_password . '|' . $order_id . '|' . $amount . '|' . $timestamp . '|' . $summarycode;
-        $fingerprint_hash = hash('sha1', $fingerprint_string);
-        if ($fingerprint_hash == $fingerprint && in_array($rescode, array('00', '08', '11'))) {
-            $this->response->redirect($this->url->link('checkout/success', '', 'SSL'));
-        } else {
-            $this->response->redirect($this->url->link('checkout/checkout', '', 'SSL'));
         }
     }
 
