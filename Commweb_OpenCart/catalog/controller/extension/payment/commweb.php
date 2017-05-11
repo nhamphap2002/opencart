@@ -26,7 +26,7 @@ class ControllerExtensionPaymentCommweb extends Controller {
         $order_id = $this->session->data['order_id'];
         $order_info = $this->model_checkout_order->getOrder($order_id);
 
-        $amount = number_format($order_info['total'], 2, '.', '') * 100;
+        $amount = number_format($order_info['total'], 2, '.', '');
 
         $notify_url = $this->url->link('extension/payment/commweb/callback', '', 'SSL');
         //save card info
@@ -108,7 +108,7 @@ class ControllerExtensionPaymentCommweb extends Controller {
         $data['payment_method'] = $payment_method;
         $data['id_for_commweb'] = $order_id;
         $data['checkout_session_id'] = $checkout_session_id;
-        $total = number_format($order_info['total'], 2, '.', '') * 100;
+        $total = number_format($order_info['total'], 2, '.', '');
         $data['total'] = $total;
         //$data['complete_callback'] = $this->url->link('checkout/success');
         $data['complete_callback'] = $complete_callback = $this->url->link('extension/payment/commweb/callback&on=' . $order_id, '', true);

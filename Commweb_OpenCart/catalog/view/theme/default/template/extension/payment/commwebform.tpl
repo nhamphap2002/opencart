@@ -59,6 +59,7 @@
                 <?php echo $payment_method; ?>
                 </script>
     <div id="loading"></div>
+    <div style="min-height: 500px;">&nbsp;</div>
 </div>
 
 <?php echo $footer; ?>
